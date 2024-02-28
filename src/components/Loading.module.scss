@@ -1,5 +1,153 @@
 .loading {
-  color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f7f7f7;
 
-  font-weight: 800;
+  .loading-box {
+    display: flex;
+    position: relative;
+    width: 8em;
+    height: 8em;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e6fd9;
+    border-radius: 10px;
+    box-shadow: -1px 0px 65px -38px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: -1px 0px 65px -38px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -1px 0px 65px -38px rgba(0, 0, 0, 1);
+
+    .drone-propeller {
+      position: absolute;
+
+      &.top-left,
+      &.top-right,
+      &.bottom-left,
+      &.bottom-right {
+        width: 1.5em;
+        height: 1.5em;
+      }
+
+      &.top-left {
+        top: 1.1em;
+        left: 1.3em;
+        transform: scaleX(-1);
+        animation: rotateleft 0.2s linear infinite;
+      }
+
+      &.top-right {
+        top: 1.1em;
+        right: 1.2em;
+        animation: rotateright 0.2s linear infinite;
+      }
+
+      &.bottom-left {
+        bottom: 1.1em;
+        left: 1.2em;
+        transform: rotate(180deg);
+        animation: rotateright 0.2s linear infinite;
+      }
+
+      &.bottom-right {
+        bottom: 1.1em;
+        right: 1.2em;
+        transform: scaleY(-1);
+        animation: rotateleft 0.2s linear infinite;
+      }
+
+      img {
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+
+    .drone-body {
+      width: 4em;
+      height: 4em;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .loading-text {
+    margin-top: 0.4em;
+    color: rgb(66, 65, 65);
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+}
+
+@keyframes rotateright {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateleft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@media (max-width: 440px) {
+  .loading {
+    .loading-box {
+      width: 7.5em;
+      height: 7.5em;
+
+      .drone-propeller {
+        &.top-left,
+        &.top-right,
+        &.bottom-left,
+        &.bottom-right {
+          width: 1.2em;
+          height: 1.2em;
+        }
+
+        &.top-left {
+          top: 1.2em;
+          left: 1.5em;
+        }
+
+        &.top-right {
+          top: 1.3em;
+          right: 1.4em;
+        }
+
+        &.bottom-left {
+          bottom: 1.2em;
+          left: 1.4em;
+        }
+
+        &.bottom-right {
+          bottom: 1.2em;
+          right: 1.5em;
+        }
+
+        img {
+          width: 1.2em;
+          height: 1.2em;
+        }
+      }
+
+      .drone-body {
+        width: 3.5em;
+        height: 3.5em;
+      }
+    }
+  }
 }
