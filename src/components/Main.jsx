@@ -14,6 +14,7 @@ export default function Main() {
     <>
       <Header language={language} changeLanguage={changeLanguage} />
       <HomePage language={language} />
+      <footer>&copy; Michał Krudysz 2024</footer>
     </>
   );
 }

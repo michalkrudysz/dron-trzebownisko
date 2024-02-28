@@ -1,5 +1,8 @@
 import classes from "./HomePage.module.scss";
 import Button from "./Button";
+import ReferenceBox from "./ReferenceBox";
+import references from "../references.js";
+import gminaTrzebownisko from "../assets/company-logos/gmina-trzebownisko.png";
 
 const contentByLanguage = {
   PL: {
@@ -27,7 +30,8 @@ export default function HomePage({ language }) {
     contentByLanguage[language] || contentByLanguage.PL;
 
   return (
-    <content className={classes["home-page"]}>
+    <div className={classes["home-page"]}>
+      {" "}
       <section className={classes.section}>
         <div className={classes["left-container"]}>
           <h1 className={classes.h1}>
@@ -42,8 +46,27 @@ export default function HomePage({ language }) {
             <Button kind={false}>{buttons.discover}</Button>
           </div>
         </div>
-        <div className={classes["right-container"]}> </div>
+        <div className={classes["right-container"]}>
+          {references.slice(0, 3).map((ref) => (
+            <div
+              key={ref.id}
+              className={
+                classes[
+                  ref.id === 1 ? "first" : ref.id === 2 ? "second" : "third"
+                ]
+              }
+            >
+              <ReferenceBox
+                logoUrl={ref.logoUrl}
+                companyName={ref.companyName}
+                description={
+                  language === "PL" ? ref.descriptionPL : ref.descriptionEN
+                }
+              />
+            </div>
+          ))}
+        </div>
       </section>
-    </content>
+    </div>
   );
 }
