@@ -1,0 +1,39 @@
+.home-page {
+  display: flex;
+  margin-top: 7em;
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .left-container {
+      padding-left: 15em;
+      padding-right: 4em;
+      width: 50%;
+      letter-spacing: 0.05em;
+      .h1 {
+        font-size: 3em;
+        padding-right: 1em;
+        .highlighted-text {
+          font-weight: 800;
+        }
+      }
+      .h2 {
+        font-size: 1.3em;
+        padding-right: 1.5em;
+        font-weight: 400;
+        margin-top: 0.3em;
+      }
+      .button-container {
+        margin-top: 2em;
+        margin-right: 4em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1em;
+      }
+    }
+    .right-container {
+      width: 50%;
+    }
+  }
+}
