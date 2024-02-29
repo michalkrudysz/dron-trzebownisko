@@ -7,34 +7,36 @@
   justify-content: flex-start;
   padding: 0;
   margin: 0;
-  border: 0.5px solid #f2f2f2;
+  border: 0.5px solid #5c9df2;
   border-radius: 5px;
-  background-color: #12151a;
+  background-color: #12151ae5;
   cursor: pointer;
   transition: box-shadow 0.5s ease;
 
   &:hover {
     -webkit-box-shadow: -1px 0px 40px 10px rgba(148, 189, 242, 1);
     -moz-box-shadow: -1px 0px 40px 10px rgba(148, 189, 242, 1);
-    box-shadow: -1px 0px 40px 10px rgba(148, 189, 242, 1);
+    box-shadow: -1px 0px 40px 10px rgba(148, 189, 242, 0.61);
   }
 
   .avatar {
-    width: 20%;
+    width: 5em;
     height: 5em;
     position: relative;
-    left: 1em;
-    border-radius: 5px;
-
+    left: 1.2em;
+    border-radius: 50%;
     img {
-      width: 5em;
-      height: 5em;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
+      border: 1px solid whitesmoke;
+      filter: drop-shadow(-1px 1px 10px #0d65d9);
     }
   }
 
   .reference-content {
     width: 80%;
+    margin-left: 1.5em;
     padding: 2em 2em 2em 1em;
     display: flex;
     flex-direction: column;
