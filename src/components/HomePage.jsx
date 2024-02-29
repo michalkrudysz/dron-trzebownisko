@@ -28,33 +28,36 @@ export default function HomePage({ language }) {
     contentByLanguage[language] || contentByLanguage.PL;
 
   return (
-    <div className={classes["home-page"]}>
-      <section className={classes.section}>
-        <div className={classes["left-container"]}>
-          <h1 className={classes.h1}>
-            <span className={classes["highlighted-text"]}>
-              {greeting.split(" ")[0]}
-            </span>{" "}
-            {greeting.split(" ").slice(1).join(" ")}
-          </h1>
-          <h2 className={classes.h2}>{description}</h2>
-          <div className={classes["button-container"]}>
-            <Button>{buttons.portfolio}</Button>
-            <Button kind={false}>{buttons.discover}</Button>
+    <>
+      <div className={classes["home-page"]}>
+        <section className={classes.section}>
+          <div className={classes["left-container"]}>
+            <h1 className={classes.h1}>
+              <span className={classes["highlighted-text"]}>
+                {greeting.split(" ")[0]}
+              </span>{" "}
+              {greeting.split(" ").slice(1).join(" ")}
+            </h1>
+            <h2 className={classes.h2}>{description}</h2>
+            <div className={classes["button-container"]}>
+              <Button>{buttons.portfolio}</Button>
+              <Button kind={false}>{buttons.discover}</Button>
+            </div>
           </div>
-        </div>
-        <div className={classes["right-container"]}>
-          <div className={classes.first}>
-            <ReferenceBox language={language} id={2} />
+          <div className={classes["right-container"]}>
+            <div className={classes.first}>
+              <ReferenceBox language={language} id={2} />
+            </div>
+            <div className={classes.second}>
+              <ReferenceBox language={language} id={1} />
+            </div>
+            <div className={classes.third}>
+              <ReferenceBox language={language} id={3} />
+            </div>
           </div>
-          <div className={classes.second}>
-            <ReferenceBox language={language} id={1} />
-          </div>
-          <div className={classes.third}>
-            <ReferenceBox language={language} id={3} />
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+      <div className={classes["shadow"]}></div>
+    </>
   );
 }
