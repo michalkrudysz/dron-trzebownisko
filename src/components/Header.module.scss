@@ -35,3 +35,78 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 1684px) {
+  .header {
+    .header-logo {
+      height: 5em;
+      padding-left: 18em;
+    }
+    .menu {
+      gap: 1em;
+    }
+    .language {
+      margin-right: 13em;
+    }
+  }
+}
+
+@media (max-width: 1515px) {
+  .header {
+    .header-logo {
+      height: 5em;
+      padding-left: 14em;
+    }
+    .menu {
+      gap: 1em;
+    }
+    .language {
+      margin-right: 10em;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .header {
+    .header-logo {
+      height: 5em;
+      padding-left: 10em;
+    }
+    .menu {
+      gap: 1em;
+    }
+    .language {
+      margin-right: 7em;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .header {
+    .header-logo {
+      height: 4.5em;
+      padding-left: 6em;
+    }
+    .menu {
+      gap: 0.8em;
+    }
+    .language {
+      margin-right: 4em;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    .header-logo {
+      height: 4.5em;
+      padding-left: 4em;
+    }
+    .menu {
+      gap: 0.7em;
+    }
+    .language {
+      margin-right: 2em;
+    }
+  }
+}

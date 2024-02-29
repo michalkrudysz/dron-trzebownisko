@@ -8,3 +8,9 @@ footer {
   justify-content: center;
   letter-spacing: 0.05em;
 }
+
+@media (max-width: 1515px) {
+  footer {
+    font-size: 0.85em;
+  }
+}
