@@ -130,3 +130,157 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    .header-logo {
+      height: 6.2em;
+      padding-left: 0;
+    }
+    .menu {
+      display: none;
+    }
+    .language {
+      font-size: 1.6em;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .hamburger-menu {
+      position: absolute;
+      cursor: pointer;
+      top: 1.5em;
+      right: 3.5em;
+      display: block;
+      width: 4.2em;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    .header-logo {
+      height: 5em;
+      padding-left: 0;
+    }
+    .menu {
+      display: none;
+    }
+    .language {
+      font-size: 1.1em;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .hamburger-menu {
+      position: absolute;
+      cursor: pointer;
+      top: 1.5em;
+      right: 1.4em;
+      display: block;
+      width: 2.8em;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    .header-logo {
+      height: 4.7em;
+      padding-left: 0;
+    }
+    .menu {
+      display: none;
+    }
+    .language {
+      font-size: 1em;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .hamburger-menu {
+      position: absolute;
+      cursor: pointer;
+      top: 1.5em;
+      right: 1.5em;
+      display: block;
+      width: 2.6em;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    .header-logo {
+      height: 4.3em;
+      padding-left: 0;
+    }
+    .menu {
+      display: none;
+    }
+    .language {
+      font-size: 1em;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .hamburger-menu {
+      position: absolute;
+      cursor: pointer;
+      top: 1.5em;
+      right: 1.5em;
+      display: block;
+      width: 2.3em;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    .header-logo {
+      height: 4.5em;
+      padding-left: 0;
+    }
+    .menu {
+      display: none;
+    }
+    .language {
+      font-size: 1em;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .hamburger-menu {
+      position: absolute;
+      cursor: pointer;
+      top: 1.5em;
+      right: 1.5em;
+      display: block;
+      width: 2.4em;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
