@@ -1,8 +1,9 @@
 import classes from "./Header.module.scss";
 import Button from "./Button";
 import logo from "../assets/logo-small.png";
+import menu from "../assets/hamburger-menu.png";
 
-export default function Header({ language, changeLanguage }) {
+export default function Header({ language, changeLanguage, toggleMenu }) {
   return (
     <header className={classes.header}>
       <div className={classes["header-logo"]}>
@@ -18,6 +19,9 @@ export default function Header({ language, changeLanguage }) {
       </nav>
       <div className={classes.language} onClick={changeLanguage}>
         {language === "PL" ? "EN" : "PL"}
+      </div>
+      <div className={classes["hamburger-menu"]} onClick={toggleMenu}>
+        <img src={menu} alt="Menu" />
       </div>
     </header>
   );

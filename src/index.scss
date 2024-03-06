@@ -16,6 +16,9 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -27,5 +30,23 @@ body {
 }
 
 #root {
-  height: 100%;
+  height: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0.8em;
+  width: 100%;
+  display: flex;
+  font-size: 0.9em;
+  font-weight: 300;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  z-index: 3;
+}
+
+@media (max-width: 1515px) {
+  footer {
+    font-size: 0.9em;
+  }
 }

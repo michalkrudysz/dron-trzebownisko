@@ -1,17 +1,5 @@
-footer {
-  position: fixed;
-  bottom: 0.8em;
-  width: 100%;
-  display: flex;
-  font-size: 0.9em;
-  font-weight: 300;
-  justify-content: center;
-  letter-spacing: 0.05em;
-  z-index: 3;
-}
-
-@media (max-width: 1515px) {
-  footer {
-    font-size: 0.9em;
+@media (max-width: 1025px) {
+  .footer {
+    display: none;
   }
 }
