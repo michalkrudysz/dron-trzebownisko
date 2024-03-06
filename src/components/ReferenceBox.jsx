@@ -8,9 +8,9 @@ const references = [
   {
     id: 1,
     logo: gminaTrzebownisko,
-    companyName: "Gmina Trzebownisko",
+    companyName: "Urząd Gminy Trzebownisko",
     descriptionPL: `"Na szczególne uznanie zasługuje stworzenie w 2018 roku spotu promocyjnego dla Gminy, dostępnego na platformie YouTube. Z głębokim zrozumieniem potrzeb społeczności, Pan Michał Krudysz uwiecznił naszą gminę w różnych aspektach..."`,
-    descriptionEN: `"Special recognition deserves the creation of a promotional video for the Municipality in 2018, available on the YouTube platform. With a deep understanding of community needs, Mr. Michał Krudysz immortalized our municipality in various aspects..."`,
+    descriptionEN: `Special recognition deserves the creation of a promotional video for the Municipality in 2018, available on the YouTube platform. With a deep understanding of community needs, Mr. Michał Krudysz immortalized our municipality in various aspects...`,
   },
   {
     id: 2,

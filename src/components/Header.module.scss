@@ -97,13 +97,30 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .header {
     .header-logo {
       height: 4.5em;
       padding-left: 4em;
     }
     .menu {
+      gap: 0.7em;
+    }
+    .language {
+      margin-right: 2em;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    justify-content: center;
+    .header-logo {
+      height: 4.5em;
+      padding-left: 4em;
+    }
+    .menu {
+      display: none;
       gap: 0.7em;
     }
     .language {

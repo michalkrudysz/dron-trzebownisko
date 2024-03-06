@@ -145,3 +145,20 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .reference-box {
+    width: 35em;
+    height: 15em;
+    .avatar {
+      width: 6em;
+      height: 6em;
+      left: 3em;
+    }
+    .reference-content {
+      margin-left: 5em;
+      font-size: 1em;
+      padding: 1.1em 1.1em 1.1em 0.5em;
+    }
+  }
+}
