@@ -49,10 +49,9 @@
     font-size: 0.85em;
   }
 }
-
 @media (max-width: 1025px) {
   .button {
-    width: 20em;
+    width: auto;
     padding: 0.7em;
     font-size: 2em;
     font-weight: 500;
