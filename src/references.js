@@ -1,31 +1,29 @@
-const references = [
+import gminaTrzebownisko from "./assets/company-logos/gmina-trzebownisko.png";
+import waran from "./assets/company-logos/waran.png";
+import innoreg from "./assets/company-logos/innoreg.png";
+
+const REFERENCES = [
   {
     id: 1,
-    logoUrl: "./assets/company-logos/gmina-trzebownisko.png",
-    companyName: "Gmina Trzebownisko",
-    descriptionPL:
-      "Na szczególne uznanie zasługuje stworzenie w 2018 roku spotu promocyjnego dla Gminy, dostępnego na platformie YouTube. Z głębokim zrozumieniem potrzeb społeczności, Pan Michał Krudysz uwiecznił naszą gminę w różnych aspektach...",
-    descriptionEN:
-      "Special recognition deserves the creation of a promotional video for the Municipality in 2018, available on the YouTube platform. With a deep understanding of community needs, Mr. Michał Krudysz immortalized our municipality in various aspects...",
+    logo: gminaTrzebownisko,
+    companyName: "Urząd Gminy Trzebownisko",
+    descriptionPL: `"Na szczególne uznanie zasługuje stworzenie w 2018 roku spotu promocyjnego dla Gminy, dostępnego na platformie YouTube..."`,
+    descriptionEN: `Special recognition deserves the creation of a promotional video for the Municipality in 2018, available on the YouTube platform...`,
   },
   {
     id: 2,
-    logoUrl: "https://example.com/logo2.png",
-    companyName: "GreenFuture",
-    descriptionPL:
-      "GreenFuture specjalizuje się w ekologicznych i zrównoważonych technologiach.",
-    descriptionEN:
-      "GreenFuture specializes in eco-friendly and sustainable technologies.",
+    logo: waran,
+    companyName: "Waran Regały",
+    descriptionPL: `"Współpraca na każdym etapie realizacji zlecenia przebiegała w sposób wzorowy..."`,
+    descriptionEN: `The cooperation at every stage of the order execution was exemplary...`,
   },
   {
     id: 3,
-    logoUrl: "https://example.com/logo3.png",
-    companyName: "FinSecure",
-    descriptionPL:
-      "FinSecure oferuje zaawansowane rozwiązania bezpieczeństwa dla sektora finansowego.",
-    descriptionEN:
-      "FinSecure offers advanced security solutions for the financial sector.",
+    logo: innoreg,
+    companyName: "Innoreg Sp. z o.o.",
+    descriptionPL: `"Pan Michał wykazał się nie tylko zaangażowaniem, ale również strategicznym myśleniem w zakresie logistyki projektu..."`,
+    descriptionEN: `Mr. Michał demonstrated not only commitment but also strategic thinking in terms of the project's logistics...`,
   },
 ];
 
-export default references;
+export default REFERENCES;

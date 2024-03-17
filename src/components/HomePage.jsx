@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import REFERENCES from "../references";
 import classes from "./HomePage.module.scss";
 import Button from "./Button";
 import ReferenceBox from "./ReferenceBox";
@@ -25,7 +26,6 @@ const contentByLanguage = {
   },
 };
 
-// SEO information
 const seo = {
   title:
     "Dron Trzebownisko - Profesjonalne Zdjęcia Lotnicze Gminy | Michał Krudysz",
@@ -91,15 +91,20 @@ export default function HomePage({ language }) {
             </div>
           </div>
           <div className={classes["right-container"]}>
-            <div className={classes.first}>
-              <ReferenceBox language={language} id={2} />
-            </div>
-            <div className={classes.second}>
-              <ReferenceBox language={language} id={1} />
-            </div>
-            <div className={classes.third}>
-              <ReferenceBox language={language} id={3} />
-            </div>
+            {REFERENCES.slice(0, 3).map((reference, index) => (
+              <div
+                key={reference.id}
+                className={classes[["first", "second", "third"][index]]}>
+                <ReferenceBox
+                  id={reference.id}
+                  logo={reference.logo}
+                  companyName={reference.companyName}
+                  descriptionPL={reference.descriptionPL}
+                  descriptionEN={reference.descriptionEN}
+                  language={language}
+                />
+              </div>
+            ))}
           </div>
         </section>
       </div>
