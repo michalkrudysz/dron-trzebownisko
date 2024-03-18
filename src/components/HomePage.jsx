@@ -91,10 +91,11 @@ export default function HomePage({ language }) {
             </div>
           </div>
           <div className={classes["right-container"]}>
-            {REFERENCES.slice(0, 3).map((reference, index) => (
+            {REFERENCES.slice(5, 8).map((reference, index) => (
               <div
                 key={reference.id}
-                className={classes[["first", "second", "third"][index]]}>
+                className={classes[["first", "second", "third"][index]]}
+              >
                 <ReferenceBox
                   id={reference.id}
                   logo={reference.logo}
