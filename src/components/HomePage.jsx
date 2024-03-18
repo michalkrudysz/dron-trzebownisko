@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import REFERENCES from "../references";
 import classes from "./HomePage.module.scss";
@@ -51,7 +51,29 @@ const seo = {
   },
 };
 
+const getRandomIndexes = (length, count) => {
+  let indexes = [];
+  while (indexes.length < count) {
+    let index = Math.floor(Math.random() * length);
+    if (!indexes.includes(index)) {
+      indexes.push(index);
+    }
+  }
+  return indexes;
+};
+
 export default function HomePage({ language }) {
+  const [indexes, setIndexes] = useState(
+    getRandomIndexes(REFERENCES.length, 3)
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndexes(getRandomIndexes(REFERENCES.length, 3));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   const { greeting, description, buttons } =
     contentByLanguage[language] || contentByLanguage.PL;
 
@@ -91,21 +113,28 @@ export default function HomePage({ language }) {
             </div>
           </div>
           <div className={classes["right-container"]}>
-            {REFERENCES.slice(5, 8).map((reference, index) => (
-              <div
-                key={reference.id}
-                className={classes[["first", "second", "third"][index]]}
-              >
-                <ReferenceBox
-                  id={reference.id}
-                  logo={reference.logo}
-                  companyName={reference.companyName}
-                  descriptionPL={reference.descriptionPL}
-                  descriptionEN={reference.descriptionEN}
-                  language={language}
-                />
-              </div>
-            ))}
+            {indexes.map((index) => {
+              const reference = REFERENCES[index];
+              return (
+                <div
+                  key={reference.id}
+                  className={
+                    classes[
+                      ["first", "second", "third"][indexes.indexOf(index)]
+                    ]
+                  }
+                >
+                  <ReferenceBox
+                    id={reference.id}
+                    logo={reference.logo}
+                    companyName={reference.companyName}
+                    descriptionPL={reference.descriptionPL}
+                    descriptionEN={reference.descriptionEN}
+                    language={language}
+                  />
+                </div>
+              );
+            })}
           </div>
         </section>
       </div>
