@@ -2,8 +2,11 @@ import classes from "./Header.module.scss";
 import Button from "./Button";
 import logo from "../assets/logo-small.png";
 import menu from "../assets/hamburger-menu.png";
+import { useLanguage } from "../store/language/languageContext";
 
-export default function Header({ language, changeLanguage, toggleMenu }) {
+export default function Header({ toggleMenu }) {
+  const { language, toggleLanguage } = useLanguage();
+
   return (
     <header className={classes.header}>
       <div className={classes["header-logo"]}>
@@ -17,7 +20,7 @@ export default function Header({ language, changeLanguage, toggleMenu }) {
           {language === "PL" ? "Odkryj gminę" : "Explore the Municipality"}
         </Button>
       </nav>
-      <div className={classes.language} onClick={changeLanguage}>
+      <div className={classes.language} onClick={toggleLanguage}>
         {language === "PL" ? "EN" : "PL"}
       </div>
       <div className={classes["hamburger-menu"]} onClick={toggleMenu}>

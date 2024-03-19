@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { useLanguage } from "../store/language/languageContext";
 import REFERENCES from "../references";
 import classes from "./HomePage.module.scss";
 import Button from "./Button";
@@ -62,7 +63,9 @@ const getRandomIndexes = (length, count) => {
   return indexes;
 };
 
-export default function HomePage({ language }) {
+export default function HomePage() {
+  const { language } = useLanguage();
+
   const [indexes, setIndexes] = useState(
     getRandomIndexes(REFERENCES.length, 3)
   );

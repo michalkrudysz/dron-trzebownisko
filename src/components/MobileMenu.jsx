@@ -1,7 +1,9 @@
 import classes from "./MobileMenu.module.scss";
 import Button from "./Button";
+import { useLanguage } from "../store/language/languageContext";
 
-export default function MobileMenu({ language }) {
+export default function MobileMenu() {
+  const { language } = useLanguage();
   return (
     <>
       <div className={classes["mobile-menu"]}>
