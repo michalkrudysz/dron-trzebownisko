@@ -1,31 +1,13 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useLanguage } from "../store/language/languageContext";
-import REFERENCES from "../references";
+import REFERENCES from "../../data/references";
+import HOME_PAGE_CONTENT from "../../data/homePageContent";
 import classes from "./HomePage.module.scss";
 import Button from "./Button";
 import ReferenceBox from "./ReferenceBox";
 
-const contentByLanguage = {
-  PL: {
-    greeting: "Cześć! Nazywam się Michał",
-    description:
-      "Od 2017 do 2021 roku tworzyłem drontrzebownisko.pl, by z innej perspektywy pokazać piękno naszej Gminy. Zapraszam Cię do wspólnego odkrywania jej zakątków oraz historii mojego projektu.",
-    buttons: {
-      portfolio: "Portfolio",
-      discover: "Odkryj gminę",
-    },
-  },
-  EN: {
-    greeting: "Hello! My name is Michał",
-    description:
-      "From 2017 to 2021, I created drontrzebownisko.pl to show the beauty of our Municipality from a different perspective. I invite you to explore its various places and the history of my project together.",
-    buttons: {
-      portfolio: "Portfolio",
-      discover: "Explore the Municipality",
-    },
-  },
-};
+const contentByLanguage = HOME_PAGE_CONTENT;
 
 const seo = {
   title:

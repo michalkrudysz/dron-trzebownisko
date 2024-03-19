@@ -1,11 +1,11 @@
-import gminaTrzebownisko from "./assets/company-logos/gmina-trzebownisko.png";
-import waran from "./assets/company-logos/waran.png";
-import innoreg from "./assets/company-logos/innoreg.png";
-import tubisFilm from "./assets/company-logos/tubis-film.png";
-import visualArtStudio from "./assets/company-logos/visual-art-studio.png";
-import newVentures from "./assets/company-logos/new-ventures.png";
-import kamko from "./assets/company-logos/kamko.png";
-import videoMat from "./assets/company-logos/videomat.png";
+import gminaTrzebownisko from "../src/assets/company-logos/gmina-trzebownisko.png";
+import waran from "../src/assets/company-logos/waran.png";
+import innoreg from "../src/assets/company-logos/innoreg.png";
+import tubisFilm from "../src/assets/company-logos/tubis-film.png";
+import visualArtStudio from "../src/assets/company-logos/visual-art-studio.png";
+import newVentures from "../src/assets/company-logos/new-ventures.png";
+import kamko from "../src/assets/company-logos/kamko.png";
+import videoMat from "../src/assets/company-logos/videomat.png";
 
 const REFERENCES = [
   {
