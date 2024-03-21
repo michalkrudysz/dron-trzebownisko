@@ -13,7 +13,7 @@ export default function Main() {
 
   return (
     <>
-      <Header toggleMenu={toggleMenu} />
+      <Header toggleMenu={toggleMenu} isOpen={isMenuOpen} />
       {isMenuOpen ? (
         <MobileMenu />
       ) : (

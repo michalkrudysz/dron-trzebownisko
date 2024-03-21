@@ -2,9 +2,10 @@ import classes from "./Header.module.scss";
 import Button from "./Button";
 import logo from "../assets/logo-small.png";
 import menu from "../assets/hamburger-menu.png";
+import closeMenu from "../assets/close-menu.png";
 import { useLanguage } from "../store/language/languageContext";
 
-export default function Header({ toggleMenu }) {
+export default function Header({ toggleMenu, isOpen }) {
   const { language, toggleLanguage } = useLanguage();
 
   return (
@@ -24,7 +25,11 @@ export default function Header({ toggleMenu }) {
         {language === "PL" ? "EN" : "PL"}
       </div>
       <div className={classes["hamburger-menu"]} onClick={toggleMenu}>
-        <img src={menu} alt="Menu" />
+        {isOpen ? (
+          <img src={closeMenu} alt="Menu" />
+        ) : (
+          <img src={menu} alt="Menu" />
+        )}
       </div>
     </header>
   );
