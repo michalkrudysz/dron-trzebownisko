@@ -1,8 +1,6 @@
-import React from "react";
 import classes from "./ReferenceBox.module.scss";
 
 export default function ReferenceBox({
-  // id, Przyda się w przyszłości to wyświetlania okna modalnego z konkretną referencją
   logo,
   companyName,
   descriptionPL,

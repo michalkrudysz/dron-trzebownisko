@@ -26,9 +26,12 @@ export default function HomePage() {
   const [indexes, setIndexes] = useState(
     getRandomIndexes(REFERENCES.length, 3)
   );
+  const [referenceImage, setReferenceImage] = useState();
 
-  const modalReferenceRef = useRef(null);
-  const handleModalReference = () => {
+  const modalReferenceRef = useRef();
+
+  const handleModalReference = (image) => {
+    setReferenceImage(image);
     modalReferenceRef.current.openModal();
   };
 
@@ -59,15 +62,13 @@ export default function HomePage() {
               <Button kind={false}>{buttons.discover}</Button>
             </div>
           </div>
-          <div
-            onClick={handleModalReference}
-            className={classes["right-container"]}
-          >
-            <ModalReference ref={modalReferenceRef} />
+
+          <div className={classes["right-container"]}>
             {indexes.map((index) => {
               const reference = REFERENCES[index];
               return (
                 <div
+                  onClick={() => handleModalReference(reference.referenceImage)}
                   key={reference.id}
                   className={
                     classes[
@@ -75,6 +76,10 @@ export default function HomePage() {
                     ]
                   }
                 >
+                  <ModalReference
+                    image={referenceImage}
+                    ref={modalReferenceRef}
+                  />
                   <ReferenceBox
                     id={reference.id}
                     logo={reference.logo}

@@ -1,10 +1,9 @@
 import classes from "./ModalReference.module.scss";
 import ReactDOM from "react-dom";
-import innoReg from "../assets/company-logos/innoreg-reference.jpg";
 import buttonClose from "../assets/close-reference.png";
 import { useState, forwardRef, useImperativeHandle } from "react";
 
-const ModalReference = forwardRef((props, ref) => {
+const ModalReference = forwardRef(({ image }, ref) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal(event) {
@@ -35,7 +34,7 @@ const ModalReference = forwardRef((props, ref) => {
       />
       <div className={classes["modal-reference"]}>
         <div className={classes["modal-reference__content"]}>
-          <img className={classes["reference"]} src={innoReg} alt="reference" />
+          <img className={classes["reference"]} src={image} alt="reference" />
         </div>
       </div>
       <div className={classes["shadow"]}></div>
