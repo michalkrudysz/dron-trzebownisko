@@ -18,7 +18,7 @@
   border-radius: 10px;
   overflow: hidden;
   transform: translate(-50%, -50%);
-
+  transition: border 0.1s ease-in;
   .modal-reference__content {
     display: flex;
     flex-direction: column;
@@ -31,6 +31,9 @@
       height: 100%;
       object-fit: contain;
     }
+  }
+  &:hover {
+    border: solid 4px #1e6fd9;
   }
 }
 
