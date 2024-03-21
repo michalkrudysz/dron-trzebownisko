@@ -64,6 +64,7 @@ export default function HomePage() {
           </div>
 
           <div className={classes["right-container"]}>
+            <ModalReference image={referenceImage} ref={modalReferenceRef} />
             {indexes.map((index) => {
               const reference = REFERENCES[index];
               return (
@@ -76,10 +77,6 @@ export default function HomePage() {
                     ]
                   }
                 >
-                  <ModalReference
-                    image={referenceImage}
-                    ref={modalReferenceRef}
-                  />
                   <ReferenceBox
                     id={reference.id}
                     logo={reference.logo}
