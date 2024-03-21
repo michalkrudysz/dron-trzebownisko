@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { useLanguage } from "../store/language/languageContext";
 import REFERENCES from "../../data/references";
@@ -53,6 +53,11 @@ export default function HomePage() {
     getRandomIndexes(REFERENCES.length, 3)
   );
 
+  const modalReferenceRef = useRef(null);
+  const handleModalReference = () => {
+    modalReferenceRef.current.openModal();
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIndexes(getRandomIndexes(REFERENCES.length, 3));
@@ -98,8 +103,11 @@ export default function HomePage() {
               <Button kind={false}>{buttons.discover}</Button>
             </div>
           </div>
-          <div className={classes["right-container"]}>
-            <ModalReference />
+          <div
+            onClick={handleModalReference}
+            className={classes["right-container"]}
+          >
+            <ModalReference ref={modalReferenceRef} />
             {indexes.map((index) => {
               const reference = REFERENCES[index];
               return (
