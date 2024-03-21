@@ -6,6 +6,7 @@ import HOME_PAGE_CONTENT from "../../data/homePageContent";
 import classes from "./HomePage.module.scss";
 import Button from "./Button";
 import ReferenceBox from "./ReferenceBox";
+import ModalReference from "./ModalReference";
 
 const contentByLanguage = HOME_PAGE_CONTENT;
 
@@ -98,6 +99,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className={classes["right-container"]}>
+            <ModalReference />
             {indexes.map((index) => {
               const reference = REFERENCES[index];
               return (
