@@ -55,7 +55,114 @@
   background-color: rgba(0, 0, 0, 0.8);
   animation: fadeIn 0.5s ease forwards;
 }
+@media (max-width: 1440px) {
+  .button-close {
+    width: 2.7em;
+  }
+}
+@media (max-width: 1160px) {
+  .button-close {
+    width: 2.5em;
+    right: 4em;
+  }
+}
+@media (max-width: 1025px) {
+  .button-close {
+    position: fixed;
+    width: 2.5em;
+    right: 4em;
+  }
+  .modal-reference {
+    position: fixed;
+  }
+  .shadow {
+    position: fixed;
+  }
+}
 
+@media (max-width: 768px) {
+  .button-close {
+    position: fixed;
+    width: 2.8em;
+    right: 3.2em;
+    top: 0.5%;
+    z-index: 51;
+  }
+  .modal-reference {
+    position: fixed;
+  }
+  .shadow {
+    position: fixed;
+  }
+}
+@media (max-width: 430px) {
+  .button-close {
+    position: fixed;
+    width: 2.5em;
+    right: 0.35em;
+    top: 10.5%;
+    z-index: 51;
+  }
+  .modal-reference {
+    position: fixed;
+    height: 70%;
+    max-width: 98%;
+  }
+  .shadow {
+    position: fixed;
+  }
+}
+@media (max-width: 390px) {
+  .button-close {
+    position: fixed;
+    width: 2.3em;
+    right: 0.2em;
+    top: 12%;
+    z-index: 51;
+  }
+  .modal-reference {
+    position: fixed;
+    height: 67%;
+    max-width: 97%;
+  }
+  .shadow {
+    position: fixed;
+  }
+}
+@media (max-width: 375px) {
+  .button-close {
+    position: fixed;
+    width: 2.2em;
+    right: 0.45em;
+    top: 7%;
+    z-index: 51;
+  }
+  .modal-reference {
+    position: fixed;
+    height: 75%;
+    max-width: 97%;
+  }
+  .shadow {
+    position: fixed;
+  }
+}
+@media (max-width: 360px) {
+  .button-close {
+    position: fixed;
+    width: 2.2em;
+    right: 0.2em;
+    top: 8%;
+    z-index: 51;
+  }
+  .modal-reference {
+    position: fixed;
+    height: 75%;
+    max-width: 97%;
+  }
+  .shadow {
+    position: fixed;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
