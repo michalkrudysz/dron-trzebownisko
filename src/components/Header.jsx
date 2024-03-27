@@ -5,19 +5,28 @@ import menu from "../assets/hamburger-menu.png";
 import closeMenu from "../assets/close-menu.png";
 import { useLanguage } from "../store/language/languageContext";
 
-export default function Header({ toggleMenu, isOpen }) {
+export default function Header({ toggleMenu, isOpen, changePage }) {
   const { language, toggleLanguage } = useLanguage();
 
   return (
     <header className={classes.header}>
       <div className={classes["header-logo"]}>
-        <img src={logo} alt="Logo" />
+        <img onClick={() => changePage("homePage")} src={logo} alt="Logo" />
       </div>
       <nav className={classes.menu}>
-        <Button>{language === "PL" ? "Portfolio" : "Portfolio"}</Button>
-        <Button>{language === "PL" ? "Referencje" : "References"}</Button>
-        <Button>{language === "PL" ? "O mnie" : "About Me"}</Button>
-        <Button kind={false}>
+        <Button onClick={() => changePage("portfolio")}>
+          {language === "PL" ? "Portfolio" : "Portfolio"}
+        </Button>
+        <Button onClick={() => changePage("references")}>
+          {language === "PL" ? "Referencje" : "References"}
+        </Button>
+        <Button onClick={() => changePage("aboutMe")}>
+          {language === "PL" ? "O mnie" : "About Me"}
+        </Button>
+        <Button
+          onClick={() => changePage("exploreTheMunicipality")}
+          kind={false}
+        >
           {language === "PL" ? "Odkryj gminę" : "Explore the Municipality"}
         </Button>
       </nav>
