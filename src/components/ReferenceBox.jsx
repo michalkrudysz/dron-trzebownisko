@@ -1,12 +1,13 @@
 import classes from "./ReferenceBox.module.scss";
+import { useLanguage } from "../store/language/languageContext";
 
 export default function ReferenceBox({
   logo,
   companyName,
   descriptionPL,
   descriptionEN,
-  language,
 }) {
+  const { language } = useLanguage();
   const getDescription = (language) => {
     return language === "PL" ? descriptionPL : descriptionEN;
   };

@@ -47,7 +47,11 @@ export default function Main() {
       ) : (
         <>
           {displayPage()}
-          <footer className={classes.footer}>&copy; Michał Krudysz 2024</footer>
+          {currentPage === "homePage" && (
+            <footer className={classes.footer}>
+              &copy; Michał Krudysz 2024
+            </footer>
+          )}
         </>
       )}
     </>

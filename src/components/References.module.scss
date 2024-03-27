@@ -1,3 +1,56 @@
+.headline {
+  margin-top: 2.5em;
+
+  .container {
+    display: flex;
+    justify-content: center;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h1 {
+        font-size: 2.4em;
+        font-weight: 800;
+        letter-spacing: 0.02;
+        background-color: #5c9df2;
+        padding: 1em 2em;
+      }
+
+      p {
+        font-size: 1.05em;
+        font-weight: 400;
+        padding: 1.5em 3em 0;
+      }
+    }
+
+    .right {
+      width: 40%;
+      background-color: #1e2229c2;
+      padding: 2em 3em;
+      margin-left: 2em;
+      box-shadow: -1px 1px 21px -4px rgba(92, 157, 242, 1);
+
+      h2 {
+        font-size: 1.05em;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+}
+
 .references {
-  color: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+  margin: 3em 0 2em;
+  padding: 0 8em;
+  li {
+    all: unset;
+  }
 }

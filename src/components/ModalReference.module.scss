@@ -1,5 +1,5 @@
 .button-close {
-  position: absolute;
+  position: fixed;
   top: 2.8em;
   right: 5em;
   z-index: 49;
@@ -10,7 +10,7 @@
 }
 
 .modal-reference {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   z-index: 50;
@@ -46,7 +46,7 @@
 }
 
 .shadow {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

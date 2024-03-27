@@ -83,7 +83,6 @@ export default function HomePage() {
                     companyName={reference.companyName}
                     descriptionPL={reference.descriptionPL}
                     descriptionEN={reference.descriptionEN}
-                    language={language}
                   />
                 </div>
               );
