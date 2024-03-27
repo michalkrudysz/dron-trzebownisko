@@ -1,15 +1,13 @@
 .mobile-menu {
   display: flex;
   flex-direction: column;
-
   gap: 2.2em;
   justify-content: center;
   align-items: center;
   height: auto;
   position: relative;
-  top: 50%;
+  top: 20%;
   font-size: 1.4em;
-  transform: translate(0, -50%);
   animation: slideInFromRight 1s ease-out forwards;
 }
 
