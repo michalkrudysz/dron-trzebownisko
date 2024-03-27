@@ -5,13 +5,25 @@ import menu from "../assets/hamburger-menu.png";
 import closeMenu from "../assets/close-menu.png";
 import { useLanguage } from "../store/language/languageContext";
 
-export default function Header({ toggleMenu, isOpen, changePage }) {
+export default function Header({
+  toggleMenu,
+  isOpen,
+  changePage,
+  setIsMenuOpen,
+}) {
   const { language, toggleLanguage } = useLanguage();
 
   return (
     <header className={classes.header}>
       <div className={classes["header-logo"]}>
-        <img onClick={() => changePage("homePage")} src={logo} alt="Logo" />
+        <img
+          onClick={() => {
+            changePage("homePage");
+            setIsMenuOpen(false);
+          }}
+          src={logo}
+          alt="Logo"
+        />
       </div>
       <nav className={classes.menu}>
         <Button onClick={() => changePage("portfolio")}>

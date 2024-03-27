@@ -40,9 +40,10 @@ export default function Main() {
         toggleMenu={toggleMenu}
         isOpen={isMenuOpen}
         changePage={changePage}
+        setIsMenuOpen={setIsMenuOpen}
       />
       {isMenuOpen ? (
-        <MobileMenu changePage={changePage} />
+        <MobileMenu changePage={changePage} setIsMenuOpen={setIsMenuOpen} />
       ) : (
         <>
           {displayPage()}
