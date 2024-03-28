@@ -4,6 +4,7 @@ import Header from "./Header";
 import HomePage from "./HomePage";
 import MobileMenu from "./MobileMenu";
 import References from "./References";
+import ExploreTheMunicipality from "./ExploreTheMunicipality";
 
 export default function Main() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
