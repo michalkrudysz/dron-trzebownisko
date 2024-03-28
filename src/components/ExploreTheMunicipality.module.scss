@@ -1,21 +1,16 @@
 .top {
   .header {
-    margin-top: 2em;
+    margin-top: 2.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     h3 {
       text-transform: uppercase;
-      color: #f2f2f2;
+      color: #586274e5;
       letter-spacing: 0.05em;
-      background-color: #5c9df2;
-      padding-left: 1em;
-      padding-right: 1em;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
+      font-size: 1.1em;
     }
     h1 {
-      margin-top: 0.1em;
       letter-spacing: 0.03em;
     }
   }
@@ -26,7 +21,7 @@
     margin-top: 1em;
     .block {
       border: 2px solid #1a1e25e5;
-      width: 35em;
+      width: 38em;
       background-color: #12151ae5;
       display: flex;
       flex-direction: column;
@@ -36,10 +31,40 @@
       padding-bottom: 1em;
       padding-left: 1em;
       padding-right: 1em;
-    }
-    .left-block {
-    }
-    .right-block {
+      .title {
+        color: #3084f2;
+        font-size: 2em;
+        font-weight: 700;
+        height: 30%;
+      }
+      .description {
+        margin-top: 0.2em;
+        color: #f2f2f2;
+        font-size: 1.4em;
+        padding-left: 2em;
+        padding-right: 2em;
+        height: 70%;
+        text-align: center;
+        margin-bottom: 0.7em;
+      }
+      .button {
+        all: unset;
+        cursor: pointer;
+
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        border: 1px solid #5096f2;
+        text-align: center;
+        font-weight: 400;
+        width: 40%;
+        transition: background-color 0.3s ease-in;
+        &:hover {
+          background-color: #5096f2;
+        }
+      }
+      .custom-select {
+        width: 40%;
+      }
     }
   }
 }
