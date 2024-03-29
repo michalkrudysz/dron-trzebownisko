@@ -16,6 +16,10 @@ import school2017 from "../src/assets/municipality-of-trzebownisko/laka/school-2
 import school2017_2 from "../src/assets/municipality-of-trzebownisko/laka/school-2017-2.png";
 import church2019 from "../src/assets/municipality-of-trzebownisko/laka/church-2019.png";
 import church2019_2 from "../src/assets/municipality-of-trzebownisko/laka/church-2019-2.png";
+import lukawiecChurch2017 from "../src/assets/municipality-of-trzebownisko/lukawiec/church-2017.png";
+import lukawiecChurch2017_2 from "../src/assets/municipality-of-trzebownisko/lukawiec/church-2017-2.png";
+import lukawiecChurch2019 from "../src/assets/municipality-of-trzebownisko/lukawiec/church-2019.png";
+import lukawiecChurch2019_2 from "../src/assets/municipality-of-trzebownisko/lukawiec/church-2019-2.png";
 
 const MUNICIPALITY_OF_TRZEBOWNISKO = [
   {
@@ -205,6 +209,55 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
       },
       {
         img: school2017_2,
+        alt: "zdjęcie portu lotniczego",
+        altEN: "photo of the airport",
+        dateOfPhoto: 2017,
+        curiosityPL:
+          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
+        curiosityEN:
+          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+      },
+    ],
+  },
+  {
+    name: "Łukawiec",
+    descriptionPL:
+      "Łukawiec to malownicza wieś położona w sercu Podkarpacia, wchodząca w skład Gminy Trzebownisko, znajdująca się w bliskim sąsiedztwie Rzeszowa. Jest to miejsce, gdzie tradycja łączy się z nowoczesnością, a lokalna społeczność pielęgnuje bogate dziedzictwo kulturowe regionu. Otoczona zielonymi wzgórzami i rozległymi polami, Łukawiec oferuje swoim mieszkańcom i odwiedzającym spokój oraz bliskość natury, stanowiąc idealne miejsce dla osób szukających ucieczki od miejskiego zgiełku. ",
+    descriptionEN:
+      "Jasionka is a small town located in south-eastern Poland, in the Podkarpackie Voivodeship, near Rzeszów. It is known primarily thanks to its developing Rzeszów-Jasionka Airport, which is an important communication point for the region, offering domestic and international connections. Besides its transport role, Jasionka attracts attention thanks to the modern Exhibition and Congress Centre, which is the venue for many significant events, trade fairs, conferences, and business meetings.",
+    Materials: [
+      {
+        img: lukawiecChurch2017,
+        alt: "zdjęcie portu lotniczego",
+        altEN: "photo of the airport",
+        dateOfPhoto: 2017,
+        curiosityPL:
+          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
+        curiosityEN:
+          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+      },
+      {
+        img: lukawiecChurch2017_2,
+        alt: "zdjęcie portu lotniczego",
+        altEN: "photo of the airport",
+        dateOfPhoto: 2017,
+        curiosityPL:
+          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
+        curiosityEN:
+          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+      },
+      {
+        img: lukawiecChurch2019,
+        alt: "zdjęcie portu lotniczego",
+        altEN: "photo of the airport",
+        dateOfPhoto: 2017,
+        curiosityPL:
+          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
+        curiosityEN:
+          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+      },
+      {
+        img: lukawiecChurch2019_2,
         alt: "zdjęcie portu lotniczego",
         altEN: "photo of the airport",
         dateOfPhoto: 2017,
