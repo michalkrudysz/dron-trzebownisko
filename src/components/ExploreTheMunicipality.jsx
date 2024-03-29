@@ -1,19 +1,18 @@
 import Select from "react-select";
 import classes from "./ExploreTheMunicipality.module.scss";
+import Location from "./Location";
 
 export default function ExploreTheMunicipality() {
   const options = [
-    { value: "1", label: "Wszystkie miejscowości" },
-    { value: "2", label: "Trzebownisko" },
-    { value: "3", label: "Łąka" },
-    { value: "4", label: "Łukawiec" },
-    { value: "5", label: "Jasionka" },
-    { value: "6", label: "Wólka Podleśna" },
-    { value: "7", label: "Terliczka" },
-    { value: "8", label: "Jasionka" },
-    { value: "9", label: "Nowa Wieś" },
-    { value: "10", label: "Zaczernie" },
-    { value: "11", label: "Tajęcina" },
+    { value: "1", label: "Trzebownisko" },
+    { value: "2", label: "Łąka" },
+    { value: "3", label: "Łukawiec" },
+    { value: "4", label: "Jasionka" },
+    { value: "5", label: "Wólka Podleśna" },
+    { value: "6", label: "Terliczka" },
+    { value: "7", label: "Nowa Wieś" },
+    { value: "8", label: "Zaczernie" },
+    { value: "9", label: "Tajęcina" },
   ];
 
   const customStyles = {
@@ -34,7 +33,7 @@ export default function ExploreTheMunicipality() {
         borderColor: "#5096f2",
       },
     }),
-    menu: (provided, state) => ({
+    menu: (provided) => ({
       ...provided,
       backgroundColor: "#3084F2",
       cursor: "pointer",
@@ -50,63 +49,80 @@ export default function ExploreTheMunicipality() {
         color: "white",
       },
     }),
-    singleValue: (provided, state) => ({
+    singleValue: (provided) => ({
       ...provided,
       color: "white",
     }),
-    placeholder: (provided, state) => ({
+    placeholder: (provided) => ({
       ...provided,
       color: "white",
     }),
-    input: (provided, state) => ({
+    input: (provided) => ({
       ...provided,
       color: "white",
     }),
-    noOptionsMessage: (provided, state) => ({
+    noOptionsMessage: (provided) => ({
       ...provided,
       color: "white",
     }),
-    dropdownIndicator: (provided, state) => ({
+    dropdownIndicator: (provided) => ({
       ...provided,
       color: "white",
       "&:hover": {
         color: "white",
       },
     }),
-    indicatorSeparator: (provided, state) => ({
+    indicatorSeparator: (provided) => ({
       ...provided,
       display: "none",
     }),
   };
 
   return (
-    <div className={classes.top}>
-      <div className={classes.header}>
-        <h3>Odkryj gminę</h3>
-        <h1>Zagraj w quiz lub znajdź interesujące miejsce</h1>
-      </div>
-      <div className={classes.blocks}>
-        <div className={`${classes["left-block"]} ${classes["block"]}`}>
-          <div className={classes.title}>Quiz</div>
-          <div className={classes.description}>
-            Rozwiąż quiz i sprawdź swoją wiedzę o Gminie Trzebownisko.
-          </div>
-          <button className={classes.button}>Rozpocznij</button>
+    <>
+      <div className={classes.top}>
+        <div className={classes.header}>
+          <h3>Odkryj gminę</h3>
+          <h1>Zagraj w quiz lub znajdź interesujące miejsce</h1>
         </div>
-        <div className={`${classes["right-block"]} ${classes["block"]}`}>
-          <div className={classes.title}>Znajdź miejsce</div>
-          <div className={classes.description}>
-            Wybierz miejscowość, by wyświetlić dostępne materiały.
+        <div className={classes.blocks}>
+          <div className={`${classes["left-block"]} ${classes["block"]}`}>
+            <div className={classes.title}>Quiz</div>
+            <div className={classes.description}>
+              Rozwiąż quiz i sprawdź swoją wiedzę o Gminie Trzebownisko.
+            </div>
+            <button className={classes.button}>Rozpocznij</button>
           </div>
-          <Select
-            className={classes["custom-select"]}
-            options={options}
-            styles={customStyles}
-            placeholder="Wyszukaj"
-            noOptionsMessage={() => "Brak opcji"} // Zmiana tekstu dla braku opcji
-          />
+          <div className={`${classes["right-block"]} ${classes["block"]}`}>
+            <div className={classes.title}>Znajdź miejsce</div>
+            <div className={classes.description}>
+              Wybierz miejscowość, by wyświetlić dostępne materiały.
+            </div>
+            <Select
+              className={classes["custom-select"]}
+              options={options}
+              styles={customStyles}
+              placeholder="Wszystkie"
+              noOptionsMessage={() => "Brak opcji"}
+            />
+          </div>
         </div>
       </div>
-    </div>
+      <div className={classes.locations}>
+        <div className={classes["locations-header"]}>
+          Wszystkie miejscowości
+        </div>
+        <div className={classes["locations-list"]}>
+          <ol>
+            <li>
+              <Location />
+            </li>
+            <li>
+              <Location />
+            </li>
+          </ol>
+        </div>
+      </div>
+    </>
   );
 }

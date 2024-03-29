@@ -1,69 +1,94 @@
 .top {
   .header {
-    margin-top: 2.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    h3 {
-      text-transform: uppercase;
-      color: #586274e5;
-      letter-spacing: 0.05em;
-      font-size: 1.1em;
-    }
+    margin-top: 2.5em;
+
     h1 {
       letter-spacing: 0.03em;
     }
+
+    h3 {
+      font-size: 1.1em;
+      color: #586274e5;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
   }
+
   .blocks {
     display: flex;
     justify-content: center;
     gap: 2em;
     margin-top: 1em;
+
     .block {
-      border: 2px solid #1a1e25e5;
-      width: 38em;
-      background-color: #12151ae5;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      padding-left: 1em;
-      padding-right: 1em;
+      width: 38em;
+      padding: 1em;
+      border: 2px solid #1a1e25e5;
+      background-color: #12151ae5;
+
       .title {
-        color: #3084f2;
         font-size: 2em;
         font-weight: 700;
+        color: #3084f2;
         height: 30%;
       }
+
       .description {
-        margin-top: 0.2em;
-        color: #f2f2f2;
         font-size: 1.4em;
-        padding-left: 2em;
-        padding-right: 2em;
-        height: 70%;
+        color: #f2f2f2;
         text-align: center;
-        margin-bottom: 0.7em;
+        margin: 0.2em 2em 0.7em;
+        padding: 0 2em;
+        height: 70%;
       }
+
       .button {
         all: unset;
-        cursor: pointer;
-
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
+        width: 40%;
+        padding: 0.5em 0;
         border: 1px solid #5096f2;
         text-align: center;
         font-weight: 400;
-        width: 40%;
+        cursor: pointer;
         transition: background-color 0.3s ease-in;
+
         &:hover {
           background-color: #5096f2;
         }
       }
+
       .custom-select {
         width: 40%;
+      }
+    }
+  }
+}
+.locations {
+  margin-top: 0.8em;
+  display: flex;
+  flex-direction: column;
+  .locations-header {
+    text-align: center;
+    color: #5c9df2;
+    font-weight: 500;
+    font-size: 1.8em;
+    margin-bottom: 0.3em;
+  }
+
+  .locations-list {
+    display: flex;
+    flex-direction: column;
+    ol {
+      all: unset;
+      li {
+        all: unset;
       }
     }
   }
