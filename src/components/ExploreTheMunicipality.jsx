@@ -1,6 +1,7 @@
 import Select from "react-select";
 import classes from "./ExploreTheMunicipality.module.scss";
 import Location from "./Location";
+import { useLanguage } from "../store/language/languageContext";
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 
 export default function ExploreTheMunicipality() {
@@ -78,43 +79,62 @@ export default function ExploreTheMunicipality() {
       display: "none",
     }),
   };
+  const { language } = useLanguage();
 
   return (
     <>
       <div className={classes.top}>
         <div className={classes.header}>
-          <h3>Odkryj gminę</h3>
-          <h1>Zagraj w quiz lub znajdź interesujące miejsce</h1>
+          <h3>
+            {language === "PL" ? "Odkryj gminę" : "Explore the Municipality"}
+          </h3>
+          <h1>
+            {language === "PL"
+              ? " Zagraj w quiz lub znajdź interesujące miejsce"
+              : "Play a quiz or find an interesting place"}
+          </h1>
         </div>
         <div className={classes.blocks}>
           <div className={`${classes["left-block"]} ${classes["block"]}`}>
             <div className={classes.title}>Quiz</div>
             <div className={classes.description}>
-              Rozwiąż quiz i sprawdź swoją wiedzę o Gminie Trzebownisko.
+              {language === "PL"
+                ? " Rozwiąż quiz i sprawdź swoją wiedzę o Gminie Trzebownisko."
+                : "Solve the quiz and check your knowledge about the Trzebownisko Municipality."}
             </div>
-            <button className={classes.button}>Rozpocznij</button>
+            <button className={classes.button}>
+              {language === "PL" ? "Rozpocznij" : "Start"}
+            </button>
           </div>
           <div className={`${classes["right-block"]} ${classes["block"]}`}>
-            <div className={classes.title}>Znajdź miejsce</div>
+            <div className={classes.title}>
+              {language === "PL" ? "Rozpocznij" : "Find a place"}
+            </div>
             <div className={classes.description}>
-              Wybierz miejscowość, by wyświetlić dostępne materiały.
+              {language === "PL"
+                ? "Wybierz miejscowość, by wyświetlić dostępne materiały."
+                : "Select a village to view available materials."}
             </div>
             <Select
               className={classes["custom-select"]}
               options={options}
               styles={customStyles}
-              placeholder="Wszystkie"
-              noOptionsMessage={() => "Brak opcji"}
+              placeholder={language === "PL" ? "Wszystkie" : "All villages"}
+              noOptionsMessage={() => {
+                return language === "PL" ? "Brak opcji" : "No options";
+              }}
             />
           </div>
         </div>
       </div>
       <div className={classes.locations}>
         <div className={classes["locations-header"]}>
-          Wszystkie miejscowości
+          {language === "PL" ? "Wszystkie miejscowości" : "All localities"}{" "}
         </div>
         <div className={classes["locations-description"]}>
-          (Kliknięcie na zdjęcie odsłoni więcej informacji o tym miejscu)
+          {language === "PL"
+            ? `(Kliknięcie na zdjęcie odsłoni więcej informacji o tym miejscu)`
+            : `(Clicking on the picture will reveal more information about this place)`}
         </div>
         <div className={classes["locations-list"]}>
           <ol>
