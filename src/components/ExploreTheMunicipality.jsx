@@ -1,6 +1,7 @@
 import Select from "react-select";
 import classes from "./ExploreTheMunicipality.module.scss";
 import Location from "./Location";
+import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 
 export default function ExploreTheMunicipality() {
   const options = [
@@ -112,14 +113,16 @@ export default function ExploreTheMunicipality() {
         <div className={classes["locations-header"]}>
           Wszystkie miejscowości
         </div>
+        <div className={classes["locations-description"]}>
+          (Kliknięcie na zdjęcie odsłoni więcej informacji o tym miejscu)
+        </div>
         <div className={classes["locations-list"]}>
           <ol>
-            <li>
-              <Location />
-            </li>
-            <li>
-              <Location />
-            </li>
+            {MUNICIPALITY_OF_TRZEBOWNISKO.map((location, index) => (
+              <li key={index}>
+                <Location location={location} />
+              </li>
+            ))}
           </ol>
         </div>
       </div>
