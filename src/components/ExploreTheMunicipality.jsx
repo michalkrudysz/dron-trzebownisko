@@ -90,7 +90,7 @@ export default function ExploreTheMunicipality() {
           </h3>
           <h1>
             {language === "PL"
-              ? " Zagraj w quiz lub znajdź interesujące miejsce"
+              ? "Zagraj w quiz lub znajdź interesujące miejsce"
               : "Play a quiz or find an interesting place"}
           </h1>
         </div>
@@ -99,7 +99,7 @@ export default function ExploreTheMunicipality() {
             <div className={classes.title}>Quiz</div>
             <div className={classes.description}>
               {language === "PL"
-                ? " Rozwiąż quiz i sprawdź swoją wiedzę o Gminie Trzebownisko."
+                ? "Rozwiąż quiz i sprawdź swoją wiedzę o Gminie Trzebownisko."
                 : "Solve the quiz and check your knowledge about the Trzebownisko Municipality."}
             </div>
             <button className={classes.button}>
@@ -108,7 +108,7 @@ export default function ExploreTheMunicipality() {
           </div>
           <div className={`${classes["right-block"]} ${classes["block"]}`}>
             <div className={classes.title}>
-              {language === "PL" ? "Rozpocznij" : "Find a place"}
+              {language === "PL" ? "Znajdź miejsce" : "Find a place"}
             </div>
             <div className={classes.description}>
               {language === "PL"

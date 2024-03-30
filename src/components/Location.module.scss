@@ -15,7 +15,6 @@
       justify-content: flex-end;
       width: 50%;
       padding-right: 10em;
-
       .title {
         display: block;
         width: 50%;
@@ -25,6 +24,9 @@
         text-align: center;
         background-color: #5c9df2;
         border-radius: 5px;
+        -webkit-box-shadow: -2px 1px 46px -17px rgba(48, 132, 242, 1);
+        -moz-box-shadow: -2px 1px 46px -17px rgba(48, 132, 242, 1);
+        box-shadow: -2px 1px 46px -17px rgba(48, 132, 242, 1);
         transition: background-color 0.5s ease-in, transform 0.3s ease-in;
 
         &:hover {
