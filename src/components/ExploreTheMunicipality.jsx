@@ -17,7 +17,6 @@ export default function ExploreTheMunicipality() {
     { value: "6", label: "Terliczka" },
     { value: "7", label: "Nowa Wieś" },
     { value: "8", label: "Zaczernie" },
-    { value: "9", label: "Tajęcina" },
   ];
 
   const selectLocation = (selectedOption) => {
