@@ -46,36 +46,30 @@ import zaczernieSchool2018_2 from "../src/assets/municipality-of-trzebownisko/za
 const MUNICIPALITY_OF_TRZEBOWNISKO = [
   {
     name: "Jasionka",
-    descriptionPL:
-      "Jasionka to niewielka miejscowość położona w południowo-wschodniej Polsce, w województwie podkarpackim, niedaleko Rzeszowa. Jest znana przede wszystkim dzięki swojemu rozwijającemu się portowi lotniczemu Rzeszów-Jasionka, który stanowi ważny punkt komunikacyjny dla regionu, oferując połączenia krajowe i międzynarodowe. Oprócz roli transportowej, Jasionka przyciąga uwagę dzięki nowoczesnemu Centrum Wystawienniczo-Kongresowemu, które jest miejscem wielu znaczących wydarzeń, targów, konferencji i spotkań biznesowych.",
-    descriptionEN:
-      "Jasionka is a small town located in south-eastern Poland, in the Podkarpackie Voivodeship, near Rzeszów. It is known primarily thanks to its developing Rzeszów-Jasionka Airport, which is an important communication point for the region, offering domestic and international connections. Besides its transport role, Jasionka attracts attention thanks to the modern Exhibition and Congress Centre, which is the venue for many significant events, trade fairs, conferences, and business meetings.",
+    descriptionPL: `Jasionka to wieś położona ok. 10 km na północ od Rzeszowa, przy drodze wojewódzkiej nr 878, blisko drogi ekspresowej S19. Według danych z 2021, zamieszkuje ją 2 831 osób, z lekką przewagą kobiet (50,4%) nad mężczyznami (49,6%). Wieś jest dobrze rozwinięta pod względem infrastruktury i aktywności lokalnej. Znajduje się tu parafia św. Stanisława Kostki, szkoła podstawowa, koło gospodyń wiejskich, jednostka Ochotniczej Straży Pożarnej, a także bank, poczta, apteka i ośrodek zdrowia. Znajdziemy tu również stadion sportowy, a także port lotniczy Rzeszów-Jasionka oraz szkolne lotnisko Ośrodka Kształcenia Lotniczego Politechniki Rzeszowskiej.`,
+    descriptionEN: `Jasionka is a village located about 10 km north of Rzeszów, by the provincial road no. 878, close to the S19 expressway. According to data from 2021, it is inhabited by 2,831 people, with a slight majority of women (50.4%) over men (49.6%). The village is well-developed in terms of infrastructure and local activity. There is the parish of St. Stanislaus Kostka, a primary school, a rural housewives' circle, a Volunteer Fire Brigade unit, as well as a bank, post office, pharmacy, and health center. There is also a sports stadium, the Rzeszów-Jasionka airport, and the school airport of the Rzeszów University of Technology's Aviation Training Center.`,
     Materials: [
       {
         img: jasionkaAirport2018,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        alt: "Port Lotniczy",
+        altEN: "Airport",
+        dateOfPhoto: 2018,
+        curiosityPL: `25 marca 2022 r., prezydent USA, Joe Biden, przyleciał do Polski, lądując na lotnisku w Jasionce. Celem jego wizyty było pogłębienie relacji między Polską a Stanami Zjednoczonymi oraz omówienie kwestii bezpieczeństwa i współpracy militarnej, z naciskiem na wsparcie dla Ukrainy. Biden spotkał się z żołnierzami z 82. Dywizji Powietrznodesantowej. Prezydenta USA powitał prezydent Polski, Andrzej Duda.`,
+        curiosityEN: `On March 25, 2022, the President of the USA, Joe Biden, arrived in Poland, landing at the Jasionka airport. The purpose of his visit was to deepen the relations between Poland and the United States and to discuss security issues and military cooperation, with an emphasis on support for Ukraine. Biden met with soldiers from the 82nd Airborne Division. The President of the USA was welcomed by the President of Poland, Andrzej Duda.          `,
       },
       {
         img: jasionkaAirport2018_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        alt: "Port Lotniczy",
+        altEN: "Airport",
+        dateOfPhoto: 2018,
+        curiosityPL: `Papież Jan Paweł II odwiedził lotnisko w Jasionce 2 czerwca 1991 roku podczas swojej podróży do Polski. Ta wizyta była częścią jego pielgrzymki, której głównym przesłaniem było "Bogu dziękujcie, Ducha nie gaście". Spotkanie to miało miejsce w ważnym momencie dla Polski, kiedy kraj przygotowywał się do pierwszych w pełni wolnych wyborów parlamentarnych zaplanowanych na październik tego roku. Był to czas, gdy polski krajobraz polityczny przechodził głębokie zmiany, odchodząc od podziału na obóz postkomunistyczny i solidarnościowy, w kierunku nowego podziału politycznego na lewicę, liberałów i konserwatystów.`,
+        curiosityEN: `Pope John Paul II visited the airport in Jasionka on June 2, 1991, during his trip to Poland. This visit was part of his pilgrimage, whose main message was "Give thanks to God, do not extinguish the Spirit." This meeting took place at an important moment for Poland, as the country was preparing for the first fully free parliamentary elections scheduled for October of that year. It was a time when the Polish political landscape was undergoing profound changes, moving away from the division into the post-communist and Solidarity camps, towards a new political division into the left, liberals, and conservatives.`,
       },
       {
         img: jasionkaAirport2018_3,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
+        alt: `Centrum Wystawienniczo - Kongresowe`,
+        altEN: "Exhibition and Congress Center",
+        dateOfPhoto: 2018,
         curiosityPL:
           "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
         curiosityEN:
@@ -83,9 +77,9 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
       },
       {
         img: jasionkaAirport2018_4,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
+        alt: `Centrum Wystawienniczo - Kongresowe`,
+        altEN: "Exhibition and Congress Center",
+        dateOfPhoto: 2018,
         curiosityPL:
           "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
         curiosityEN:
