@@ -1,11 +1,38 @@
 import { createPortal } from "react-dom";
+import { useState, forwardRef, useImperativeHandle } from "react";
 import classes from "./PhotoModal.module.scss";
 import photo from "../assets/municipality-of-trzebownisko/laka/church-2019.png";
 import buttonClose from "../assets/close-reference.png";
-export default function PhotoModal({}) {
+
+const PhotoModal = forwardRef((props, ref) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function closeModal(event) {
+    event.stopPropagation();
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  useImperativeHandle(ref, () => ({
+    openModal: openModal,
+    closeModal: closeModal,
+  }));
+
+  if (!isOpen) {
+    return null;
+  }
+
   return createPortal(
     <>
-      <img className={classes["button-close"]} src={buttonClose} alt="close" />
+      <img
+        className={classes["button-close"]}
+        onClick={closeModal}
+        src={buttonClose}
+        alt="close"
+      />
       <div className={classes.modal}>
         <div className={classes["modal-content"]}>
           <div className={classes.photo}>
@@ -30,4 +57,7 @@ export default function PhotoModal({}) {
     </>,
     document.getElementById("photo")
   );
-}
+});
+
+PhotoModal.displayName = "PhotoModal";
+export default PhotoModal;
