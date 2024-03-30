@@ -22,11 +22,17 @@ export default function Location({ location }) {
             <div className={classes.title}>{location.name}</div>
           </div>
           <div className={classes.right}>
-            <div className={classes.description}>{location.descriptionPL}</div>
+            <div className={classes.description}>
+              {language === "PL"
+                ? location.descriptionPL
+                : location.descriptionEN}
+            </div>
           </div>
         </div>
         <div className={classes.bottom}>
-          <div className={classes.header}>Dostępne materiały</div>
+          <div className={classes.header}>
+            {language === "PL" ? "Dostępne materiały" : "Available materials"}
+          </div>
           <div className={classes.materials}>
             <ul>
               {location.Materials.map((material, index) => (

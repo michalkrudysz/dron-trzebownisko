@@ -1,9 +1,11 @@
 import { createPortal } from "react-dom";
 import { useState, forwardRef, useImperativeHandle } from "react";
+import { useLanguage } from "../store/language/languageContext";
 import classes from "./PhotoModal.module.scss";
 import buttonClose from "../assets/close-reference.png";
 
 const PhotoModal = forwardRef(({ imageData }, ref) => {
+  const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal(event) {
@@ -35,18 +37,28 @@ const PhotoModal = forwardRef(({ imageData }, ref) => {
       <div className={classes.modal}>
         <div className={classes["modal-content"]}>
           <div className={classes.photo}>
-            <img src={imageData.img} alt="zdjęcie" />
+            <img
+              src={imageData.img}
+              alt={language === "PL" ? imageData.alt : imageData.altEN}
+            />
           </div>
           <div className={classes["photo-description"]}>
             <div className={classes["photo-description-title"]}>
-              {imageData.alt}
+              {language === "PL" ? imageData.alt : imageData.altEN}
             </div>
             <div className={classes["photo-date"]}>
-              Rok wykonania zdjęcia: {imageData.dateOfPhoto}
+              {language === "PL"
+                ? `Rok wykonania zdjęcia:`
+                : `Year the photo was taken:`}{" "}
+              {imageData.dateOfPhoto}
             </div>
-            <div className={classes.curiosity}>Ciekawostka</div>
+            <div className={classes.curiosity}>
+              {language === "PL" ? "Ciekawostka" : "Fun fact"}
+            </div>
             <div className={classes["photo-description-text"]}>
-              {imageData.curiosityPL}
+              {language === "PL"
+                ? imageData.curiosityPL
+                : imageData.curiosityEN}
             </div>
           </div>
         </div>

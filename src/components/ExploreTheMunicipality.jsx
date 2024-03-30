@@ -24,7 +24,7 @@ export default function ExploreTheMunicipality() {
   };
 
   let filteredLocations;
-
+  let place;
   if (selectedOption) {
     filteredLocations = MUNICIPALITY_OF_TRZEBOWNISKO.filter((location) => {
       return location.name === selectedOption.label;
@@ -145,14 +145,19 @@ export default function ExploreTheMunicipality() {
         </div>
       </div>
       <div className={classes.locations}>
-        <div className={classes["locations-header"]}>
-          {language === "PL" ? "Wszystkie miejscowości" : "All localities"}{" "}
-        </div>
-        <div className={classes["locations-description"]}>
-          {language === "PL"
-            ? `(Kliknięcie na zdjęcie odsłoni więcej informacji o tym miejscu)`
-            : `(Clicking on the picture will reveal more information about this place)`}
-        </div>
+        {selectedOption === null && (
+          <>
+            <div className={classes["locations-header"]}>
+              {language === "PL" ? "Wszystkie miejscowości" : "All localities"}
+            </div>
+            <div className={classes["locations-description"]}>
+              {language === "PL"
+                ? `(Kliknięcie na zdjęcie odsłoni więcej informacji o tym miejscu)`
+                : `(Clicking on the picture will reveal more information about this place)`}
+            </div>
+          </>
+        )}
+
         <div className={classes["locations-list"]}>
           <ol>
             {filteredLocations.map((location, index) => (
