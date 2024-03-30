@@ -1,15 +1,21 @@
 import classes from "./Location.module.scss";
 import PhotoModal from "./PhotoModal";
 import { useLanguage } from "../store/language/languageContext";
+import { useRef, useState } from "react";
 
 export default function Location({ location }) {
-  console.log(location);
-
   const { language } = useLanguage();
+  const photoModal = useRef();
 
+  const [selectedLocation, setSelectedLocation] = useState(null);
+
+  const openPhoto = (material) => {
+    setSelectedLocation(material);
+    photoModal.current.openModal();
+  };
   return (
     <>
-      <PhotoModal />
+      <PhotoModal ref={photoModal} imageData={selectedLocation} />
       <div className={classes.container}>
         <div className={classes.top}>
           <div className={classes.left}>
@@ -24,8 +30,11 @@ export default function Location({ location }) {
           <div className={classes.materials}>
             <ul>
               {location.Materials.map((material, index) => (
-                <li key={index}>
-                  <img src={material.img} alt="zdjęcie" />
+                <li onClick={() => openPhoto(material)} key={index}>
+                  <img
+                    src={material.img}
+                    alt={language === "PL" ? material.alt : material.altEN}
+                  />
                 </li>
               ))}
             </ul>

@@ -99,7 +99,7 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
     Materials: [
       {
         img: lakaChurch2017,
-        alt: "zdjęcie portu lotniczego",
+        alt: "kosciol",
         altEN: "photo of the airport",
         dateOfPhoto: 2017,
         curiosityPL:

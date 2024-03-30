@@ -1,17 +1,10 @@
 import Select from "react-select";
 import classes from "./ExploreTheMunicipality.module.scss";
 import Location from "./Location";
-import PhotoModal from "./PhotoModal";
 import { useLanguage } from "../store/language/languageContext";
-import { useRef } from "react";
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 
 export default function ExploreTheMunicipality() {
-  const photoModal = useRef();
-  const openPhoto = () => {
-    photoModal.current.openModal();
-  };
-
   const options = [
     { value: "1", label: "Trzebownisko" },
     { value: "2", label: "Łąka" },
@@ -143,11 +136,10 @@ export default function ExploreTheMunicipality() {
             ? `(Kliknięcie na zdjęcie odsłoni więcej informacji o tym miejscu)`
             : `(Clicking on the picture will reveal more information about this place)`}
         </div>
-        <PhotoModal ref={photoModal} />
         <div className={classes["locations-list"]}>
           <ol>
             {MUNICIPALITY_OF_TRZEBOWNISKO.map((location, index) => (
-              <li onClick={() => openPhoto()} key={index}>
+              <li key={index}>
                 <Location location={location} />
               </li>
             ))}

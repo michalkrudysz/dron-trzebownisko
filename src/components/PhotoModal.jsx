@@ -4,7 +4,7 @@ import classes from "./PhotoModal.module.scss";
 import photo from "../assets/municipality-of-trzebownisko/laka/church-2019.png";
 import buttonClose from "../assets/close-reference.png";
 
-const PhotoModal = forwardRef((props, ref) => {
+const PhotoModal = forwardRef(({ imageData }, ref) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal(event) {
@@ -40,15 +40,14 @@ const PhotoModal = forwardRef((props, ref) => {
           </div>
           <div className={classes["photo-description"]}>
             <div className={classes["photo-description-title"]}>
-              Kościół pw. Dobrego Pasterza
+              {imageData.alt}
             </div>
             <div className={classes["photo-date"]}>
-              Rok wykonania zdjęcia: 2019
+              Rok wykonania zdjęcia: {imageData.dateOfPhoto}
             </div>
             <div className={classes.curiosity}>Ciekawostka</div>
             <div className={classes["photo-description-text"]}>
-              Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który
-              wprowadził bezkontaktowe bramki bezpieczeństwa.
+              {imageData.curiosityPL}
             </div>
           </div>
         </div>
