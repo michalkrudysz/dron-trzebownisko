@@ -2,9 +2,12 @@ import Select from "react-select";
 import classes from "./ExploreTheMunicipality.module.scss";
 import Location from "./Location";
 import { useLanguage } from "../store/language/languageContext";
+import { useState } from "react";
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 
 export default function ExploreTheMunicipality() {
+  const [selectedOption, setSelectedOption] = useState(null);
+
   const options = [
     { value: "1", label: "Trzebownisko" },
     { value: "2", label: "Łąka" },
@@ -16,6 +19,20 @@ export default function ExploreTheMunicipality() {
     { value: "8", label: "Zaczernie" },
     { value: "9", label: "Tajęcina" },
   ];
+
+  const selectLocation = (selectedOption) => {
+    setSelectedOption(selectedOption);
+  };
+
+  let filteredLocations;
+
+  if (selectedOption) {
+    filteredLocations = MUNICIPALITY_OF_TRZEBOWNISKO.filter((location) => {
+      return location.name === selectedOption.label;
+    });
+  } else {
+    filteredLocations = MUNICIPALITY_OF_TRZEBOWNISKO;
+  }
 
   const customStyles = {
     control: (provided, state) => ({
@@ -119,6 +136,7 @@ export default function ExploreTheMunicipality() {
               className={classes["custom-select"]}
               options={options}
               styles={customStyles}
+              onChange={selectLocation}
               placeholder={language === "PL" ? "Wszystkie" : "All villages"}
               noOptionsMessage={() => {
                 return language === "PL" ? "Brak opcji" : "No options";
@@ -138,7 +156,7 @@ export default function ExploreTheMunicipality() {
         </div>
         <div className={classes["locations-list"]}>
           <ol>
-            {MUNICIPALITY_OF_TRZEBOWNISKO.map((location, index) => (
+            {filteredLocations.map((location, index) => (
               <li key={index}>
                 <Location location={location} />
               </li>

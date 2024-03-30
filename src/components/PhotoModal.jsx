@@ -1,7 +1,6 @@
 import { createPortal } from "react-dom";
 import { useState, forwardRef, useImperativeHandle } from "react";
 import classes from "./PhotoModal.module.scss";
-import photo from "../assets/municipality-of-trzebownisko/laka/church-2019.png";
 import buttonClose from "../assets/close-reference.png";
 
 const PhotoModal = forwardRef(({ imageData }, ref) => {
@@ -36,7 +35,7 @@ const PhotoModal = forwardRef(({ imageData }, ref) => {
       <div className={classes.modal}>
         <div className={classes["modal-content"]}>
           <div className={classes.photo}>
-            <img src={photo} alt="zdjęcie" />
+            <img src={imageData.img} alt="zdjęcie" />
           </div>
           <div className={classes["photo-description"]}>
             <div className={classes["photo-description-title"]}>
