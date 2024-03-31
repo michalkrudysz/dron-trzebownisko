@@ -70,20 +70,16 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
         alt: `Centrum Wystawienniczo - Kongresowe`,
         altEN: "Exhibition and Congress Center",
         dateOfPhoto: 2018,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Centrum zostało uroczyście otwarte dnia 23 czerwca 2016 roku. Zostało stworzone z zamysłem organizowania prestiżowych wydarzeń, targów, wystaw i konferencji, które odbywają się w regionie. Ten obiekt może się pochwalić ponad 16 tysiącami metrów kwadratowych przestrzeni wystawienniczej, imponującą salą kongresową na 872 osoby, dwoma salami konferencyjnymi oraz dziesięcioma mniejszymi salami zdolnymi pomieścić od 20 do 60 osób każda. Co więcej, dysponuje on również salą restauracyjną i bankietową, a także przestronnym parkingiem na ponad 600 miejsc.`,
+        curiosityEN: `The center was ceremonially opened on June 23, 2016. It was created with the intention of organizing prestigious events, fairs, exhibitions, and conferences that take place in the region. This facility boasts over 16,000 square meters of exhibition space, an impressive congress hall for 872 people, two conference rooms, and ten smaller rooms capable of accommodating from 20 to 60 people each. Moreover, it also has a dining and banquet hall, as well as a spacious parking lot for over 600 spaces.`,
       },
       {
         img: jasionkaAirport2018_4,
         alt: `Centrum Wystawienniczo - Kongresowe`,
         altEN: "Exhibition and Congress Center",
         dateOfPhoto: 2018,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Podczas wybuchu konfliktu na Ukrainie w 2022 roku, armia amerykańska zdecydowała się na utworzenie swojej bazy w Centrum Wystawienniczo-Kongresowym w Jasionce. Pełniła ona kluczową rolę, między innymi w obsłudze dostaw sprzętu wojskowego dla Ukrainy.`,
+        curiosityEN: `During the outbreak of the conflict in Ukraine in 2022, the American army decided to establish its base in the Exhibition and Congress Center in Jasionka. It played a key role, among other things, in handling military equipment supplies for Ukraine.`,
       },
       {
         img: jasionkaChurch2017,
