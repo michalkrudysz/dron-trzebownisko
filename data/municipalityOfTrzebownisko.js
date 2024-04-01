@@ -83,18 +83,16 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
       },
       {
         img: jasionkaChurch2017,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Parafia św. Stanisława Kostki",
+        altEN: "St. Stanislaus Kostka Parish",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Jednym z najbardziej wyjątkowych i niezapomnianych momentów w historii kościoła w Jasionce był 10 czerwca 1997 roku. Wtedy to Ojciec Święty Jan Paweł II, podczas uroczystej mszy kanonizacyjnej św. Jana z Dukli w Krośnie, poświęcił kamień węgielny dla budującego się kościoła parafialnego w Jasionce. Ta uroczystość stanowiła symboliczny punkt zwrotny w budowie nowego kościoła, który miał stać się ważnym miejscem dla lokalnej społeczności.`,
+        curiosityEN: `One of the most unique and unforgettable moments in the history of the church in Jasionka was on June 10, 1997. It was then that Saint Pope John Paul II, during the solemn canonization mass of St. John of Dukla in Krosno, consecrated the cornerstone for the church under construction in Jasionka. This ceremony was a symbolic turning point in the construction of the new church, which was to become an important place for the local community.`,
       },
       {
         img: jasionkaChurch2017_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Parafia św. Stanisława Kostki",
+        altEN: "St. Stanislaus Kostka Parish",
         dateOfPhoto: 2017,
         curiosityPL:
           "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
