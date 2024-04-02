@@ -14,25 +14,30 @@ export default function Quiz() {
   }
 
   return (
-    <div className={classes.quiz}>
-      <div className={classes.image}>
-        <img
-          src={QUESTIONS[activeQuestionIndex].image}
-          alt={QUESTIONS[activeQuestionIndex].alt}
-        />
+    <>
+      <div className={classes.quiz}>
+        <div className={classes.image}>
+          <img
+            src={QUESTIONS[activeQuestionIndex].image}
+            alt={QUESTIONS[activeQuestionIndex].alt}
+          />
+        </div>
+        <div className={classes.question}>
+          <h2 className={classes.header}>
+            {QUESTIONS[activeQuestionIndex].text}
+          </h2>
+          <ul className={classes.answers}>
+            {QUESTIONS[activeQuestionIndex].answers.map((answer, index) => (
+              <li key={index} className={classes.answer}>
+                <button onClick={() => handleAnswerClick(answer)}>
+                  {answer}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <div className={classes.question}>
-        <h2>{QUESTIONS[activeQuestionIndex].text}</h2>
-        <ul className={classes.answers}>
-          {QUESTIONS[activeQuestionIndex].answers.map((answer, index) => (
-            <li key={index} className={classes.answer}>
-              <button onClick={() => handleAnswerClick(answer)}>
-                {answer}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+      <div className={classes["shadow"]}></div>
+    </>
   );
 }
