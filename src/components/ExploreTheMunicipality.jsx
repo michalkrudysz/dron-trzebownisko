@@ -5,7 +5,7 @@ import { useLanguage } from "../store/language/languageContext";
 import { useState } from "react";
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 
-export default function ExploreTheMunicipality() {
+export default function ExploreTheMunicipality({ quizOpen }) {
   const [selectedOption, setSelectedOption] = useState(null);
 
   const options = [
@@ -25,7 +25,7 @@ export default function ExploreTheMunicipality() {
   };
 
   let filteredLocations;
-  let place;
+
   if (selectedOption) {
     filteredLocations = MUNICIPALITY_OF_TRZEBOWNISKO.filter((location) => {
       return location.name === selectedOption.label;
@@ -119,7 +119,7 @@ export default function ExploreTheMunicipality() {
                 ? "Rozwiąż quiz i sprawdź swoją wiedzę o Gminie Trzebownisko."
                 : "Solve the quiz and check your knowledge about the Trzebownisko Municipality."}
             </div>
-            <button className={classes.button}>
+            <button onClick={() => quizOpen("quiz")} className={classes.button}>
               {language === "PL" ? "Rozpocznij" : "Start"}
             </button>
           </div>

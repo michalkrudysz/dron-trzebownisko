@@ -5,6 +5,7 @@ import HomePage from "./HomePage";
 import MobileMenu from "./MobileMenu";
 import References from "./References";
 import ExploreTheMunicipality from "./ExploreTheMunicipality";
+import Quiz from "./Quiz";
 
 export default function Main() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,9 @@ export default function Main() {
       case "aboutMe":
         return <AboutMe />;
       case "exploreTheMunicipality":
-        return <ExploreTheMunicipality />;
+        return <ExploreTheMunicipality quizOpen={changePage} />;
+      case "quiz":
+        return <Quiz />;
       default:
         return <HomePage />;
     }
