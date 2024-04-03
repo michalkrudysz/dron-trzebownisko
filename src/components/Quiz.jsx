@@ -6,14 +6,19 @@ export default function Quiz() {
   const [userAnswers, setUserAnswers] = useState([]);
 
   const activeQuestionIndex = userAnswers.length;
-  const shuffledAnswers = [...QUESTIONS[activeQuestionIndex].answers];
-  shuffledAnswers.sort(() => Math.random() - 0.5);
+  const quizFinished = activeQuestionIndex === QUESTIONS.length;
 
   function handleAnswerClick(answer) {
     setUserAnswers((prevUserAnswers) => {
       return [...prevUserAnswers, answer];
     });
   }
+
+  if (quizFinished) {
+    return <div className={classes.summary}>Koniec quizu.</div>;
+  }
+  const shuffledAnswers = [...QUESTIONS[activeQuestionIndex].answers];
+  shuffledAnswers.sort(() => Math.random() - 0.5);
 
   return (
     <>
