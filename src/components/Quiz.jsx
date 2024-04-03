@@ -1,6 +1,7 @@
 import classes from "./Quiz.module.scss";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import QUESTIONS from "../../data/questions";
+import QuestionTimer from "./QuestionTimer";
 
 export default function Quiz() {
   const [userAnswers, setUserAnswers] = useState([]);
@@ -8,21 +9,34 @@ export default function Quiz() {
   const activeQuestionIndex = userAnswers.length;
   const quizFinished = activeQuestionIndex === QUESTIONS.length;
 
-  function handleAnswerClick(answer) {
+  const handleAnswerClick = useCallback(function handleAnswerClick(answer) {
     setUserAnswers((prevUserAnswers) => {
       return [...prevUserAnswers, answer];
     });
-  }
+  }, []);
+
+  const handleSkipAnswer = useCallback(
+    () => handleAnswerClick(null),
+    [handleAnswerClick]
+  );
 
   if (quizFinished) {
     return <div className={classes.summary}>Koniec quizu.</div>;
   }
+
   const shuffledAnswers = [...QUESTIONS[activeQuestionIndex].answers];
   shuffledAnswers.sort(() => Math.random() - 0.5);
 
   return (
     <>
       <div className={classes.quiz}>
+        <div className={classes.timer}>
+          <QuestionTimer
+            key={activeQuestionIndex}
+            timeout={10000}
+            onTimeout={handleSkipAnswer}
+          />
+        </div>
         <div className={classes.image}>
           <img
             src={QUESTIONS[activeQuestionIndex].image}
