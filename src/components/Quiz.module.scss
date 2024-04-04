@@ -56,13 +56,15 @@
         }
       }
       .answered {
-        background-color: #f0f3f8;
+        background-color: #f2f2f2;
+        color: #1e6fd9;
+        font-weight: 500;
       }
       .correctly {
-        background-color: #00ff00;
+        background-color: #359e35;
       }
       .incorrectly {
-        background-color: #ff0000;
+        background-color: #db2323;
       }
     }
   }

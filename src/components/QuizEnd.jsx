@@ -34,8 +34,7 @@ export default function QuizEnd({ userAnswers, questions }) {
         }
       : {
           congrats: "Congrats!",
-          congratsText:
-            "You've completed the quiz about the Municipality of Trzebownisko!",
+          congratsText: "You've finished the Trzebownisko Municipality quiz!",
           resultsSummary: "Score Breakdown",
           correctAnswers: "Correct answers",
           skippedAnswers: "Skipped answers",
