@@ -3,10 +3,14 @@ import classes from "./Quiz.module.scss";
 import { useState, useCallback } from "react";
 import QUESTIONS from "../../data/questions";
 import Question from "./Question";
+// Import useLanguage hook
+import { useLanguage } from "../store/language/languageContext";
 
 export default function Quiz() {
   const [answerState, setAnswerState] = useState("");
   const [userAnswers, setUserAnswers] = useState([]);
+  // Use the useLanguage hook to get the current language
+  const { language } = useLanguage();
 
   const activeQuestionIndex =
     answerState === "" ? userAnswers.length : userAnswers.length - 1;
@@ -14,40 +18,33 @@ export default function Quiz() {
 
   const handleAnswerClick = useCallback(
     (answer) => {
-      // Jeśli już odpowiedziano, ignoruj kolejne kliknięcia
       if (answerState !== "") {
         return;
       }
-
-      // Zaznacz, że odpowiedź została wybrana
       setAnswerState("answered");
       setUserAnswers((prevUserAnswers) => [...prevUserAnswers, answer]);
 
-      // Ustawienie timeoutów do zarządzania wyświetlaniem stanów odpowiedzi
       const timeoutId = setTimeout(() => {
-        const newState =
-          answer === QUESTIONS[activeQuestionIndex].answers[0]
-            ? "correctly"
-            : "incorrectly";
+        const correctAnswer =
+          language === "EN"
+            ? QUESTIONS[activeQuestionIndex].answersEN[0]
+            : QUESTIONS[activeQuestionIndex].answersPL[0];
+        const newState = answer === correctAnswer ? "correctly" : "incorrectly";
         setAnswerState(newState);
 
         const resetStateTimeoutId = setTimeout(() => {
           setAnswerState("");
         }, 2000);
-
-        // Opcjonalnie, przechowywanie ID timeoutu do czyszczenia, jeśli użytkownik szybko przejdzie do następnego pytania
-        // clearTimeout(resetStateTimeoutId);
       }, 1000);
-
-      // Czyszczenie timeoutu przy szybkim przejściu między pytaniami
-      // return () => clearTimeout(timeoutId);
     },
-    [activeQuestionIndex, answerState] // Upewnij się, że odpowiednio zarządzasz zależnościami
+    [activeQuestionIndex, answerState, language] // include language in dependencies
   );
+
   const handleSkipAnswer = useCallback(
     () => handleAnswerClick(null),
     [handleAnswerClick]
   );
+
   if (quizFinished) {
     return <QuizEnd userAnswers={userAnswers} questions={QUESTIONS} />;
   }
@@ -55,15 +52,27 @@ export default function Quiz() {
   return (
     <>
       <Question
-        questionText={QUESTIONS[activeQuestionIndex].text}
-        answers={QUESTIONS[activeQuestionIndex].answers}
+        questionText={
+          language === "EN"
+            ? QUESTIONS[activeQuestionIndex].textEN
+            : QUESTIONS[activeQuestionIndex].textPL
+        }
+        answers={
+          language === "EN"
+            ? QUESTIONS[activeQuestionIndex].answersEN
+            : QUESTIONS[activeQuestionIndex].answersPL
+        }
         onSelectAnswer={handleAnswerClick}
         activeQuestionIndex={activeQuestionIndex}
         handleSkipAnswer={handleSkipAnswer}
         answerState={answerState}
         userAnswers={userAnswers}
         imageSrc={QUESTIONS[activeQuestionIndex].image}
-        imageAlt={QUESTIONS[activeQuestionIndex].alt}
+        imageAlt={
+          language === "EN"
+            ? QUESTIONS[activeQuestionIndex].altEN
+            : QUESTIONS[activeQuestionIndex].altPL
+        }
       />
       <div className={classes["shadow"]}></div>
     </>
