@@ -1,5 +1,4 @@
-// Import QuizEnd component at the top of your Quiz.jsx file
-import QuizEnd from "./QuizEnd"; // Adjust the path according to your project structure
+import QuizEnd from "./QuizEnd";
 import classes from "./Quiz.module.scss";
 import { useState, useCallback } from "react";
 import QUESTIONS from "../../data/questions";
@@ -15,30 +14,40 @@ export default function Quiz() {
 
   const handleAnswerClick = useCallback(
     (answer) => {
+      // Jeśli już odpowiedziano, ignoruj kolejne kliknięcia
+      if (answerState !== "") {
+        return;
+      }
+
+      // Zaznacz, że odpowiedź została wybrana
       setAnswerState("answered");
       setUserAnswers((prevUserAnswers) => [...prevUserAnswers, answer]);
 
-      setTimeout(() => {
-        if (answer === QUESTIONS[activeQuestionIndex].answers[0]) {
-          setAnswerState("correctly");
-        } else {
-          setAnswerState("incorrectly");
-        }
+      // Ustawienie timeoutów do zarządzania wyświetlaniem stanów odpowiedzi
+      const timeoutId = setTimeout(() => {
+        const newState =
+          answer === QUESTIONS[activeQuestionIndex].answers[0]
+            ? "correctly"
+            : "incorrectly";
+        setAnswerState(newState);
 
-        setTimeout(() => {
+        const resetStateTimeoutId = setTimeout(() => {
           setAnswerState("");
         }, 2000);
-      }, 1000);
-    },
-    [activeQuestionIndex]
-  );
 
+        // Opcjonalnie, przechowywanie ID timeoutu do czyszczenia, jeśli użytkownik szybko przejdzie do następnego pytania
+        // clearTimeout(resetStateTimeoutId);
+      }, 1000);
+
+      // Czyszczenie timeoutu przy szybkim przejściu między pytaniami
+      // return () => clearTimeout(timeoutId);
+    },
+    [activeQuestionIndex, answerState] // Upewnij się, że odpowiednio zarządzasz zależnościami
+  );
   const handleSkipAnswer = useCallback(
     () => handleAnswerClick(null),
     [handleAnswerClick]
   );
-
-  // Display QuizEnd component when the quiz is finished
   if (quizFinished) {
     return <QuizEnd userAnswers={userAnswers} questions={QUESTIONS} />;
   }
