@@ -1,28 +1,30 @@
 import classes from "./MobileMenu.module.scss";
 import Button from "./Button";
 import { useLanguage } from "../store/language/languageContext";
+import { usePage } from "../store/page/pageContext";
 
-export default function MobileMenu({ changePage, setIsMenuOpen }) {
+export default function MobileMenu({ setIsMenuOpen }) {
   const { language } = useLanguage();
+  const { changePage } = usePage();
 
-  const handleClick = (page) => {
+  const handleChangePage = (page) => {
     changePage(page);
     setIsMenuOpen(false);
   };
 
   return (
     <div className={classes["mobile-menu"]}>
-      <Button onClick={() => handleClick("portfolio")}>
+      <Button onClick={() => handleChangePage("portfolio")}>
         {language === "PL" ? "Portfolio" : "Portfolio"}
       </Button>
-      <Button onClick={() => handleClick("references")}>
+      <Button onClick={() => handleChangePage("references")}>
         {language === "PL" ? "Referencje" : "References"}
       </Button>
-      <Button onClick={() => handleClick("aboutMe")}>
+      <Button onClick={() => handleChangePage("aboutMe")}>
         {language === "PL" ? "O mnie" : "About Me"}
       </Button>
       <Button
-        onClick={() => handleClick("exploreTheMunicipality")}
+        onClick={() => handleChangePage("exploreTheMunicipality")}
         kind={false}
       >
         {language === "PL" ? "Odkryj gminę" : "Explore the Municipality"}

@@ -1,8 +1,10 @@
 import classes from "./QuizEnd.module.scss";
 import { useLanguage } from "../store/language/languageContext";
+import { usePage } from "../store/page/pageContext";
 
 export default function QuizEnd({ userAnswers, questions }) {
   const { language } = useLanguage();
+  const { changePage } = usePage();
 
   const totalQuestions = questions.length;
   const correctAnswers = userAnswers.filter((answer, index) => {
@@ -77,8 +79,17 @@ export default function QuizEnd({ userAnswers, questions }) {
           </p>
         </div>
         <div className={classes.buttons}>
-          <button className={classes.button}>{content.returnButton}</button>
-          <button className={classes.button}>{content.retryButton}</button>
+          <button
+            onClick={() => {
+              changePage("homePage");
+            }}
+            className={classes.button}
+          >
+            {content.returnButton}
+          </button>
+          <button onClick={() => changePage("quiz")} className={classes.button}>
+            {content.retryButton}
+          </button>
         </div>
       </div>
 

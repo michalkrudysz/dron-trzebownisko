@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../store/language/languageContext";
+import { usePage } from "../store/page/pageContext";
 import REFERENCES from "../../data/references";
 import HOME_PAGE_CONTENT from "../../data/homePageContent";
 import classes from "./HomePage.module.scss";
@@ -22,7 +23,7 @@ const getRandomIndexes = (length, count) => {
 
 export default function HomePage() {
   const { language } = useLanguage();
-
+  const { changePage } = usePage();
   const [indexes, setIndexes] = useState(
     getRandomIndexes(REFERENCES.length, 3)
   );
@@ -58,8 +59,15 @@ export default function HomePage() {
             </h1>
             <h2 className={classes.h2}>{description}</h2>
             <div className={classes["button-container"]}>
-              <Button>{buttons.portfolio}</Button>
-              <Button kind={false}>{buttons.discover}</Button>
+              <Button onClick={() => changePage("portfolio")}>
+                {buttons.portfolio}
+              </Button>
+              <Button
+                onClick={() => changePage("exploreTheMunicipality")}
+                kind={false}
+              >
+                {buttons.discover}
+              </Button>
             </div>
           </div>
 

@@ -4,14 +4,11 @@ import logo from "../assets/logo-small.png";
 import menu from "../assets/hamburger-menu.png";
 import closeMenu from "../assets/close-menu.png";
 import { useLanguage } from "../store/language/languageContext";
+import { usePage } from "../store/page/pageContext";
 
-export default function Header({
-  toggleMenu,
-  isOpen,
-  changePage,
-  setIsMenuOpen,
-}) {
+export default function Header({ toggleMenu, isOpen, setIsMenuOpen }) {
   const { language, toggleLanguage } = useLanguage();
+  const { changePage } = usePage();
 
   return (
     <header className={classes.header}>

@@ -3,10 +3,12 @@ import classes from "./ExploreTheMunicipality.module.scss";
 import Location from "./Location";
 import { useLanguage } from "../store/language/languageContext";
 import { useState } from "react";
+import { usePage } from "../store/page/pageContext";
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 
-export default function ExploreTheMunicipality({ quizOpen }) {
+export default function ExploreTheMunicipality() {
   const [selectedOption, setSelectedOption] = useState(null);
+  const { changePage } = usePage();
 
   const options = [
     { value: "1", label: "Trzebownisko" },
@@ -119,7 +121,10 @@ export default function ExploreTheMunicipality({ quizOpen }) {
                 ? "Rozwiąż quiz i sprawdź swoją wiedzę o Gminie Trzebownisko."
                 : "Solve the quiz and check your knowledge about the Trzebownisko Municipality."}
             </div>
-            <button onClick={() => quizOpen("quiz")} className={classes.button}>
+            <button
+              onClick={() => changePage("quiz")}
+              className={classes.button}
+            >
               {language === "PL" ? "Rozpocznij" : "Start"}
             </button>
           </div>
