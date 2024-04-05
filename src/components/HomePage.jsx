@@ -9,6 +9,8 @@ import ReferenceBox from "./ReferenceBox";
 import ModalReference from "./ModalReference";
 import Loading from "./Loading";
 
+const currentYear = new Date().getFullYear();
+
 export default function HomePage() {
   const [loadedImages, setLoadedImages] = useState({});
   const [referenceImage, setReferenceImage] = useState(null);
@@ -144,7 +146,9 @@ export default function HomePage() {
         </section>
       </div>
       <div className={classes["shadow"]}></div>
-      <footer className={classes.footer}>&copy; Michał Krudysz 2024</footer>
+      <footer
+        className={classes.footer}
+      >{`&copy; Michał Krudysz 2017 - ${currentYear}`}</footer>
     </>
   );
 }
