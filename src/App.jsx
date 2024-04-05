@@ -9,7 +9,6 @@ function App() {
     <PageProvider>
       <LanguageProvider>
         <>
-          <Loading />
           <Main />
         </>
       </LanguageProvider>

@@ -1,26 +1,76 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import classes from "./References.module.scss";
 import { useLanguage } from "../store/language/languageContext";
 import ReferenceBox from "./ReferenceBox";
 import REFERENCES from "../../data/references";
 import REFERENCES_CONTENT from "../../data/referencesContent";
 import ModalReference from "./ModalReference";
+import Loading from "./Loading";
 
 export default function References() {
+  const [loadedImages, setLoadedImages] = useState({});
   const [referenceImage, setReferenceImage] = useState(null);
   const modalReferenceRef = useRef();
-
+  const [isLoading, setIsLoading] = useState(true);
   const { language } = useLanguage();
-  const contentByLanguage =
-    REFERENCES_CONTENT[language] || REFERENCES_CONTENT.PL;
-  const { left, leftInfo, rightDescription } = contentByLanguage;
 
-  const handleModalReference = (image) => {
-    setReferenceImage(image);
+  useEffect(() => {
+    const loadImage = (imageSrc) =>
+      new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+
+        img.onload = () => resolve({ src: img.src, id: imageSrc });
+        img.onerror = reject;
+      });
+
+    const loadImagesAsync = (references) => {
+      setIsLoading(true); // Rozpocznij ładowanie
+
+      const imagePromises = references.flatMap((ref) => [
+        loadImage(ref.logo),
+        loadImage(ref.referenceImage),
+      ]);
+
+      // Obietnica, która rozwiązuje się po co najmniej 1 sekundzie
+      const minimumLoadingTimePromise = new Promise((resolve) =>
+        setTimeout(resolve, 1000)
+      );
+
+      Promise.all([...imagePromises, minimumLoadingTimePromise])
+        .then((results) => {
+          const images = results.slice(0, -1); // Usuń ostatni element, który jest wynikiem minimumLoadingTimePromise
+          const imagesMap = images.reduce((acc, image) => {
+            acc[image.id] = image.src;
+            return acc;
+          }, {});
+          setLoadedImages(imagesMap);
+        })
+        .catch((error) => {
+          console.error("Error loading images:", error);
+        })
+        .finally(() => {
+          setIsLoading(false); // Zakończ ładowanie
+        });
+    };
+
+    loadImagesAsync(REFERENCES);
+  }, []);
+
+  const handleModalReference = (imageSrc) => {
+    setReferenceImage(loadedImages[imageSrc]);
     if (modalReferenceRef.current) {
       modalReferenceRef.current.openModal();
     }
   };
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  const contentByLanguage =
+    REFERENCES_CONTENT[language] || REFERENCES_CONTENT.PL;
+  const { left, leftInfo, rightDescription } = contentByLanguage;
 
   return (
     <>
@@ -44,7 +94,7 @@ export default function References() {
           >
             <ReferenceBox
               id={reference.id}
-              logo={reference.logo}
+              logo={loadedImages[reference.logo]}
               companyName={reference.companyName}
               descriptionPL={reference.descriptionPL}
               descriptionEN={reference.descriptionEN}

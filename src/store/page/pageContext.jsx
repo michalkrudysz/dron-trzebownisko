@@ -22,11 +22,13 @@ export function PageProvider({ children }) {
       case "homePage":
         return <HomePage />;
       case "portfolio":
-        return <Portfolio />;
+        // return <Portfolio />;
+        break;
       case "references":
         return <References />;
       case "aboutMe":
-        return <AboutMe />;
+        // return <AboutMe />;
+        break;
       case "exploreTheMunicipality":
         return <ExploreTheMunicipality />;
       case "quiz":
@@ -37,16 +39,12 @@ export function PageProvider({ children }) {
   };
 
   return (
-    <PageContext.Provider value={{ currentPage, changePage, displayPage }}>
+    <PageContext.Provider value={{ changePage, displayPage }}>
       {children}
     </PageContext.Provider>
   );
 }
 
 export function usePage() {
-  const context = useContext(PageContext);
-  if (context === undefined) {
-    throw new Error("usePage must be used within a PageProvider");
-  }
-  return context;
+  return useContext(PageContext);
 }
