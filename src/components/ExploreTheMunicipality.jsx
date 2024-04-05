@@ -1,15 +1,26 @@
 import Select from "react-select";
 import classes from "./ExploreTheMunicipality.module.scss";
 import Location from "./Location";
+import Loading from "./Loading";
 import { useLanguage } from "../store/language/languageContext";
 import { useState } from "react";
 import { usePage } from "../store/page/pageContext";
-
+import { useEffect } from "react";
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 
 export default function ExploreTheMunicipality() {
+  const [isLoading, setIsLoading] = useState(true);
   const [selectedOption, setSelectedOption] = useState(null);
   const { changePage } = usePage();
+  const { language } = useLanguage();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const options = [
     { value: "1", label: "Trzebownisko" },
@@ -99,8 +110,10 @@ export default function ExploreTheMunicipality() {
       display: "none",
     }),
   };
-  const { language } = useLanguage();
 
+  if (isLoading) {
+    return <Loading />; // Pokaż komponent ładowania, gdy isLoading jest true
+  }
   return (
     <>
       <div className={classes.top}>
