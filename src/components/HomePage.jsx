@@ -91,6 +91,7 @@ export default function HomePage() {
         </section>
       </div>
       <div className={classes["shadow"]}></div>
+      <footer className={classes.footer}>&copy; Michał Krudysz 2024</footer>
     </>
   );
 }

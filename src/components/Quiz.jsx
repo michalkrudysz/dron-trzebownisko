@@ -3,13 +3,12 @@ import classes from "./Quiz.module.scss";
 import { useState, useCallback } from "react";
 import QUESTIONS from "../../data/questions";
 import Question from "./Question";
-// Import useLanguage hook
 import { useLanguage } from "../store/language/languageContext";
 
 export default function Quiz() {
   const [answerState, setAnswerState] = useState("");
   const [userAnswers, setUserAnswers] = useState([]);
-  // Use the useLanguage hook to get the current language
+
   const { language } = useLanguage();
 
   const activeQuestionIndex =
@@ -24,7 +23,7 @@ export default function Quiz() {
       setAnswerState("answered");
       setUserAnswers((prevUserAnswers) => [...prevUserAnswers, answer]);
 
-      const timeoutId = setTimeout(() => {
+      setTimeout(() => {
         const correctAnswer =
           language === "EN"
             ? QUESTIONS[activeQuestionIndex].answersEN[0]
@@ -32,12 +31,12 @@ export default function Quiz() {
         const newState = answer === correctAnswer ? "correctly" : "incorrectly";
         setAnswerState(newState);
 
-        const resetStateTimeoutId = setTimeout(() => {
+        setTimeout(() => {
           setAnswerState("");
         }, 2000);
       }, 1000);
     },
-    [activeQuestionIndex, answerState, language] // include language in dependencies
+    [activeQuestionIndex, answerState, language]
   );
 
   const handleSkipAnswer = useCallback(
