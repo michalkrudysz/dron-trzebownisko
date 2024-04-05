@@ -19,39 +19,40 @@ export default function References() {
       new Promise((resolve, reject) => {
         const img = new Image();
         img.src = imageSrc;
-
         img.onload = () => resolve({ src: img.src, id: imageSrc });
         img.onerror = reject;
       });
 
-    const loadImagesAsync = (references) => {
-      setIsLoading(true); // Rozpocznij ładowanie
+    const loadImagesAsync = async (references) => {
+      setIsLoading(true);
+      const startTime = Date.now();
 
-      const imagePromises = references.flatMap((ref) => [
-        loadImage(ref.logo),
-        loadImage(ref.referenceImage),
-      ]);
+      try {
+        const imagePromises = references.flatMap((ref) => [
+          loadImage(ref.logo),
+          loadImage(ref.referenceImage),
+        ]);
 
-      // Obietnica, która rozwiązuje się po co najmniej 1 sekundzie
-      const minimumLoadingTimePromise = new Promise((resolve) =>
-        setTimeout(resolve, 1000)
-      );
+        const images = await Promise.all(imagePromises);
+        const elapsedTime = Date.now() - startTime;
 
-      Promise.all([...imagePromises, minimumLoadingTimePromise])
-        .then((results) => {
-          const images = results.slice(0, -1); // Usuń ostatni element, który jest wynikiem minimumLoadingTimePromise
-          const imagesMap = images.reduce((acc, image) => {
-            acc[image.id] = image.src;
-            return acc;
-          }, {});
-          setLoadedImages(imagesMap);
-        })
-        .catch((error) => {
-          console.error("Error loading images:", error);
-        })
-        .finally(() => {
-          setIsLoading(false); // Zakończ ładowanie
-        });
+        if (elapsedTime < 1000) {
+          await new Promise((resolve) =>
+            setTimeout(resolve, 1000 - elapsedTime)
+          );
+        }
+
+        const imagesMap = images.reduce((acc, image) => {
+          acc[image.id] = image.src;
+          return acc;
+        }, {});
+
+        setLoadedImages(imagesMap);
+      } catch (error) {
+        console.error("Error loading images:", error);
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     loadImagesAsync(REFERENCES);

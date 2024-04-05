@@ -1,19 +1,62 @@
 import QuizEnd from "./QuizEnd";
 import classes from "./Quiz.module.scss";
-import { useState, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import QUESTIONS from "../../data/questions";
 import Question from "./Question";
 import { useLanguage } from "../store/language/languageContext";
+import Loading from "./Loading";
 
 export default function Quiz() {
+  const [loadedImages, setLoadedImages] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const [answerState, setAnswerState] = useState("");
   const [userAnswers, setUserAnswers] = useState([]);
-
   const { language } = useLanguage();
 
   const activeQuestionIndex =
     answerState === "" ? userAnswers.length : userAnswers.length - 1;
   const quizFinished = activeQuestionIndex === QUESTIONS.length;
+
+  useEffect(() => {
+    const loadImage = (imageSrc) =>
+      new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = () => resolve({ src: img.src, id: imageSrc });
+        img.onerror = reject;
+      });
+
+    const loadImagesAsync = async () => {
+      setIsLoading(true);
+      const startTime = Date.now();
+
+      try {
+        const imagePromises = QUESTIONS.map((question) =>
+          loadImage(question.image)
+        );
+        const images = await Promise.all(imagePromises);
+        const imagesMap = images.reduce((acc, image) => {
+          acc[image.id] = image.src;
+          return acc;
+        }, {});
+
+        const elapsedTime = Date.now() - startTime;
+        if (elapsedTime < 1000) {
+          await new Promise((resolve) =>
+            setTimeout(resolve, 1000 - elapsedTime)
+          );
+        }
+
+        setLoadedImages(imagesMap);
+      } catch (error) {
+        console.error("Error loading images:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadImagesAsync();
+  }, []);
 
   const handleAnswerClick = useCallback(
     (answer) => {
@@ -44,34 +87,29 @@ export default function Quiz() {
     [handleAnswerClick]
   );
 
+  if (isLoading) {
+    return <Loading />;
+  }
+
   if (quizFinished) {
     return <QuizEnd userAnswers={userAnswers} questions={QUESTIONS} />;
   }
 
+  const question = QUESTIONS[activeQuestionIndex];
+  const imageSrc = loadedImages[question.image];
+
   return (
     <>
       <Question
-        questionText={
-          language === "EN"
-            ? QUESTIONS[activeQuestionIndex].textEN
-            : QUESTIONS[activeQuestionIndex].textPL
-        }
-        answers={
-          language === "EN"
-            ? QUESTIONS[activeQuestionIndex].answersEN
-            : QUESTIONS[activeQuestionIndex].answersPL
-        }
+        questionText={language === "EN" ? question.textEN : question.textPL}
+        answers={language === "EN" ? question.answersEN : question.answersPL}
         onSelectAnswer={handleAnswerClick}
         activeQuestionIndex={activeQuestionIndex}
         handleSkipAnswer={handleSkipAnswer}
         answerState={answerState}
         userAnswers={userAnswers}
-        imageSrc={QUESTIONS[activeQuestionIndex].image}
-        imageAlt={
-          language === "EN"
-            ? QUESTIONS[activeQuestionIndex].altEN
-            : QUESTIONS[activeQuestionIndex].altPL
-        }
+        imageSrc={imageSrc}
+        imageAlt={language === "EN" ? question.altEN : question.altPL}
       />
       <div className={classes["shadow"]}></div>
     </>

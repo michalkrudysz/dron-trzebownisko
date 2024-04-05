@@ -7,44 +7,89 @@ import classes from "./HomePage.module.scss";
 import Button from "./Button";
 import ReferenceBox from "./ReferenceBox";
 import ModalReference from "./ModalReference";
-
-const contentByLanguage = HOME_PAGE_CONTENT;
-
-const getRandomIndexes = (length, count) => {
-  let indexes = [];
-  while (indexes.length < count) {
-    let index = Math.floor(Math.random() * length);
-    if (!indexes.includes(index)) {
-      indexes.push(index);
-    }
-  }
-  return indexes;
-};
+import Loading from "./Loading";
 
 export default function HomePage() {
+  const [loadedImages, setLoadedImages] = useState({});
+  const [referenceImage, setReferenceImage] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const modalReferenceRef = useRef();
   const { language } = useLanguage();
   const { changePage } = usePage();
-  const [indexes, setIndexes] = useState(
-    getRandomIndexes(REFERENCES.length, 3)
-  );
-  const [referenceImage, setReferenceImage] = useState();
-
-  const modalReferenceRef = useRef();
-
-  const handleModalReference = (image) => {
-    setReferenceImage(image);
-    modalReferenceRef.current.openModal();
-  };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndexes(getRandomIndexes(REFERENCES.length, 3));
-    }, 8000);
-    return () => clearInterval(interval);
+    const loadImage = (imageSrc) =>
+      new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = () => resolve({ src: img.src, id: imageSrc });
+        img.onerror = (e) => reject(e);
+      });
+
+    const loadImagesAsync = (references) => {
+      setIsLoading(true);
+      const startTime = Date.now();
+
+      const imagePromises = references.flatMap((ref) => [
+        loadImage(ref.logo),
+        loadImage(ref.referenceImage),
+      ]);
+
+      Promise.all(imagePromises)
+        .then((images) => {
+          const imagesMap = images.reduce((acc, image) => {
+            acc[image.id] = image.src;
+            return acc;
+          }, {});
+
+          const elapsedTime = Date.now() - startTime;
+          if (elapsedTime < 1000) {
+            return new Promise((resolve) =>
+              setTimeout(resolve, 1000 - elapsedTime)
+            ).then(() => imagesMap);
+          }
+          return imagesMap;
+        })
+        .then((imagesMap) => {
+          setLoadedImages(imagesMap);
+        })
+        .catch((error) => {
+          console.error("Error loading images:", error);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    };
+
+    loadImagesAsync(REFERENCES);
   }, []);
 
+  const handleModalReference = (imageSrc) => {
+    setReferenceImage(loadedImages[imageSrc]);
+    if (modalReferenceRef.current) {
+      modalReferenceRef.current.openModal();
+    }
+  };
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   const { greeting, description, buttons } =
-    contentByLanguage[language] || contentByLanguage.PL;
+    HOME_PAGE_CONTENT[language] || HOME_PAGE_CONTENT.PL;
+
+  const getRandomIndexes = (length, count) => {
+    let indexes = [];
+    while (indexes.length < count) {
+      let index = Math.floor(Math.random() * length);
+      if (!indexes.includes(index)) {
+        indexes.push(index);
+      }
+    }
+    return indexes;
+  };
+
+  const indexes = getRandomIndexes(REFERENCES.length, 3);
 
   return (
     <>
@@ -87,7 +132,7 @@ export default function HomePage() {
                 >
                   <ReferenceBox
                     id={reference.id}
-                    logo={reference.logo}
+                    logo={loadedImages[reference.logo]}
                     companyName={reference.companyName}
                     descriptionPL={reference.descriptionPL}
                     descriptionEN={reference.descriptionEN}
