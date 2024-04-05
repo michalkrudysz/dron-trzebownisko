@@ -2,6 +2,8 @@ import classes from "./Location.module.scss";
 import PhotoModal from "./PhotoModal";
 import { useLanguage } from "../store/language/languageContext";
 import { useRef, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Location({ location }) {
   const { language } = useLanguage();
@@ -37,9 +39,10 @@ export default function Location({ location }) {
             <ul>
               {location.Materials.map((material, index) => (
                 <li onClick={() => openPhoto(material)} key={index}>
-                  <img
+                  <LazyLoadImage
                     src={material.img}
                     alt={language === "PL" ? material.alt : material.altEN}
+                    effect="blur"
                   />
                 </li>
               ))}

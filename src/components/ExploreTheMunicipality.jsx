@@ -4,6 +4,7 @@ import Location from "./Location";
 import { useLanguage } from "../store/language/languageContext";
 import { useState } from "react";
 import { usePage } from "../store/page/pageContext";
+
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 
 export default function ExploreTheMunicipality() {
