@@ -9,7 +9,7 @@ function App() {
     <PageProvider>
       <LanguageProvider>
         <>
-          {/* <Loading */}
+          <Loading />
           <Main />
         </>
       </LanguageProvider>

@@ -1,9 +1,10 @@
+import ReactDOM from "react-dom";
 import classes from "./Loading.module.scss";
 import droneBody from "../assets/loading/drone-body.png";
 import propeller from "../assets/loading/propeller.png";
 
 export default function Loading() {
-  return (
+  return ReactDOM.createPortal(
     <div className={classes.loading}>
       <div className={classes["loading-box"]}>
         <div className={`${classes["drone-propeller"]} ${classes["top-left"]}`}>
@@ -28,7 +29,8 @@ export default function Loading() {
           <img src={propeller} alt="Drone's propeller - bottom right" />
         </div>
       </div>
-      <div className={classes["loading-text"]}>Ładowanie</div>
-    </div>
+      <div className={classes["loading-text"]}>Ładowanie...</div>
+    </div>,
+    document.getElementById("loading")
   );
 }

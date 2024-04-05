@@ -6,7 +6,7 @@ import MobileMenu from "./MobileMenu";
 export default function Main() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const { displayPage, changePage } = usePage();
+  const { displayPage } = usePage();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
