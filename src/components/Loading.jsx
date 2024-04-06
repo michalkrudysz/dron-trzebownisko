@@ -5,6 +5,7 @@ import propeller from "../assets/loading/propeller.png";
 import { useLanguage } from "../store/language/languageContext";
 
 const currentYear = new Date().getFullYear();
+
 export default function Loading() {
   const { language } = useLanguage();
 

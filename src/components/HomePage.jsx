@@ -148,7 +148,7 @@ export default function HomePage() {
       <div className={classes["shadow"]}></div>
       <footer
         className={classes.footer}
-      >{`&copy; Michał Krudysz 2017 - ${currentYear}`}</footer>
+      >{`© 2017 - ${currentYear} Michał Krudysz`}</footer>
     </>
   );
 }

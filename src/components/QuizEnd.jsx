@@ -1,6 +1,8 @@
+import React from "react";
 import classes from "./QuizEnd.module.scss";
 import { useLanguage } from "../store/language/languageContext";
 import { usePage } from "../store/page/pageContext";
+import QUIZ_CONTENT from "../../data/quizContent";
 
 export default function QuizEnd({ userAnswers, questions }) {
   const { language } = useLanguage();
@@ -21,35 +23,13 @@ export default function QuizEnd({ userAnswers, questions }) {
   const skippedPercentage = (skippedAnswers / totalQuestions) * 100;
   const incorrectPercentage = (incorrectAnswers / totalQuestions) * 100;
 
-  const content =
-    language === "PL"
-      ? {
-          congrats: "Brawo!",
-          congratsText:
-            "Ukończyłeś test dotyczący wiedzy o Gminie Trzebownisko!",
-          resultsSummary: "Podsumowanie wyników",
-          correctAnswers: "Poprawne odpowiedzi",
-          skippedAnswers: "Pominięte odpowiedzi",
-          incorrectAnswers: "Niepoprawne odpowiedzi",
-          returnButton: "Powrót do strony głównej",
-          retryButton: "Powtórz test",
-        }
-      : {
-          congrats: "Congrats!",
-          congratsText: "You've finished the Trzebownisko Municipality quiz!",
-          resultsSummary: "Score Breakdown",
-          correctAnswers: "Correct answers",
-          skippedAnswers: "Skipped answers",
-          incorrectAnswers: "Incorrect answers",
-          returnButton: "Back to Home",
-          retryButton: "Give it Another Go",
-        };
+  const content = QUIZ_CONTENT[language] || QUIZ_CONTENT.PL;
 
   return (
     <>
       <div className={classes.summary}>
         <h1 className={classes.title}>
-          <span className={classes.strong}>{content.congrats}</span>
+          <span className={classes.strong}>{content.congrats}</span>{" "}
           {content.congratsText}
         </h1>
         <h2 className={classes["summary-results"]}>{content.resultsSummary}</h2>

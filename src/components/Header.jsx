@@ -5,10 +5,12 @@ import menu from "../assets/hamburger-menu.png";
 import closeMenu from "../assets/close-menu.png";
 import { useLanguage } from "../store/language/languageContext";
 import { usePage } from "../store/page/pageContext";
+import NAVIGATION_CONTENT from "../../data/navigationContent";
 
 export default function Header({ toggleMenu, isOpen, setIsMenuOpen }) {
   const { language, toggleLanguage } = useLanguage();
   const { changePage } = usePage();
+  const content = NAVIGATION_CONTENT[language] || NAVIGATION_CONTENT.PL;
 
   return (
     <header className={classes.header}>
@@ -24,23 +26,21 @@ export default function Header({ toggleMenu, isOpen, setIsMenuOpen }) {
       </div>
       <nav className={classes.menu}>
         <Button onClick={() => changePage("portfolio")}>
-          {language === "PL" ? "Portfolio" : "Portfolio"}
+          {content.portfolio}
         </Button>
         <Button onClick={() => changePage("references")}>
-          {language === "PL" ? "Referencje" : "References"}
+          {content.references}
         </Button>
-        <Button onClick={() => changePage("aboutMe")}>
-          {language === "PL" ? "O mnie" : "About Me"}
-        </Button>
+        <Button onClick={() => changePage("aboutMe")}>{content.aboutMe}</Button>
         <Button
           onClick={() => changePage("exploreTheMunicipality")}
           kind={false}
         >
-          {language === "PL" ? "Odkryj gminę" : "Explore the Municipality"}
+          {content.exploreTheMunicipality}
         </Button>
       </nav>
       <div className={classes.language} onClick={toggleLanguage}>
-        {language === "PL" ? "EN" : "PL"}
+        {content.languageSwitch}
       </div>
       <div className={classes["hamburger-menu"]} onClick={toggleMenu}>
         {isOpen ? (
