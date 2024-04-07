@@ -56,6 +56,12 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
         dateOfPhoto: 2018,
         curiosityPL: `25 marca 2022 r., prezydent USA, Joe Biden, przyleciał do Polski, lądując na lotnisku w Jasionce. Celem jego wizyty było pogłębienie relacji między Polską a Stanami Zjednoczonymi oraz omówienie kwestii bezpieczeństwa i współpracy militarnej, z naciskiem na wsparcie dla Ukrainy. Biden spotkał się z żołnierzami z 82. Dywizji Powietrznodesantowej. Prezydenta USA powitał prezydent Polski, Andrzej Duda.`,
         curiosityEN: `On March 25, 2022, the President of the USA, Joe Biden, arrived in Poland, landing at the Jasionka airport. The purpose of his visit was to deepen the relations between Poland and the United States and to discuss security issues and military cooperation, with an emphasis on support for Ukraine. Biden met with soldiers from the 82nd Airborne Division. The President of the USA was welcomed by the President of Poland, Andrzej Duda.          `,
+        sources: [
+          {
+            nameSource: "Dzieje.pl",
+            url: "https://dzieje.pl/wiadomosci/prezydent-usa-joe-biden-przybyl-do-polski",
+          },
+        ],
       },
       {
         img: jasionkaAirport2018_2,
@@ -64,6 +70,12 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
         dateOfPhoto: 2018,
         curiosityPL: `Papież Jan Paweł II odwiedził lotnisko w Jasionce 2 czerwca 1991 roku podczas swojej podróży do Polski. Ta wizyta była częścią jego pielgrzymki, której głównym przesłaniem było "Bogu dziękujcie, Ducha nie gaście". Spotkanie to miało miejsce w ważnym momencie dla Polski, kiedy kraj przygotowywał się do pierwszych w pełni wolnych wyborów parlamentarnych zaplanowanych na październik tego roku. Był to czas, gdy polski krajobraz polityczny przechodził głębokie zmiany, odchodząc od podziału na obóz postkomunistyczny i solidarnościowy, w kierunku nowego podziału politycznego na lewicę, liberałów i konserwatystów.`,
         curiosityEN: `Pope John Paul II visited the airport in Jasionka on June 2, 1991, during his trip to Poland. This visit was part of his pilgrimage, whose main message was "Give thanks to God, do not extinguish the Spirit." This meeting took place at an important moment for Poland, as the country was preparing for the first fully free parliamentary elections scheduled for October of that year. It was a time when the Polish political landscape was undergoing profound changes, moving away from the division into the post-communist and Solidarity camps, towards a new political division into the left, liberals, and conservatives.`,
+        sources: [
+          {
+            nameSource: "jp2online.pl",
+            url: "https://jp2online.pl/en/publication/czwarta-pielgrzymka-jana-pawla-ii-do-polski-1991-rok-fundamenty-dla-nowego-panstwa-;UHVibGljYXRpb246MTEw",
+          },
+        ],
       },
       {
         img: jasionkaAirport2018_3,
@@ -72,32 +84,56 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
         dateOfPhoto: 2018,
         curiosityPL: `Centrum zostało uroczyście otwarte dnia 23 czerwca 2016 roku. Zostało stworzone z zamysłem organizowania prestiżowych wydarzeń, targów, wystaw i konferencji, które odbywają się w regionie. Ten obiekt może się pochwalić ponad 16 tysiącami metrów kwadratowych przestrzeni wystawienniczej, imponującą salą kongresową na 872 osoby, dwoma salami konferencyjnymi oraz dziesięcioma mniejszymi salami zdolnymi pomieścić od 20 do 60 osób każda. Co więcej, dysponuje on również salą restauracyjną i bankietową, a także przestronnym parkingiem na ponad 600 miejsc.`,
         curiosityEN: `The center was ceremonially opened on June 23, 2016. It was created with the intention of organizing prestigious events, fairs, exhibitions, and conferences that take place in the region. This facility boasts over 16,000 square meters of exhibition space, an impressive congress hall for 872 people, two conference rooms, and ten smaller rooms capable of accommodating from 20 to 60 people each. Moreover, it also has a dining and banquet hall, as well as a spacious parking lot for over 600 spaces.`,
+        sources: [
+          {
+            nameSource: "g2aarena.pl",
+            url: "https://g2aarena.pl/g2a-arena/?_gl=1*1uuhnrs*_up*MQ..&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xT9oBCdBZPNWAh3H3xdY_yrghGrgYnvbc3B3tAil2kSgAudQKFhpdoaAjsMEALw_wcB",
+          },
+        ],
       },
       {
         img: jasionkaAirport2018_4,
         alt: `Centrum Wystawienniczo - Kongresowe`,
         altEN: "Exhibition and Congress Center",
         dateOfPhoto: 2018,
-        curiosityPL: `Podczas wybuchu konfliktu na Ukrainie w 2022 roku, armia amerykańska zdecydowała się na utworzenie swojej bazy w Centrum Wystawienniczo-Kongresowym w Jasionce. Pełniła ona kluczową rolę, między innymi w obsłudze dostaw sprzętu wojskowego dla Ukrainy.`,
-        curiosityEN: `During the outbreak of the conflict in Ukraine in 2022, the American army decided to establish its base in the Exhibition and Congress Center in Jasionka. It played a key role, among other things, in handling military equipment supplies for Ukraine.`,
+        curiosityPL: `Podczas wybuchu konfliktu na Ukrainie w 2022 roku armia amerykańska, na początku, zakwaterowała swoich żołnierzy w Centrum Wystawienniczo-Kongresowym G2A Arena. Właśnie tam odbyło się spotkanie żołnierzy prezydenta Stanów Zjednoczonych, Joe Bidena.`,
+        curiosityEN: `During the outbreak of the conflict in Ukraine in 2022, the US military initially quartered its soldiers in the G2A Arena Exhibition and Congress Center. It was there that the meeting of the soldiers of the President of the United States, Joe Biden, took place.`,
+        sources: [
+          {
+            nameSource: "rzeszow.wyborcza.pl",
+            url: "https://rzeszow.wyborcza.pl/rzeszow/7,34962,29477222,amerykanscy-zolnierze-w-jasionce-jak-dlugo-tu-zostana-deweloperzy.html",
+          },
+        ],
       },
       {
         img: jasionkaChurch2017,
         alt: "Parafia św. Stanisława Kostki",
         altEN: "St. Stanislaus Kostka Parish",
         dateOfPhoto: 2017,
-        curiosityPL: `Jednym z najbardziej wyjątkowych i niezapomnianych momentów w historii kościoła w Jasionce był 10 czerwca 1997 roku. Wtedy to Ojciec Święty Jan Paweł II, podczas uroczystej mszy kanonizacyjnej św. Jana z Dukli w Krośnie, poświęcił kamień węgielny dla budującego się kościoła parafialnego w Jasionce. Ta uroczystość stanowiła symboliczny punkt zwrotny w budowie nowego kościoła, który miał stać się ważnym miejscem dla lokalnej społeczności.`,
-        curiosityEN: `One of the most unique and unforgettable moments in the history of the church in Jasionka was on June 10, 1997. It was then that Saint Pope John Paul II, during the solemn canonization mass of St. John of Dukla in Krosno, consecrated the cornerstone for the church under construction in Jasionka. This ceremony was a symbolic turning point in the construction of the new church, which was to become an important place for the local community.`,
+        curiosityPL: `W 2016 roku parafia św. Stanisława Kostki w Jasionce obchodziła 50. rocznicę, od kiedy została erygowana 11 czerwca 1966 roku. Historia wiary w tej okolicy ma korzenie sięgające państwa Wiślan i Rusi Kijowskiej, z przemianą z prawosławia na katolicyzm po podbojach Kazimierza Wielkiego w XIV wieku. Rozwój osadnictwa, wsparty przez przybyłych z Mazur i utworzenie parafii na Staromieściu przez Jana Paszko w 1356 roku, kształtował strukturę kościelną obszaru. Wraz z upływem czasu, w tym zmianą koryta Wisłoka, doszło do erygowania nowych parafii, w tym samodzielnej parafii w Stobiernej w 1789 roku, która pokrywała obszary oddzielone od Łąki. Podział ten utrzymywał się aż do 1966 roku.`,
+        curiosityEN: `In 2016, the parish of St. Stanislaus Kostka in Jasionka celebrated its 50th anniversary since it was established on June 11, 1966. The history of faith in this area has roots reaching back to the state of the Vistulans and Kievan Rus, with a transformation from Orthodoxy to Catholicism after the conquests of Casimir the Great in the 14th century. The development of settlements, supported by arrivals from Masuria and the establishment of a parish in Staromieście by Jan Paszko in 1356, shaped the church structure of the area. Over time, including the change of the Wisłok riverbed, new parishes were established, including a separate parish in Stobierna in 1789, which covered areas separated from Łąka. This division persisted until 1966.`,
+        sources: [
+          {
+            nameSource:
+              "Bereś, R., Mierzwa, J., Ożóg, A., Sworszt, J., Zdeb, M., & Drąg, E. (2015). Jasionka przez wieki. Stowarzyszenie Przyjaciół Podkarpackiej Rodziny Szkół im. Jana Pawła II, s. 72",
+            url: "https://trzebownisko.pl/FCK/JASIONKA_monografia_PDF.pdf",
+          },
+        ],
       },
       {
         img: jasionkaChurch2017_2,
         alt: "Parafia św. Stanisława Kostki",
         altEN: "St. Stanislaus Kostka Parish",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `1966 roku, ze względu na rosnącą liczbę parafian uczestniczących w mszach, mała kaplica prowadzona przez siostry służebniczki została przez biskupa Ignacego Tokarczuka przemianowana na kościół parafialny. Aby zapewnić miejsce dla większej liczby osób, już w 1960 roku podjęto decyzję o rozbudowie kaplicy poprzez wyburzenie północnej ściany jednego z pomieszczeń. W 1973 roku przeprowadzono dalsze prace, adaptując dawną przybudówkę, używaną niegdyś jako magazyn mąki, na dodatkową kaplicę dla wiernych.`,
+        curiosityEN: `In 1966, due to the increasing number of parishioners attending masses, a small chapel run by the Sister Servants was renamed by Bishop Ignacy Tokarczuk as a parish church. To accommodate more people, a decision was already made in 1960 to expand the chapel by demolishing the north wall of one of the rooms. In 1973, further work was carried out, adapting a former annex, once used as a flour warehouse, into an additional chapel for the faithful.`,
+        sources: [
+          {
+            nameSource:
+              "Bereś, R., Mierzwa, J., Ożóg, A., Sworszt, J., Zdeb, M., & Drąg, E. (2015). Jasionka przez wieki. Stowarzyszenie Przyjaciół Podkarpackiej Rodziny Szkół im. Jana Pawła II, s. 75",
+            url: "https://trzebownisko.pl/FCK/JASIONKA_monografia_PDF.pdf",
+          },
+        ],
       },
     ],
   },

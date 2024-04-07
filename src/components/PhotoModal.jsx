@@ -1,3 +1,4 @@
+import React from "react";
 import { createPortal } from "react-dom";
 import { useState, forwardRef, useImperativeHandle } from "react";
 import { useLanguage } from "../store/language/languageContext";
@@ -60,6 +61,19 @@ const PhotoModal = forwardRef(({ imageData }, ref) => {
                 ? imageData.curiosityPL
                 : imageData.curiosityEN}
             </div>
+            {imageData.sources &&
+              imageData.sources.map((source, index) => (
+                <div key={index} className={classes.source}>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    {language === "PL"
+                      ? `Źródło: ${source.nameSource}`
+                      : `Source: ${source.nameSource}`}
+                  </a>
+                </div>
+              ))}
           </div>
         </div>
       </div>
