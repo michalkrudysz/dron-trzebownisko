@@ -1,0 +1,22 @@
+.top {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+
+  .title {
+    font-size: 1.4em;
+    text-align: center;
+    padding: 0.4em 0.8em;
+    border-radius: 3px;
+  }
+}
+.film-productions {
+  margin-top: 1em;
+  padding-left: 7em;
+  padding-right: 7em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

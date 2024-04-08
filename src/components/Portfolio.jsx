@@ -2,6 +2,7 @@ import classes from "./Portfolio.module.scss";
 import SkillBar from "./SkillBar";
 import Category from "./Category";
 import FilmEditing from "./FilmEditing";
+import FilmProductions from "./FilmProductions";
 
 export default function Portfolio() {
   return (
@@ -50,6 +51,7 @@ export default function Portfolio() {
         </div>
       </div>
       <FilmEditing />
+      <FilmProductions />
     </>
   );
 }
