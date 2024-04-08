@@ -1,0 +1,40 @@
+.category {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 28em;
+  height: 35em;
+  border: 3px solid #5096f2;
+
+  .left-arrow,
+  .right-arrow {
+    position: absolute;
+    cursor: pointer;
+    width: 2.5em;
+    height: auto;
+  }
+
+  .left-arrow {
+    right: 35em;
+  }
+
+  .right-arrow {
+    left: 35em;
+  }
+
+  .category-item {
+    width: 40em;
+    bottom: 0;
+    cursor: pointer;
+
+    .item {
+      width: 100%;
+      height: 100%;
+      box-shadow: -2px 1px 24px -12px rgba(126, 176, 242, 1);
+      -webkit-box-shadow: -2px 1px 24px -12px rgba(126, 176, 242, 1);
+      -moz-box-shadow: -2px 1px 24px -12px rgba(126, 176, 242, 1);
+    }
+  }
+}

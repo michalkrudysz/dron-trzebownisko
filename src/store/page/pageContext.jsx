@@ -3,6 +3,7 @@ import HomePage from "../../components/HomePage";
 import References from "../../components/References";
 import ExploreTheMunicipality from "../../components/ExploreTheMunicipality";
 import Quiz from "../../components/Quiz";
+import Portfolio from "../../components/Portfolio";
 
 const PageContext = createContext();
 
@@ -22,8 +23,7 @@ export function PageProvider({ children }) {
       case "homePage":
         return <HomePage />;
       case "portfolio":
-        // return <Portfolio />;
-        break;
+        return <Portfolio />;
       case "references":
         return <References />;
       case "aboutMe":

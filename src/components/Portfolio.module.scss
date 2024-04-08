@@ -1,0 +1,46 @@
+.top {
+  width: 100%;
+  margin-top: 5em;
+
+  .portfolio {
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10em;
+
+      .text {
+        font-size: 1.3em;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        padding-left: 3em;
+        padding-right: 1.5em;
+      }
+
+      .skills-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5em;
+
+        .skills {
+          width: 80%;
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5em;
+    }
+  }
+}
