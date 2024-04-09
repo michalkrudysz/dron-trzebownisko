@@ -1,4 +1,3 @@
-import React from "react";
 import { createPortal } from "react-dom";
 import { useState, forwardRef, useImperativeHandle } from "react";
 import { useLanguage } from "../store/language/languageContext";
@@ -39,13 +38,19 @@ const PhotoModal = forwardRef(({ imageData }, ref) => {
         <div className={classes["modal-content"]}>
           <div className={classes.photo}>
             <img
-              src={imageData.img}
-              alt={language === "PL" ? imageData.alt : imageData.altEN}
+              src={imageData.img ? imageData.img : imageData.imgUrl}
+              alt={
+                language === "PL"
+                  ? imageData.alt || imageData.altPL
+                  : imageData.altEN
+              }
             />
           </div>
           <div className={classes["photo-description"]}>
             <div className={classes["photo-description-title"]}>
-              {language === "PL" ? imageData.alt : imageData.altEN}
+              {language === "PL"
+                ? imageData.alt || imageData.altPL
+                : imageData.altEN}
             </div>
             <div className={classes["photo-date"]}>
               {language === "PL"
@@ -67,7 +72,8 @@ const PhotoModal = forwardRef(({ imageData }, ref) => {
                   <a
                     href={source.url}
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     {language === "PL"
                       ? `Źródło: ${source.nameSource}`
                       : `Source: ${source.nameSource}`}

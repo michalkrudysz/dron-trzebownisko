@@ -29,16 +29,43 @@ const PORTFOLIO_CONTENT = [
         imgUrl: cyprus2019_2,
         altPL: "Wyspa Yeronissos Cypr",
         altEN: "Yeronissos Island Cyprus",
+        dateOfPhoto: 2019,
+        curiosityPL: "Andrzej był tutaj",
+        curiosityEN: "Andrzej was here",
+        sources: [
+          {
+            url: "https://www.cyprusisland.net/cyprus-shipwrecks/demetrios-ii-shipwreck",
+            nameSource: "Cyprus Island",
+          },
+        ],
       },
       {
         imgUrl: cyprus2019_3,
         altPL: "Wrak statku MV Demetrios II",
         altEN: "Shipwreck MV Demetrios II",
+        curiosityPL: "Andrzej był tutaj",
+        curiosityEN: "Andrzej was here",
+        dateOfPhoto: 2019,
+        sources: [
+          {
+            url: "https://www.cyprusisland.net/cyprus-shipwrecks/demetrios-ii-shipwreck",
+            nameSource: "Cyprus Island",
+          },
+        ],
       },
       {
         imgUrl: cyprus2019_4,
         altPL: "Wrak statku MV Demetrios II",
         altEN: "Shipwreck MV Demetrios II",
+        curiosityPL: "Andrzej był tutaj",
+        curiosityEN: "Andrzej was here",
+        dateOfPhoto: 2019,
+        sources: [
+          {
+            url: "https://www.cyprusisland.net/cyprus-shipwrecks/demetrios-ii-shipwreck",
+            nameSource: "Cyprus Island",
+          },
+        ],
       },
     ],
   },
