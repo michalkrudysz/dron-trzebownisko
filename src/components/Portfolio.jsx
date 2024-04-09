@@ -4,23 +4,20 @@ import Category from "./Category";
 import FilmEditing from "./FilmEditing";
 import FilmProductions from "./FilmProductions";
 import Photos from "./Photos";
+import PORTFOLIO_CONTENT from "../../data/portfolioContent";
+import { useLanguage } from "../store/language/languageContext";
 
 export default function Portfolio() {
+  const { language } = useLanguage();
+
+  const { content } = PORTFOLIO_CONTENT[0][language];
+
   return (
     <>
       <div className={classes["top"]}>
         <div className={classes["portfolio"]}>
           <div className={classes["left"]}>
-            <h1 className={classes["text"]}>
-              Moja pasja do dokumentowania niezapomnianych chwil, zarówno w
-              trakcie podróży, jak i w codziennym życiu, zaowocowała stworzeniem
-              obszernej kolekcji. Portfolio to także przestrzeń, w której
-              prezentuję moje doświadczenie w tworzeniu relacji z wydarzeń,
-              filmów korporacyjnych, spotów czy dokumentacji inwestycji. Dzięki
-              współpracy z różnymi firmami, szczególnie przy tworzeniu filmów
-              ślubnych, zgromadziłem portfolio montaży filmowych, liczące
-              dziesiątki zrealizowanych projektów.
-            </h1>
+            <h1 className={classes["text"]}>{content}</h1>
             <div className={classes["skills-box"]}>
               <div className={classes.skills}>
                 <SkillBar
@@ -51,7 +48,7 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
-      <FilmEditing />
+      <FilmEditing content={PORTFOLIO_CONTENT[2]} />
       <FilmProductions />
       <Photos />
     </>

@@ -4,7 +4,6 @@ import References from "../../components/References";
 import ExploreTheMunicipality from "../../components/ExploreTheMunicipality";
 import Quiz from "../../components/Quiz";
 import Portfolio from "../../components/Portfolio";
-
 const PageContext = createContext();
 
 export function PageProvider({ children }) {
