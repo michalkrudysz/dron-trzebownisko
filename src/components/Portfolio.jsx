@@ -5,18 +5,16 @@ import FilmEditing from "./FilmEditing";
 import FilmProductions from "./FilmProductions";
 import Photos from "./Photos";
 import PORTFOLIO_CONTENT from "../../data/portfolioContent";
-import PhotoModal from "./PhotoModal";
-import { useRef } from "react";
 import { useLanguage } from "../store/language/languageContext";
+import VideoModal from "./VideoModal";
 
 export default function Portfolio() {
   const { language } = useLanguage();
   const { content } = PORTFOLIO_CONTENT[0][language];
 
-  const photoModalRef = useRef();
-
   return (
     <>
+      <VideoModal />
       <div className={classes["top"]}>
         <div className={classes["portfolio"]}>
           <div className={classes["left"]}>
