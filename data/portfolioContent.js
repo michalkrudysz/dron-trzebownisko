@@ -1,5 +1,8 @@
 import idaICezary from "../src/assets/portfolio/ida-i-cezary-photo.png";
 import marzenaISzczepanPhoto from "../src/assets/portfolio/marzena-i-szczepan-photo.png";
+import cyprus2019_2 from "../src/assets/portfolio/cyprus-2019-2.png";
+import cyprus2019_3 from "../src/assets/portfolio/cyprus-2019-3.png";
+import cyprus2019_4 from "../src/assets/portfolio/cyprus-2019-4.png";
 
 const PORTFOLIO_CONTENT = [
   {
@@ -22,9 +25,19 @@ const PORTFOLIO_CONTENT = [
     name: "Category",
     materials: [
       {
-        imgUrl: "cyprus-2019-4.png",
-        altPL: "test",
-        altEN: "test",
+        imgUrl: cyprus2019_2,
+        altPL: "Wyspa Yeronissos Cypr",
+        altEN: "Yeronissos Island Cyprus",
+      },
+      {
+        imgUrl: cyprus2019_3,
+        altPL: "Wrak statku MV Demetrios II",
+        altEN: "Shipwreck MV Demetrios II",
+      },
+      {
+        imgUrl: cyprus2019_4,
+        altPL: "Wrak statku MV Demetrios II",
+        altEN: "Shipwreck MV Demetrios II",
       },
     ],
   },

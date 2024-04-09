@@ -44,7 +44,7 @@ export default function Portfolio() {
             </div>
           </div>
           <div className={classes["right"]}>
-            <Category />
+            <Category materials={PORTFOLIO_CONTENT[1]} />
           </div>
         </div>
       </div>
