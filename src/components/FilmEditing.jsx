@@ -1,7 +1,5 @@
 import classes from "./FilmEditing.module.scss";
 import screenshotFromThePremiereProProject from "../assets/portfolio/screenshot-from-the-premiere-pro-project.png";
-import marzenaISzczepanPhoto from "../assets/portfolio/marzena-i-szczepan-photo.png";
-import idaICezary from "../assets/portfolio/ida-i-cezary-photo.png";
 import { useLanguage } from "../store/language/languageContext";
 
 export default function FilmEditing({ content }) {

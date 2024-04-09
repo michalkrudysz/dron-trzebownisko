@@ -49,7 +49,7 @@ export default function Portfolio() {
         </div>
       </div>
       <FilmEditing content={PORTFOLIO_CONTENT[2]} />
-      <FilmProductions />
+      <FilmProductions content={PORTFOLIO_CONTENT[3]} />
       <Photos />
     </>
   );
