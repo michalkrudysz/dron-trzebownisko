@@ -3,6 +3,7 @@ import SkillBar from "./SkillBar";
 import Category from "./Category";
 import FilmEditing from "./FilmEditing";
 import FilmProductions from "./FilmProductions";
+import Photos from "./Photos";
 
 export default function Portfolio() {
   return (
@@ -52,6 +53,7 @@ export default function Portfolio() {
       </div>
       <FilmEditing />
       <FilmProductions />
+      <Photos />
     </>
   );
 }
