@@ -11,12 +11,10 @@
   }
 }
 .film-productions {
-  margin-top: 1em;
+  margin-top: 1.2em;
   padding-left: 7em;
   padding-right: 7em;
   display: flex;
   gap: 1em;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
