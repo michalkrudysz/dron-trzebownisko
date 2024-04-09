@@ -3,7 +3,13 @@ import idaICezaryVideo from "../src/assets/portfolio/ida-i-cezary.mp4";
 import marzenaISzczepanPhoto from "../src/assets/portfolio/marzena-i-szczepan-photo.png";
 import marzenaISzczepanVideo from "../src/assets/portfolio/marzena-i-szczepan.mp4";
 import waran from "../src/assets/portfolio/waran-photo.png";
+import showreel from "../src/assets/portfolio/showreel-photo.png";
+import showreelVideo from "../src/assets/portfolio/showreel.mp4";
 import waranVideo from "../src/assets/portfolio/waran.mp4";
+import ultramaraton from "../src/assets/portfolio/ultramaraton-photo.png";
+import ultramaratonVideo from "../src/assets/portfolio/ultramaraton.mp4";
+import spot from "../src/assets/portfolio/spot-photo.png";
+import spotVideo from "../src/assets/portfolio/spot.mp4";
 import cyprus2019_2 from "../src/assets/portfolio/cyprus-2019-2.png";
 import cyprus2019_3 from "../src/assets/portfolio/cyprus-2019-3.png";
 import cyprus2019_4 from "../src/assets/portfolio/cyprus-2019-4.png";
@@ -157,7 +163,7 @@ const PORTFOLIO_CONTENT = [
           videoSrc: waranVideo,
         },
         {
-          titleBox: `Film korporacyjny`,
+          titleBox: `Showreel`,
           textBox: `Film korporacyjny to narzędzie komunikacji marketingowej
             wykorzystywane przez firmy i organizacje do promowania ich marki,
             produktów lub usług. Taki film zazwyczaj przedstawia wartości firmy,
@@ -165,22 +171,35 @@ const PORTFOLIO_CONTENT = [
             osiągnięcia. Może również pokazywać pracowników, procesy
             produkcyjne, technologie i case studies zadowolonych klientów.`,
           text: `Rok produkcji: 2019`,
-          alt: `Film korporacyjny`,
-          src: waran,
-          videoSrc: waranVideo,
+          alt: `Showreel`,
+          src: showreel,
+          videoSrc: showreelVideo,
         },
         {
-          titleBox: `Film korporacyjny`,
+          titleBox: `Ultramaraton`,
           textBox: `Film korporacyjny to narzędzie komunikacji marketingowej
               wykorzystywane przez firmy i organizacje do promowania ich marki,
               produktów lub usług. Taki film zazwyczaj przedstawia wartości firmy,
               jej misję, kulturę organizacyjną oraz kluczowe kompetencje i
               osiągnięcia. Może również pokazywać pracowników, procesy
               produkcyjne, technologie i case studies zadowolonych klientów.`,
-          text: `Rok produkcji: 2019`,
-          alt: `Film korporacyjny`,
-          src: waran,
-          videoSrc: waranVideo,
+          text: `Rok produkcji: 2021`,
+          alt: `Ultramaraton`,
+          src: ultramaraton,
+          videoSrc: ultramaratonVideo,
+        },
+        {
+          titleBox: `Spot reklamowy`,
+          textBox: `Film korporacyjny to narzędzie komunikacji marketingowej
+              wykorzystywane przez firmy i organizacje do promowania ich marki,
+              produktów lub usług. Taki film zazwyczaj przedstawia wartości firmy,
+              jej misję, kulturę organizacyjną oraz kluczowe kompetencje i
+              osiągnięcia. Może również pokazywać pracowników, procesy
+              produkcyjne, technologie i case studies zadowolonych klientów.`,
+          text: `Rok produkcji: 2021`,
+          alt: `Spot reklamowy`,
+          src: spot,
+          videoSrc: spotVideo,
         },
       ],
     },
@@ -196,11 +215,16 @@ const PORTFOLIO_CONTENT = [
           videoSrc: waranVideo,
         },
         {
-          titleBox: `Corporate film`,
-          textBox: `A corporate film is a marketing communication tool used by companies and organizations to promote their brand, products, or services. Such a film typically presents the company's values, its mission, organizational culture, and key competencies and achievements. It can also show employees, production processes, technologies, and case studies of satisfied customers.`,
-          text: `Year of production: 2019`,
-          alt: `Film korporacyjny`,
-          src: waran,
+          titleBox: `Showreel`,
+          textBox: `Film korporacyjny to narzędzie komunikacji marketingowej
+            wykorzystywane przez firmy i organizacje do promowania ich marki,
+            produktów lub usług. Taki film zazwyczaj przedstawia wartości firmy,
+            jej misję, kulturę organizacyjną oraz kluczowe kompetencje i
+            osiągnięcia. Może również pokazywać pracowników, procesy
+            produkcyjne, technologie i case studies zadowolonych klientów.`,
+          text: `Rok produkcji: 2019`,
+          alt: `Showreel`,
+          src: showreel,
           videoSrc: waranVideo,
         },
       ],
