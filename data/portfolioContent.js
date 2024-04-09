@@ -3,6 +3,7 @@ import idaICezaryVideo from "../src/assets/portfolio/ida-i-cezary.mp4";
 import marzenaISzczepanPhoto from "../src/assets/portfolio/marzena-i-szczepan-photo.png";
 import marzenaISzczepanVideo from "../src/assets/portfolio/marzena-i-szczepan.mp4";
 import waran from "../src/assets/portfolio/waran-photo.png";
+import waranVideo from "../src/assets/portfolio/waran.mp4";
 import cyprus2019_2 from "../src/assets/portfolio/cyprus-2019-2.png";
 import cyprus2019_3 from "../src/assets/portfolio/cyprus-2019-3.png";
 import cyprus2019_4 from "../src/assets/portfolio/cyprus-2019-4.png";
@@ -153,6 +154,7 @@ const PORTFOLIO_CONTENT = [
           text: `Rok produkcji: 2019`,
           alt: `Film korporacyjny`,
           src: waran,
+          videoSrc: waranVideo,
         },
         {
           titleBox: `Film korporacyjny`,
@@ -165,6 +167,7 @@ const PORTFOLIO_CONTENT = [
           text: `Rok produkcji: 2019`,
           alt: `Film korporacyjny`,
           src: waran,
+          videoSrc: waranVideo,
         },
         {
           titleBox: `Film korporacyjny`,
@@ -177,6 +180,7 @@ const PORTFOLIO_CONTENT = [
           text: `Rok produkcji: 2019`,
           alt: `Film korporacyjny`,
           src: waran,
+          videoSrc: waranVideo,
         },
       ],
     },
@@ -189,6 +193,7 @@ const PORTFOLIO_CONTENT = [
           text: `Year of production: 2019`,
           alt: `Film korporacyjny`,
           src: waran,
+          videoSrc: waranVideo,
         },
         {
           titleBox: `Corporate film`,
@@ -196,6 +201,7 @@ const PORTFOLIO_CONTENT = [
           text: `Year of production: 2019`,
           alt: `Film korporacyjny`,
           src: waran,
+          videoSrc: waranVideo,
         },
       ],
     },
