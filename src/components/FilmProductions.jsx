@@ -17,7 +17,7 @@ export default function FilmProductions({ content }) {
       </div>
       <div className={classes["film-productions"]}>
         {substance.materials.map((material, index) => (
-          <Film key={index} material={material} />
+          <Film key={index} material={material} isReversed={index % 2 !== 0} />
         ))}
       </div>
     </>

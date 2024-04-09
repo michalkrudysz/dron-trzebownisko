@@ -2,9 +2,12 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 1.5em;
+  &.reversed {
+    flex-direction: row-reverse;
+  }
 
   .left {
-    border-right: 1px solid #5096f2;
     padding-right: 5em;
 
     .description {
@@ -34,7 +37,6 @@
   }
 
   .right {
-    border-left: 1px solid #5096f2;
     padding-left: 5em;
 
     .video-box {

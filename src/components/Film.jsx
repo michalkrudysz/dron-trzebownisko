@@ -1,8 +1,10 @@
 import classes from "./Film.module.scss";
 
-export default function Film({ material }) {
+export default function Film({ material, isReversed }) {
   return (
-    <div className={classes["movies"]}>
+    <div
+      className={`${classes["movies"]} ${isReversed ? classes.reversed : ""}`}
+    >
       <div className={classes.left}>
         <div className={classes.description}>
           <div className={classes["title-box"]}>{material.titleBox}</div>
