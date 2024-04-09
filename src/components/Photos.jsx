@@ -1,32 +1,27 @@
 import classes from "./Photos.module.scss";
-import cyprus from "../assets/portfolio/cyprus-2019-2.png";
-export default function Photos() {
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useLanguage } from "../store/language/languageContext";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
+export default function Photos({ photos }) {
+  const { language } = useLanguage();
   return (
     <>
       <div className={classes.top}>
         <h1 className={classes.title}>Zdjęcia warte uwagi</h1>
       </div>
-      <div className={classes["photos"]}>
-        <div className={classes["photo-box"]}>
-          <div className={classes.photo}>
-            <img src={cyprus} alt="Photo by Toa Heftiba on Unsplash" />
+      <div className={classes.photos}>
+        {photos.materials.map((photo, index) => (
+          <div key={index} className={classes["photo-box"]}>
+            <div className={classes.photo}>
+              <LazyLoadImage
+                src={photo.imgUrl}
+                alt={language === "PL" ? photo.altPL : photo.altEN}
+                effect="blur"
+              />
+            </div>
           </div>
-        </div>
-        <div className={classes["photo-box"]}>
-          <div className={classes.photo}>
-            <img src={cyprus} alt="Photo by Toa Heftiba on Unsplash" />
-          </div>
-        </div>
-        <div className={classes["photo-box"]}>
-          <div className={classes.photo}>
-            <img src={cyprus} alt="Photo by Toa Heftiba on Unsplash" />
-          </div>
-        </div>
-        <div className={classes["photo-box"]}>
-          <div className={classes.photo}>
-            <img src={cyprus} alt="Photo by Toa Heftiba on Unsplash" />
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );

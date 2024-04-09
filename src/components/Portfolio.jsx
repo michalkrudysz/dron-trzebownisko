@@ -50,7 +50,7 @@ export default function Portfolio() {
       </div>
       <FilmEditing content={PORTFOLIO_CONTENT[2]} />
       <FilmProductions content={PORTFOLIO_CONTENT[3]} />
-      <Photos />
+      <Photos photos={PORTFOLIO_CONTENT[1]} />
     </>
   );
 }

@@ -160,14 +160,9 @@ const PORTFOLIO_CONTENT = [
           src: waran,
         },
         {
-          titleBox: `Film korporacyjny`,
-          textBox: `Film korporacyjny to narzędzie komunikacji marketingowej
-              wykorzystywane przez firmy i organizacje do promowania ich marki,
-              produktów lub usług. Taki film zazwyczaj przedstawia wartości firmy,
-              jej misję, kulturę organizacyjną oraz kluczowe kompetencje i
-              osiągnięcia. Może również pokazywać pracowników, procesy
-              produkcyjne, technologie i case studies zadowolonych klientów.`,
-          text: `Rok produkcji: 2019`,
+          titleBox: `Corporate film`,
+          textBox: `A corporate film is a marketing communication tool used by companies and organizations to promote their brand, products, or services. Such a film typically presents the company's values, its mission, organizational culture, and key competencies and achievements. It can also show employees, production processes, technologies, and case studies of satisfied customers.`,
+          text: `Year of production: 2019`,
           alt: `Film korporacyjny`,
           src: waran,
         },

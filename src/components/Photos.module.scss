@@ -1,7 +1,7 @@
 .top {
   display: flex;
   justify-content: center;
-  margin-top: 1.5em;
+  margin-top: 1.2em;
 
   .title {
     padding: 0.4em 0.8em;
@@ -16,11 +16,11 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-  margin-top: 1.3em;
+  margin-top: 0.5em;
   margin-bottom: 0.5em;
 
   .photo-box {
-    width: 30%;
+    width: 29%;
     cursor: pointer;
 
     .photo {
