@@ -12,14 +12,13 @@ import buttonPlay from "../assets/play.png";
 import rightArrowPlayer from "../assets/right-arrow-player.png";
 import leftArrowPlayer from "../assets/left-arrow-player.png";
 import pause from "../assets/pause.png";
-import film from "../assets/portfolio/waran.mp4";
 
-const VideoModal = forwardRef((props, ref) => {
-  const [isOpen, setIsOpen] = useState(true);
+const VideoModal = forwardRef(({ videoData }, ref) => {
+  const [isOpen, setIsOpen] = useState(false);
   const videoRef = useRef(null);
-  // Set isPlaying to true for autoplay on open
   const [isPlaying, setIsPlaying] = useState(true);
 
+  console.log(videoData);
   function closeModal(event) {
     event.stopPropagation();
     setIsOpen(false);
@@ -27,7 +26,6 @@ const VideoModal = forwardRef((props, ref) => {
 
   function openModal() {
     setIsOpen(true);
-    // Ensure the video plays when modal is reopened
     if (videoRef.current) {
       videoRef.current.play();
       setIsPlaying(true);
@@ -56,7 +54,6 @@ const VideoModal = forwardRef((props, ref) => {
     closeModal,
   }));
 
-  // Use useEffect to autoplay the video when the component mounts
   useEffect(() => {
     if (isOpen && videoRef.current) {
       videoRef.current.play();
@@ -98,7 +95,7 @@ const VideoModal = forwardRef((props, ref) => {
             controls={false}
             autoPlay
           >
-            <source src={film} type="video/mp4" />
+            <source src={videoData} type="video/mp4" />
           </video>
         </div>
       </div>

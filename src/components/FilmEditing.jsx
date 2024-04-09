@@ -1,17 +1,27 @@
 import classes from "./FilmEditing.module.scss";
 import screenshotFromThePremiereProProject from "../assets/portfolio/screenshot-from-the-premiere-pro-project.png";
 import { useLanguage } from "../store/language/languageContext";
+import { useRef, useState } from "react";
+import VideoModal from "./VideoModal";
 
 export default function FilmEditing({ content }) {
   const { language } = useLanguage();
+  const [currentVideo, setCurrentVideo] = useState(null);
+  const videoModal = useRef();
 
   let substance = content.PL;
   if (language === "EN") {
     substance = content.EN;
   }
 
+  const openVideo = (videoSrc) => {
+    setCurrentVideo(videoSrc);
+    videoModal.current.openModal();
+  };
+
   return (
     <>
+      <VideoModal ref={videoModal} videoData={currentVideo} />
       <div className={classes.top}>
         <h1 className={classes.title}>{substance.title}</h1>
       </div>
@@ -42,10 +52,16 @@ export default function FilmEditing({ content }) {
       <div className={classes.materials}>
         <h2 className={classes.info}>{substance.info}</h2>
         <div className={classes["video-box"]}>
-          <div className={classes.video}>
+          <div
+            onClick={() => openVideo(substance.video[0].videoSrc)}
+            className={classes.video}
+          >
             <img src={substance.video[0].src} alt={substance.video[0].alt} />
           </div>
-          <div className={classes.video}>
+          <div
+            onClick={() => openVideo(substance.video[1].videoSrc)}
+            className={classes.video}
+          >
             <img src={substance.video[1].src} alt={substance.video[1].alt} />
           </div>
         </div>

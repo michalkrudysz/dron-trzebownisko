@@ -1,5 +1,7 @@
 import idaICezary from "../src/assets/portfolio/ida-i-cezary-photo.png";
+import idaICezaryVideo from "../src/assets/portfolio/ida-i-cezary.mp4";
 import marzenaISzczepanPhoto from "../src/assets/portfolio/marzena-i-szczepan-photo.png";
+import marzenaISzczepanVideo from "../src/assets/portfolio/marzena-i-szczepan.mp4";
 import waran from "../src/assets/portfolio/waran-photo.png";
 import cyprus2019_2 from "../src/assets/portfolio/cyprus-2019-2.png";
 import cyprus2019_3 from "../src/assets/portfolio/cyprus-2019-3.png";
@@ -103,10 +105,12 @@ const PORTFOLIO_CONTENT = [
         {
           alt: `Ida i Cezary`,
           src: idaICezary,
+          videoSrc: idaICezaryVideo,
         },
         {
           title: `Marzena i Szczepan`,
           src: marzenaISzczepanPhoto,
+          videoSrc: marzenaISzczepanVideo,
         },
       ],
     },
