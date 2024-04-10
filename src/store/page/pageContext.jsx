@@ -25,9 +25,6 @@ export function PageProvider({ children }) {
         return <Portfolio />;
       case "references":
         return <References />;
-      case "aboutMe":
-        // return <AboutMe />;
-        break;
       case "exploreTheMunicipality":
         return <ExploreTheMunicipality />;
       case "quiz":

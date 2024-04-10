@@ -22,9 +22,6 @@ export default function MobileMenu({ setIsMenuOpen }) {
       <Button onClick={() => handleChangePage("references")}>
         {content.references}
       </Button>
-      <Button onClick={() => handleChangePage("aboutMe")}>
-        {content.aboutMe}
-      </Button>
       <Button
         onClick={() => handleChangePage("exploreTheMunicipality")}
         kind={false}
