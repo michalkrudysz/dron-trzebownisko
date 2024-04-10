@@ -125,7 +125,7 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
         alt: "Parafia św. Stanisława Kostki",
         altEN: "St. Stanislaus Kostka Parish",
         dateOfPhoto: 2017,
-        curiosityPL: `1966 roku, ze względu na rosnącą liczbę parafian uczestniczących w mszach, mała kaplica prowadzona przez siostry służebniczki została przez biskupa Ignacego Tokarczuka przemianowana na kościół parafialny. Aby zapewnić miejsce dla większej liczby osób, już w 1960 roku podjęto decyzję o rozbudowie kaplicy poprzez wyburzenie północnej ściany jednego z pomieszczeń. W 1973 roku przeprowadzono dalsze prace, adaptując dawną przybudówkę, używaną niegdyś jako magazyn mąki, na dodatkową kaplicę dla wiernych.`,
+        curiosityPL: `W 1966 roku, ze względu na rosnącą liczbę parafian uczestniczących w mszach, mała kaplica prowadzona przez siostry służebniczki została przez biskupa Ignacego Tokarczuka przemianowana na kościół parafialny. Aby zapewnić miejsce dla większej liczby osób, już w 1960 roku podjęto decyzję o rozbudowie kaplicy poprzez wyburzenie północnej ściany jednego z pomieszczeń. W 1973 roku przeprowadzono dalsze prace, adaptując dawną przybudówkę, używaną niegdyś jako magazyn mąki, na dodatkową kaplicę dla wiernych.`,
         curiosityEN: `In 1966, due to the increasing number of parishioners attending masses, a small chapel run by the Sister Servants was renamed by Bishop Ignacy Tokarczuk as a parish church. To accommodate more people, a decision was already made in 1960 to expand the chapel by demolishing the north wall of one of the rooms. In 1973, further work was carried out, adapting a former annex, once used as a flour warehouse, into an additional chapel for the faithful.`,
         sources: [
           {

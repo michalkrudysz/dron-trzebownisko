@@ -2,16 +2,17 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 1.5em;
+  margin-top: 1.3em;
   &.reversed {
     flex-direction: row-reverse;
   }
 
   .left {
-    padding-right: 10em;
-
+    padding-right: 1em;
     .description {
+      margin-top: 0.3em;
       padding-left: 5em;
+      padding-right: 6em;
 
       .title-box {
         width: 15em;
@@ -27,20 +28,18 @@
         margin-top: 0.5em;
         font-size: 1.13em;
         letter-spacing: 0.01em;
-
-        .text {
-          margin-top: 0.15em;
-          font-weight: 600;
-        }
+      }
+      .text {
+        margin-top: 0.2em;
+        font-weight: 700;
       }
     }
   }
 
   .right {
-    padding-left: 5em;
     .video-box {
       width: 100%;
-      padding-right: 5em;
+      padding-right: 2em;
       cursor: pointer;
 
       img {
@@ -64,11 +63,16 @@
           font-size: 1.1em;
         }
         .text-box {
+          margin-top: 0.8em;
           font-size: 1.05em;
+          .text {
+            margin-top: 0.2em;
+          }
         }
       }
     }
     .right {
+      padding-left: 1em;
       .video-box {
         padding-right: 1em;
       }

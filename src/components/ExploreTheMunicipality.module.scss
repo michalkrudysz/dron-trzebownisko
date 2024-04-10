@@ -101,3 +101,33 @@
     }
   }
 }
+@media (max-width: 1515px) {
+  .top {
+    .header {
+      h1 {
+        font-size: 1.3em;
+      }
+      h3 {
+        font-size: 1.05em;
+      }
+    }
+    .blocks {
+      .block {
+        .title {
+          font-size: 1.9em;
+        }
+        .description {
+          font-size: 1.25em;
+        }
+      }
+    }
+  }
+  .locations {
+    .locations-header {
+      font-size: 1.6em;
+    }
+    .locations-description {
+      font-size: 0.95em;
+    }
+  }
+}

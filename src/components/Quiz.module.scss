@@ -80,3 +80,25 @@
   -moz-box-shadow: 0px -100px 100px 12px rgba(30, 111, 217, 1);
   box-shadow: 0px -50px 170px 18px rgba(30, 111, 217, 1);
 }
+
+@media (max-width: 1515px) {
+  .quiz {
+    margin-top: 1.5em;
+    .image {
+      width: 40%;
+    }
+    .question {
+      width: 60%;
+      .header {
+        font-size: 1.3em;
+        letter-spacing: 0.05;
+      }
+      .answers {
+        button {
+          width: 70%;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}

@@ -105,3 +105,38 @@
     top: 50%;
   }
 }
+@media (max-width: 1515px) {
+  .summary {
+    padding: 3em;
+    top: 55%;
+
+    .title,
+    .strong {
+      font-size: 1.5em;
+    }
+
+    .title {
+      padding-top: 1.5em;
+    }
+
+    .summary-results {
+      font-size: 0.9em;
+
+      .results {
+        .paragraph,
+        .score {
+          font-size: 1em;
+        }
+      }
+    }
+
+    .buttons {
+      padding-bottom: 2.5em;
+
+      .button {
+        height: 3.4em;
+        font-size: 0.9em;
+      }
+    }
+  }
+}

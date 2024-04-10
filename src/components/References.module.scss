@@ -57,3 +57,32 @@
     all: unset;
   }
 }
+
+@media (max-width: 1515px) {
+  .headline {
+    margin-top: 2em;
+    .container {
+      .left {
+        h1 {
+          font-size: 1.8em;
+        }
+        p {
+          font-size: 0.9em;
+          padding: 0.7em 3em 0;
+        }
+      }
+      .right {
+        padding: 1.3em 2.5em;
+        h2 {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  .references {
+    width: 100%;
+    gap: 1em;
+    margin: 2em 0 1em;
+    padding: 0 3em;
+  }
+}

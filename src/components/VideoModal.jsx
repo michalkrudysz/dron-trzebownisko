@@ -16,7 +16,15 @@ import pause from "../assets/pause.png";
 const VideoModal = forwardRef(({ videoData }, ref) => {
   const [isOpen, setIsOpen] = useState(false);
   const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const progressBarRef = useRef(null);
+  const [currentTime, setCurrentTime] = useState(0);
+
+  function formatTime(seconds) {
+    const result = new Date(seconds * 1000).toISOString().substr(11, 8);
+    return result.startsWith("00:") ? result.substr(3) : result;
+  }
 
   function closeModal(event) {
     event.stopPropagation();
@@ -25,19 +33,21 @@ const VideoModal = forwardRef(({ videoData }, ref) => {
 
   function openModal() {
     setIsOpen(true);
-    if (videoRef.current) {
+  }
+
+  function togglePlayPause() {
+    const isVideoPaused = videoRef.current.paused;
+    if (isVideoPaused) {
       videoRef.current.play();
       setIsPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
     }
   }
 
   function playPauseVideo() {
-    setIsPlaying((prev) => !prev);
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-    } else {
-      videoRef.current.pause();
-    }
+    togglePlayPause();
   }
 
   function rewind10Seconds() {
@@ -48,14 +58,49 @@ const VideoModal = forwardRef(({ videoData }, ref) => {
     videoRef.current.currentTime += 10;
   }
 
+  function handleProgressBarClick(event) {
+    const bounds = progressBarRef.current.getBoundingClientRect();
+    const clickPosition = event.clientX - bounds.left;
+    const width = bounds.width;
+    const clickRatio = clickPosition / width;
+    const newTime = clickRatio * videoRef.current.duration;
+    videoRef.current.currentTime = newTime;
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (videoRef.current && isOpen) {
+        const currentProgress =
+          (videoRef.current.currentTime / videoRef.current.duration) * 100;
+        setProgress(currentProgress);
+        setCurrentTime(videoRef.current.currentTime);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [isOpen]);
+
   useImperativeHandle(ref, () => ({
     openModal,
     closeModal,
   }));
 
   useEffect(() => {
+    function handleKeydown(event) {
+      if (event.code === "Space") {
+        event.preventDefault();
+        togglePlayPause();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeydown);
+    return () => document.removeEventListener("keydown", handleKeydown);
+  }, []);
+
+  useEffect(() => {
     if (isOpen && videoRef.current) {
       videoRef.current.play();
+      setIsPlaying(true);
     }
   }, [isOpen]);
 
@@ -65,6 +110,17 @@ const VideoModal = forwardRef(({ videoData }, ref) => {
 
   return createPortal(
     <>
+      <div
+        className={classes["progress-container"]}
+        onClick={handleProgressBarClick}
+        ref={progressBarRef}
+      >
+        <div className={classes["current-time"]}>{formatTime(currentTime)}</div>
+        <div
+          className={classes["progress-bar"]}
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
       <img
         className={classes["button-close"]}
         onClick={closeModal}
@@ -86,7 +142,7 @@ const VideoModal = forwardRef(({ videoData }, ref) => {
           <img src={rightArrowPlayer} alt="forward" />
         </button>
       </div>
-      <div className={classes.modal}>
+      <div className={classes.modal} onClick={togglePlayPause}>
         <div className={classes["modal-content"]}>
           <video
             ref={videoRef}
@@ -94,7 +150,11 @@ const VideoModal = forwardRef(({ videoData }, ref) => {
             controls={false}
             autoPlay
           >
-            <source src={videoData} type="video/mp4" />
+            <source
+              onClick={(e) => e.stopPropagation()}
+              src={videoData}
+              type="video/mp4"
+            />
           </video>
         </div>
       </div>

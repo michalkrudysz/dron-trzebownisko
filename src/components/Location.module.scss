@@ -95,3 +95,44 @@
     }
   }
 }
+
+@media (max-width: 1515px) {
+  .container {
+    .top {
+      gap: 8em;
+      .left {
+        width: 40%;
+        padding-right: 4em;
+        .title {
+          width: 65%;
+          padding: 0.3em 2em;
+          font-size: 1.75em;
+        }
+      }
+      .right {
+        width: 60%;
+        margin-right: 3em;
+        .description {
+          padding: 1.9em 2.5em;
+          font-size: 1.05em;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+    .bottom {
+      .header {
+        font-size: 1.35em;
+      }
+      .materials {
+        ul {
+          gap: 1em;
+          li {
+            img {
+              width: 28em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

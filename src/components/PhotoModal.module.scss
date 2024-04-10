@@ -144,3 +144,47 @@
     margin-bottom: 0em;
   }
 }
+
+@media (max-width: 1515px) {
+  .button-close {
+    position: fixed;
+    top: 4em;
+    right: 1.4em;
+    z-index: 51;
+    width: 2.5em;
+  }
+  .modal {
+    .modal-content {
+      .photo {
+        margin-left: 1.5em;
+      }
+      .photo-description {
+        width: 80em;
+        margin-right: 1.5em;
+        .photo-description-title {
+          padding: 0.3em 2.5em;
+          font-size: 1.3em;
+        }
+        .photo-date {
+          margin-top: 0.5em;
+          font-size: 1em;
+        }
+        .curiosity {
+          margin-top: 0.5em;
+          padding: 0.3em 0.9em;
+          font-size: 1em;
+          font-weight: 500;
+        }
+        .photo-description-text {
+          font-size: 1em;
+          letter-spacing: 0.01em;
+          padding-bottom: 1.1em;
+          padding-right: 1.1em;
+        }
+        .source {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
