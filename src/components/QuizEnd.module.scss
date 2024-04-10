@@ -32,7 +32,6 @@
   .summary-results {
     width: 50%;
     margin-top: 1em;
-    padding: 0;
     border-radius: 4px;
     background-color: #bf7839;
     text-align: center;
@@ -120,8 +119,9 @@
     }
 
     .summary-results {
-      font-size: 0.9em;
-
+      font-size: 1.1em;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
       .results {
         .paragraph,
         .score {

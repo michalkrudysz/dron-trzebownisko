@@ -85,7 +85,7 @@
   .quiz {
     margin-top: 1.5em;
     .image {
-      width: 40%;
+      width: 45%;
     }
     .question {
       width: 60%;
@@ -96,7 +96,9 @@
       .answers {
         button {
           width: 70%;
-          font-size: 0.9em;
+          font-size: 0.95em;
+          padding-top: 0.95em;
+          padding-bottom: 0.95em;
         }
       }
     }
