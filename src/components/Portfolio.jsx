@@ -6,12 +6,26 @@ import FilmProductions from "./FilmProductions";
 import Photos from "./Photos";
 import PORTFOLIO_CONTENT from "../../data/portfolioContent";
 import { useLanguage } from "../store/language/languageContext";
+import { useEffect, useState } from "react";
+import Loading from "./Loading";
 import VideoModal from "./VideoModal";
 
 export default function Portfolio() {
   const { language } = useLanguage();
+  const [isLoading, setIsLoading] = useState(true);
   const { content } = PORTFOLIO_CONTENT[0][language];
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <>
       <VideoModal />

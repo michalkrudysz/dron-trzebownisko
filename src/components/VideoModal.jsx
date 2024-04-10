@@ -18,7 +18,6 @@ const VideoModal = forwardRef(({ videoData }, ref) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  console.log(videoData);
   function closeModal(event) {
     event.stopPropagation();
     setIsOpen(false);
