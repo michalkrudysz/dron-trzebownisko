@@ -38,3 +38,25 @@
     }
   }
 }
+
+@media (max-width: 1515px) {
+  .category {
+    width: 25em;
+    height: 30em;
+    .left-arrow,
+    .right-arrow {
+      width: 2em;
+    }
+
+    .left-arrow {
+      right: 32em;
+    }
+
+    .right-arrow {
+      left: 32em;
+    }
+    .category-item {
+      width: 37em;
+    }
+  }
+}

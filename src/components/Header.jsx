@@ -31,7 +31,6 @@ export default function Header({ toggleMenu, isOpen, setIsMenuOpen }) {
         <Button onClick={() => changePage("references")}>
           {content.references}
         </Button>
-
         <Button
           onClick={() => changePage("exploreTheMunicipality")}
           kind={false}

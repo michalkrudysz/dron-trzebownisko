@@ -20,3 +20,9 @@
   border-radius: 10px;
   transition: width 0.5s ease-in;
 }
+
+@media (max-width: 1515px) {
+  .skill-name {
+    font-size: 0.89m;
+  }
+}

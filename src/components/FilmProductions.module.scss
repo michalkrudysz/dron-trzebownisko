@@ -18,3 +18,17 @@
   gap: 1em;
   flex-direction: column;
 }
+
+@media (max-width: 1515px) {
+  .top {
+    margin-top: 1.2em;
+    .title {
+      font-size: 1.3em;
+    }
+  }
+  .film-productions {
+    margin-top: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+}

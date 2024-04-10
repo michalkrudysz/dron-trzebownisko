@@ -44,3 +44,23 @@
     }
   }
 }
+
+@media (max-width: 1515px) {
+  .top {
+    margin-top: 2.5em;
+    .portfolio {
+      .left {
+        margin-left: 3em;
+        .text {
+          font-size: 1.1em;
+        }
+        .skills-box {
+          margin-top: 1.5em;
+        }
+      }
+      .right {
+        margin-right: 2em;
+      }
+    }
+  }
+}
