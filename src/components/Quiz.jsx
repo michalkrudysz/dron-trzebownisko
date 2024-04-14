@@ -7,18 +7,17 @@ import { useLanguage } from "../store/language/languageContext";
 import Loading from "./Loading";
 
 export default function Quiz() {
-  const [loadedImages, setLoadedImages] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const [answerState, setAnswerState] = useState("");
-  const [userAnswers, setUserAnswers] = useState([]);
-  const { language } = useLanguage();
-
-  const activeQuestionIndex =
+veQuestionIndex =
     answerState === "" ? userAnswers.length : userAnswers.length - 1;
   const quizFinished = activeQuestionIndex === QUESTIONS.length;
 
   useEffect(() => {
-    const loadImage = (imageSrc) =>
+let a; 
+a=0;
+const =  a*2
+gitt 
+    ///LOAD IMEAFE
+ = (imageSrc) =>
       new Promise((resolve, reject) => {
         const img = new Image();
         img.src = imageSrc;
