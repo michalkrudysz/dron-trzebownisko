@@ -139,129 +139,176 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
   },
   {
     name: "Łąka",
-    descriptionPL: `Łąka to malownicza wieś położona w południowo-wschodniej Polsce, w województwie podkarpackim, wchodząca w skład administracyjny Gminy Trzebownisko, w powiecie rzeszowskim. Wieś jest usytuowana około 4 kilometry na wschód od Trzebowniska i 9 kilometrów na północny wschód od Rzeszowa, co czyni ją dobrze skomunikowaną z większymi ośrodkami urbanistycznymi, zachowując jednocześnie swój wiejski charakter i spokój. Łąka jest społecznością o bogatym życiu kulturalnym i społecznym, w której działa wiele organizacji, w tym Ochotnicza Straż Pożarna, Ludowy Klub Sportowy, czy Stowarzyszenie „Wszyscy Razem”.`,
-    descriptionEN:
-      "Jasionka is a small town located in south-eastern Poland, in the Podkarpackie Voivodeship, near Rzeszów. It is known primarily thanks to its developing Rzeszów-Jasionka Airport, which is an important communication point for the region, offering domestic and international connections. Besides its transport role, Jasionka attracts attention thanks to the modern Exhibition and Congress Centre, which is the venue for many significant events, trade fairs, conferences, and business meetings.",
+    descriptionPL: `Historia Łąki sięga XIV wieku, kiedy to wieś należała do dóbr królewskich. W ciągu wieków wieś wielokrotnie zmieniała właścicieli, przechodząc z rąk rodziny Rzeszowskich przez Pileckich aż po Lubomirskich i Sanguszków. Wiek XVIII i XIX przyniósł zmiany właścicielskie i rozwój architektoniczny, w tym budowę pałaców i kościołów, które do dziś stanowią ważne zabytki. Współcześnie wieś Łąka nie tylko pielęgnuje swoje dziedzictwo historyczne i kulturalne, ale także stawia na rozwój społeczności lokalnej. Funkcjonują tam liczne stowarzyszenia, w tym Ochotnicza Straż Pożarna, Ludowy Klub Sportowy oraz stowarzyszenie „Wszyscy Razem”, które organizują różnorodne wydarzenia integrujące mieszkańców. Według Narodowego Spisu Powszechnego Ludności i Mieszkań z 2021 roku liczba ludności we wsi Łąka to 2 018, z czego 52,2% mieszkańców stanowią kobiety, a 47,8% ludności to mężczyźni.`,
+    descriptionEN: `The history of Łąka dates back to the 14th century when the village belonged to the royal estates. Over the centuries, the village changed owners multiple times, passing from the Rzeszowski family through the Pilecki family to the Lubomirski and Sanguszko families. The 18th and 19th centuries brought ownership changes and architectural development, including the construction of palaces and churches, which remain important monuments today. Nowadays, the village of Łąka not only preserves its historical and cultural heritage but also focuses on the development of the local community. There are numerous associations operating there, including the Volunteer Fire Brigade, the People's Sports Club, and the „Wszyscy razem" association, which organizes various events integrating residents. According to the 2021 National Census of Population and Housing, the population of the village of Łąka is 2,018, with 52.2% of the population being women and 47.8% men.`,
     Materials: [
       {
         img: lakaChurch2017,
-        alt: "kosciol",
-        altEN: "photo of the airport",
+        alt: "Parafia św. Onufrego",
+        altEN: "Parish of St. Onuphrius",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Kościół św. Onufrego w Łące to parafia rzymskokatolicka zlokalizowana w diecezji rzeszowskiej, w dekanacie Rzeszów Północ. Erygowana w 1409 roku z fundacji Jana Feliksa Rzeszowskiego, parafia ta początkowo obejmowała większe terytorium, w tym miejscowości takie jak Sokołów Małopolski i Stobierna. Obecnie terytorium parafii obejmuje jedynie Łąkę.`,
+        curiosityEN: `The Church of St. Onuphrius in Łąka is a Roman Catholic parish located in the Diocese of Rzeszów, in the Rzeszów North deanery. Established in 1409 by the foundation of Jan Feliks Rzeszowski, this parish originally covered a larger territory, including towns such as Sokołów Małopolski and Stobierna. Currently, the parish territory encompasses only Łąka.`,
+        sources: [
+          {
+            nameSource: `wikiwand.com`,
+            url: `https://www.wikiwand.com/pl/Parafia_%C5%9Bw._Onufrego_w_%C5%81%C4%85ce`,
+          },
+        ],
       },
       {
         img: lakaChurch2017_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Parafia św. Onufrego",
+        altEN: "Parish of St. Onuphrius",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Parafia w Łące została założona w 1409 roku, kiedy zbudowano pierwszy drewniany kościół, który przetrwał niemal 300 lat. Następnie zastąpiono go mniejszą kaplicą, która była stopniowo rozbudowywana. Obecny kościół, zbudowany w pierwszej połowie XVIII wieku, ma barokowe cechy. Budynek posiada wydzielone prezbiterium i prosty dach dwuspadowy. Zewnętrzne elewacje są skromnie zdobione, ale wnętrze jest bogato wyposażone i dekorowane, z zielono-złotym ołtarzem głównym i bocznymi ołtarzami, które współgrają kolorystycznie z amboną i chrzcielnicą.`,
+        curiosityEN: `The parish in Łąka was established in 1409, when the first wooden church was built, which survived almost 300 years. It was then replaced by a smaller chapel, which was gradually expanded. The current church, built in the first half of the 18th century, has Baroque features. The building has a separate chancel and a simple gable roof. The external facades are modestly decorated, but the interior is richly equipped and decorated, with a green-gold main altar and side altars that match in color with the pulpit and baptismal font.`,
+        sources: [
+          {
+            nameSource: `rowerowaprzygoda.podkarpackie.eu`,
+            url: `https://rowerowaprzygoda.podkarpackie.eu/krainy/rzeszow-miasto-i-region/atrakcje/kosciol-rzymskokatolicki-pw-sw-onufrego-pustelnika-w-lace`,
+          },
+        ],
       },
       {
         img: lakaChurch2017_3,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Parafia św. Onufrego",
+        altEN: "Parish of St. Onuphrius",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `W kościele znajduje się pięć bocznych ołtarzy oraz główny ołtarz, gdzie centralne miejsce zajmuje obraz olejny św. Onufrego, patrona parafii, fundacji rodziny Sanguszko. Święty Onufry, przedstawiany jako pustelnik i syn perskiego księcia, jest postacią o dużym znaczeniu dla lokalnej społeczności, która szczególnie celebruje jego kult podczas uroczystości odpustowych 12 czerwca każdego roku.`,
+        curiosityEN: `In the church, there are five side altars and a main altar, where the central place is occupied by the oil painting of St. Onuphrius, the patron saint of the parish, founded by the Sanguszko family. Saint Onuphrius, depicted as a hermit and the son of a Persian prince, is a figure of great significance to the local community, which especially celebrates his cult during the feast day celebrations on June 12th each year.`,
+        sources: [
+          {
+            nameSource: `parafialaka.pl`,
+            url: `https://parafialaka.pl/historia`,
+          },
+        ],
       },
       {
         img: church2019,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        alt: "Parafia św. Onufrego",
+        altEN: "Parish of St. Onuphrius",
+        dateOfPhoto: 2019,
+        curiosityPL: `Parafia odgrywa aktywną rolę w życiu społeczności, oferując programy dla różnych grup, takich jak Katolickie Stowarzyszenie Młodzieży czy Róże Różańcowe, a także prowadzi Dom Opieki Społecznej, zainicjowany przez Siostry Opatrzności Bożej, który ma długą historię pomocy potrzebującym.`,
+        curiosityEN: `The parish plays an active role in the community life, offering programs for various groups such as the Catholic Youth Association or the Rosary Societies, and also runs a Social Care Home, initiated by the Sisters of Divine Providence, which has a long history of helping those in need.`,
+        sources: [
+          {
+            nameSource: `parafialaka.pl`,
+            url: `https://parafialaka.pl/historia`,
+          },
+        ],
       },
       {
         img: church2019_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        alt: "Parafia św. Onufrego",
+        altEN: "Parish of St. Onuphrius",
+        dateOfPhoto: 2019,
+        curiosityPL: `Obecny kościół został ukończony w 1742 roku przez księcia Pawła Karola Sanguszko, a jego konsekracja odbyła się w 1748 roku za sprawą biskupa Wacława Hieronima Sierakowskiego.`,
+        curiosityEN: `The current church was completed in 1742 by Prince Paweł Karol Sanguszko, and its consecration took place in 1748 through the efforts of Bishop Wacław Hieronim Sierakowski.`,
+        sources: [
+          {
+            nameSource: `wikiwand.com`,
+            url: `https://www.wikiwand.com/pl/Parafia_%C5%9Bw._Onufrego_w_%C5%81%C4%85ce`,
+          },
+        ],
       },
       {
         img: nursingHome2017,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Dom Pomocy Społecznej dla Dzieci",
+        altEN: "Care Home for Children",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Dom Pomocy Społecznej dla Dzieci w Łące jest zarządzany przez Zgromadzenie Sióstr Opatrzności Bożej. Obiekt ten, zlokalizowany w historycznym pałacu hrabiego Alfreda Potockiego, przyciąga uwagę swoim zabytkowym charakterem. W obrębie posesji znajduje się także figura św. Jana Nepomucena z XVIII wieku. Placówka działa od 1954 roku i zapewnia opiekę 85 dziewczynkom z niepełnosprawnościami intelektualnymi. W pałacu zainstalowano windę, co ułatwia poruszanie się osobom o ograniczonej sprawności ruchowej.`,
+        curiosityEN: `The Residential Home for Children in Łąka is managed by the Congregation of the Sisters of Divine Providence. This facility, located in the historic palace of Count Alfred Potocki, draws attention with its historical character. There is also a statue of St. John of Nepomuk from the 18th century on the premises. The institution has been operating since 1954 and provides care for 85 girls with intellectual disabilities. An elevator has been installed in the palace, which facilitates the movement of people with limited mobility.`,
+        sources: [
+          {
+            nameSource: `pcpr.powiat.rzeszowski.pl`,
+            url: `https://pcpr.powiat.rzeszowski.pl/dps-w-lace/`,
+          },
+        ],
       },
       {
         img: nursingHome2017_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Dom Pomocy Społecznej dla Dzieci",
+        altEN: "Care Home for Children",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `W domu realizowane są zadania opiekuńcze, wychowawcze, dydaktyczne, kompensacyjne i terapeutyczne. Pracownicy domu, w tym siostry zakonne i osoby świeckie, tworzą atmosferę akceptacji i miłości. W 1984 roku w placówce utworzono filię Zespołu Szkół Specjalnych z Rzeszowa, w ramach której działała Szkoła Życia i klasa przysposabiająca do zawodu krawiec-tkacz.`,
+        curiosityEN: `Care, educational, compensatory, and therapeutic tasks are carried out at home. The staff of the house, including nuns and laypeople, create an atmosphere of acceptance and love. In 1984, a branch of the Special Schools Complex from Rzeszów was established in the facility, within which a School of Life operated and a class preparing for the profession of tailor-weaver.`,
+        sources: [
+          {
+            nameSource: `dps-laka.pl`,
+            url: `http://www.dps-laka.pl/?c=mdTresc-cmPokaz-761`,
+          },
+        ],
       },
       {
         img: oldGranary2017,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Stary Spichlerz",
+        altEN: "Old Granary",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Odnowiony spichlerz zyskał nowe życie jako przestrzeń służąca lokalnej społeczności oraz turystom. Fotografia, którą Państwo widzą, przedstawia jeszcze jego dawny wygląd. Teraz, dzięki odrestaurowaniu, można udać się na wirtualny spacer, by zobaczyć, jak starannie przekształcono to miejsce w nowoczesne centrum, które jednocześnie zachowało swój historyczny charakter. Obecnie budynek nosi miano Centrum Kultury i Sztuki w Łące.`,
+        curiosityEN: `The renovated granary has gained a new life as a space serving the local community and tourists. The photograph you see still depicts its former appearance. Now, thanks to restoration, you can take a virtual tour to see how carefully this place has been transformed into a modern center, while still retaining its historical character. Currently, the building is known as the Culture and Art Center in Łąka.`,
+        sources: [
+          {
+            nameSource: `trzebownisko.pl`,
+            url: `https://trzebownisko.pl/?c=mdAktualnosci-cmPokazTresc-413-3168`,
+          },
+        ],
       },
       {
         img: oldGranary2017_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Stary Spichlerz",
+        altEN: "Old Granary",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Spichlerz został wybudowany w XVIII wieku przez książąt Sanguszków, przez wieki służył jako magazyn na plony i sprzęt rolniczy. Niestety, wielki pożar w 1878 roku znacząco go uszkodził. Po II wojnie światowej, w wyniku reformy rolnej z 1944 roku, majątek przeszedł w ręce miejscowych chłopów, a następnie, w 1953 roku, budynek spichlerza został przejęty przez Spółdzielnię Produkcyjną „Zwycięstwo”. Mimo prób konserwacji budynek ostatecznie popadł w ruinę i w 1968 roku został objęty ścisłą ochroną konserwatorską.`,
+        curiosityEN: `The granary was built in the 18th century by the Sanguszko princes, and for centuries it served as a storage for crops and agricultural equipment. Unfortunately, a great fire in 1878 significantly damaged it. After World War II, as a result of the agricultural reform of 1944, the property was transferred to the hands of local peasants, and then, in 1953, the granary building was taken over by the „Zwycięstwo” Production Cooperative. Despite conservation efforts, the building eventually fell into ruin and in 1968 it was placed under strict conservation protection.`,
+        sources: [
+          {
+            nameSource: `ckislaka.pl`,
+            url: `https://ckislaka.pl/o-nas/historia`,
+          },
+        ],
       },
       {
         img: oldGranary2017_3,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Stary Spichlerz",
+        altEN: "Old Granary",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Spichlerz od wieków służył do przechowywania plonów pochodzących z dziedzicznego majątku. Przede wszystkim przemiału zboża, ale również jarzyn i owoców. Obiekt został zbudowany z solidnych, ceglanych murów. Posiadał parter oraz strych, który przykrywał dwuspadowy dach, pokryty dachówką. Natomiast część piwnic wykorzystywano jako magazyn sprzętu gospodarczego.`,
+        curiosityEN: `The granary has been used for centuries to store crops from the ancestral estate. Mainly for the milling of cereals, but also vegetables and fruits. The building was constructed from solid brick walls. It had a ground floor and an attic, which was covered by a gable roof, tiled. The basement part was used as a storage for farm equipment.`,
+        sources: [
+          {
+            nameSource: `trzebownisko.pl`,
+            url: `https://trzebownisko.pl/?c=mdAktualnosci-cmPokazTresc-413-2817`,
+          },
+        ],
       },
       {
         img: school2017,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Szkoła Podstawowa",
+        altEN: "Primary School",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Szkoła w Łące, założona na przełomie 1881/82 roku, początkowo funkcjonowała jako placówka jednoklasowa. Z biegiem lat przekształciła się kolejno w szkołę dwuklasową, a na początku XX wieku w czteroklasową, by ostatecznie stać się siedmioklasową. Jej rozbudowa miała miejsce w latach 50. i 60. XX wieku, finansowana ze składek społecznych oraz państwowych dotacji. W 1967 roku szkoła zyskała status ośmioklasowej. Kolejny ważny etap w jej historii to kapitalny remont przeprowadzony w 1983 roku, który obejmował instalację centralnego ogrzewania, kanalizacji oraz bieżącej wody.`,
+        curiosityEN: `The school in Łąka, founded at the turn of 1881/82, initially functioned as a one-class facility. Over the years, it was transformed successively into a two-class school, and at the beginning of the 20th century into a four-class school, to ultimately become a seven-class school. Its expansion took place in the 1950s and 1960s, financed by community contributions and state subsidies. In 1967, the school gained the status of an eight-class school. Another important stage in its history was the major renovation carried out in 1983, which included the installation of central heating, sewage, and running water.`,
+        sources: [
+          {
+            nameSource: `zslaka.pl`,
+            url: `https://zslaka.pl/historia-szkoly`,
+          },
+        ],
       },
       {
         img: school2017_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Szkoła Podstawowa",
+        altEN: "Primary School",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `W latach 80. wieś Łąka intensywnie się rozbudowywała, co prowadziło do wzrostu liczby uczniów oraz braku miejsc w klasach. Pierwotny budynek szkolny zaczął być zagrożeniem z powodu pękających drewnianych stropów. W rezultacie podjęto decyzję o wzniesieniu nowej szkoły. Społeczny Komitet Budowy Szkoły został powołany w grudniu 1990 roku, a prace projektowe trwały przez dwa lata. Budowa rozpoczęła się w kwietniu 1992 roku, a zakończyła w sierpniu 1995 roku. Szkoła została oficjalnie otwarta i poświęcona w listopadzie 1995 roku.`,
+        curiosityEN: `In the 1980s, the village of Łąka was intensively expanding, leading to an increase in the number of students and a lack of space in classrooms. The original school building began to be a hazard due to cracking wooden ceilings. As a result, the decision was made to construct a new school. The Community School Building Committee was established in December 1990, and the design work lasted for two years. Construction began in April 1992 and ended in August 1995. The school was officially opened and dedicated in November 1995.`,
+        sources: [
+          {
+            nameSource: `zslaka.pl`,
+            url: `https://zslaka.pl/historia-szkoly`,
+          },
+        ],
       },
     ],
   },
