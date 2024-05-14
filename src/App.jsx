@@ -1,15 +1,22 @@
 import "./App.scss";
 import { LanguageProvider } from "./store/language/languageContext";
-import { PageProvider } from "./store/page/pageContext";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./components/Main.jsx";
+import HomePage from "./pages/HomePage.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main />,
+    children: [{ index: true, element: <HomePage /> }],
+  },
+]);
 
 function App() {
   return (
-    <PageProvider>
-      <LanguageProvider>
-        <Main />
-      </LanguageProvider>
-    </PageProvider>
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
   );
 }
 

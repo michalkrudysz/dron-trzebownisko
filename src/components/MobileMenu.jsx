@@ -1,33 +1,30 @@
+import { NavLink } from "react-router-dom";
 import classes from "./MobileMenu.module.scss";
-import Button from "./Button";
+import linkStyles from "./NavLink.module.scss"; // Import stylów NavLink
 import { useLanguage } from "../store/language/languageContext";
-import { usePage } from "../store/page/pageContext";
 import NAVIGATION_CONTENT from "../../data/navigationContent";
 
 export default function MobileMenu({ setIsMenuOpen }) {
   const { language } = useLanguage();
-  const { changePage } = usePage();
   const content = NAVIGATION_CONTENT[language] || NAVIGATION_CONTENT.PL;
 
-  const handleChangePage = (page) => {
-    changePage(page);
-    setIsMenuOpen(false);
-  };
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <div className={classes["mobile-menu"]}>
-      <Button onClick={() => handleChangePage("portfolio")}>
+      <NavLink to="/portfolio" className={linkStyles.link} onClick={closeMenu}>
         {content.portfolio}
-      </Button>
-      <Button onClick={() => handleChangePage("references")}>
+      </NavLink>
+      <NavLink to="/references" className={linkStyles.link} onClick={closeMenu}>
         {content.references}
-      </Button>
-      <Button
-        onClick={() => handleChangePage("exploreTheMunicipality")}
-        kind={false}
+      </NavLink>
+      <NavLink
+        to="/explore"
+        className={`${linkStyles.link} ${linkStyles.linkExplore}`}
+        onClick={closeMenu}
       >
         {content.exploreTheMunicipality}
-      </Button>
+      </NavLink>
     </div>
   );
 }

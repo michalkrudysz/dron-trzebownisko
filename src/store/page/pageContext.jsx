@@ -1,5 +1,5 @@
 import { createContext, useState, useContext } from "react";
-import HomePage from "../../components/HomePage";
+import HomePage from "../../pages/HomePage";
 import References from "../../components/References";
 import ExploreTheMunicipality from "../../components/ExploreTheMunicipality";
 import Quiz from "../../components/Quiz";

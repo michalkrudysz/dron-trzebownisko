@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { usePage } from "../store/page/pageContext";
+import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import MobileMenu from "./MobileMenu";
 
 export default function Main() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const { displayPage } = usePage();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -14,16 +12,8 @@ export default function Main() {
 
   return (
     <>
-      <Header
-        toggleMenu={toggleMenu}
-        isOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-      />
-      {isMenuOpen ? (
-        <MobileMenu setIsMenuOpen={setIsMenuOpen} />
-      ) : (
-        <>{displayPage()}</>
-      )}
+      <Header toggleMenu={toggleMenu} isOpen={isMenuOpen} />
+      {isMenuOpen ? <MobileMenu toggleMenu={toggleMenu} /> : <Outlet />}
     </>
   );
 }
