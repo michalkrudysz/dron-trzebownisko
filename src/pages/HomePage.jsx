@@ -3,9 +3,10 @@ import { useLanguage } from "../store/language/languageContext";
 import REFERENCES from "../../data/references";
 import HOME_PAGE_CONTENT from "../../data/homePageContent";
 import classes from "./HomePage.module.scss";
-import Button from "../components/Button";
+import { Link } from "react-router-dom";
 import ReferenceBox from "../components/ReferenceBox";
 import ModalReference from "../components/ModalReference";
+import linkStyles from "../components/NavLink.module.scss";
 
 const currentYear = new Date().getFullYear();
 
@@ -50,8 +51,15 @@ export default function HomePage() {
             </h1>
             <h2 className={classes.h2}>{description}</h2>
             <div className={classes["button-container"]}>
-              <Button>{buttons.portfolio}</Button>
-              <Button kind={false}>{buttons.discover}</Button>
+              <Link to="/portfolio" className={linkStyles.link}>
+                {buttons.portfolio}
+              </Link>
+              <Link
+                to="/discover"
+                className={`${linkStyles.link} ${linkStyles.linkExplore}`}
+              >
+                {buttons.discover}
+              </Link>
             </div>
           </div>
 

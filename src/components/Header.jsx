@@ -1,4 +1,3 @@
-// Header.js
 import { NavLink } from "react-router-dom";
 import classes from "./Header.module.scss";
 import linkStyles from "./NavLink.module.scss";

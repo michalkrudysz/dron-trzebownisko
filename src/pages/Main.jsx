@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./Header";
-import MobileMenu from "./MobileMenu";
+import Header from "../components/Header";
+import MobileMenu from "../components/MobileMenu";
 
-export default function Main() {
+function Main() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -17,3 +17,5 @@ export default function Main() {
     </>
   );
 }
+
+export default Main;

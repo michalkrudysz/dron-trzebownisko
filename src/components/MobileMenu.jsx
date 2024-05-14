@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import classes from "./MobileMenu.module.scss";
-import linkStyles from "./NavLink.module.scss"; // Import stylów NavLink
+import linkStyles from "./NavLink.module.scss";
 import { useLanguage } from "../store/language/languageContext";
 import NAVIGATION_CONTENT from "../../data/navigationContent";
 
