@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import classes from "./Quiz.module.scss";
+import classes from "../pages/Quiz.module.scss";
 export default function Answers({
   answers,
   selectedAnswer,

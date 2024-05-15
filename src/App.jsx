@@ -10,6 +10,8 @@ const ExploreTheMunicipality = lazy(() =>
   import("./pages/ExploreTheMunicipality.jsx")
 );
 const Main = lazy(() => import("./pages/Main.jsx"));
+const References = lazy(() => import("./pages/References.jsx"));
+const Quiz = lazy(() => import("./pages/Quiz"));
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,10 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePageWrapper /> },
       { path: "portfolio", element: <Portfolio /> },
+      { path: "references", element: <References /> },
       { path: "discover", element: <ExploreTheMunicipality /> },
+      { path: "quiz", element: <Quiz /> },
+      { path: "quiz-reset", element: <Loading /> },
     ],
   },
 ]);

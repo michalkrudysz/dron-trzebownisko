@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import classes from "./Header.module.scss";
 import linkStyles from "./NavLink.module.scss";
 import logo from "../assets/logo-small.png";
@@ -10,6 +10,7 @@ import NAVIGATION_CONTENT from "../../data/navigationContent";
 export default function Header({ toggleMenu, isOpen, setIsMenuOpen }) {
   const { language, toggleLanguage } = useLanguage();
   const content = NAVIGATION_CONTENT[language] || NAVIGATION_CONTENT.PL;
+  const navigate = useNavigate();
 
   return (
     <header className={classes.header}>
@@ -17,7 +18,7 @@ export default function Header({ toggleMenu, isOpen, setIsMenuOpen }) {
         <img
           src={logo}
           alt="Logo"
-          onClick={() => setIsMenuOpen(false)}
+          onClick={() => navigate("/")}
           style={{ cursor: "pointer" }}
         />
       </div>
@@ -44,7 +45,7 @@ export default function Header({ toggleMenu, isOpen, setIsMenuOpen }) {
           {content.references}
         </NavLink>
         <NavLink
-          to="/explore"
+          to="/discover"
           className={`${linkStyles.link} ${linkStyles.linkExplore}`}
           onClick={() => setIsMenuOpen(false)}
         >

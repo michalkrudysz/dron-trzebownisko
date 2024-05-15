@@ -1,4 +1,4 @@
-import classes from "./Quiz.module.scss";
+import classes from "../pages/Quiz.module.scss";
 import QuestionTimer from "./QuestionTimer";
 import Answers from "./Answers";
 

@@ -1,12 +1,12 @@
-import React from "react";
 import classes from "./QuizEnd.module.scss";
 import { useLanguage } from "../store/language/languageContext";
-import { usePage } from "../store/page/pageContext";
+import { useNavigate } from "react-router-dom";
+
 import QUIZ_CONTENT from "../../data/quizContent";
 
 export default function QuizEnd({ userAnswers, questions }) {
   const { language } = useLanguage();
-  const { changePage } = usePage();
+  const navigate = useNavigate();
 
   const totalQuestions = questions.length;
   const correctAnswers = userAnswers.filter((answer, index) => {
@@ -24,6 +24,17 @@ export default function QuizEnd({ userAnswers, questions }) {
   const incorrectPercentage = (incorrectAnswers / totalQuestions) * 100;
 
   const content = QUIZ_CONTENT[language] || QUIZ_CONTENT.PL;
+
+  const handleRetryQuiz = () => {
+    navigate("/quiz-reset");
+    setTimeout(() => {
+      navigate("/quiz");
+    }, 0);
+  };
+
+  const backToHome = () => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -59,15 +70,10 @@ export default function QuizEnd({ userAnswers, questions }) {
           </p>
         </div>
         <div className={classes.buttons}>
-          <button
-            onClick={() => {
-              changePage("homePage");
-            }}
-            className={classes.button}
-          >
+          <button onClick={backToHome} className={classes.button}>
             {content.returnButton}
           </button>
-          <button onClick={() => changePage("quiz")} className={classes.button}>
+          <button onClick={handleRetryQuiz} className={classes.button}>
             {content.retryButton}
           </button>
         </div>

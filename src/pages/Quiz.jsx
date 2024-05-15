@@ -1,8 +1,8 @@
-import QuizEnd from "./QuizEnd";
+import QuizEnd from "../components/QuizEnd";
 import classes from "./Quiz.module.scss";
 import { useState, useEffect, useCallback } from "react";
 import QUESTIONS from "../../data/questions";
-import Question from "./Question";
+import Question from "../components/Question";
 import { useLanguage } from "../store/language/languageContext";
 import Loading from "./Loading";
 

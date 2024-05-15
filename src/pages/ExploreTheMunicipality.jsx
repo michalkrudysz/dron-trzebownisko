@@ -1,28 +1,18 @@
 import Select from "react-select";
 import classes from "./ExploreTheMunicipality.module.scss";
 import Location from "../components/Location";
-import Loading from "./Loading";
 import { useLanguage } from "../store/language/languageContext";
 import { useState } from "react";
-import { useEffect } from "react";
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 import EXPLORE_MUNICIPALITY_CONTENT from "../../data/exploreMunicipalityContent";
+import { Link } from "react-router-dom";
 
 export default function ExploreTheMunicipality() {
-  const [isLoading, setIsLoading] = useState(true);
   const [selectedOption, setSelectedOption] = useState(null);
   const { language } = useLanguage();
 
   const content =
     EXPLORE_MUNICIPALITY_CONTENT[language] || EXPLORE_MUNICIPALITY_CONTENT.PL;
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const options = [
     { value: "1", label: "Trzebownisko" },
@@ -33,7 +23,7 @@ export default function ExploreTheMunicipality() {
     { value: "6", label: "Terliczka" },
     { value: "7", label: "Nowa Wieś" },
     { value: "8", label: "Zaczernie" },
-    { value: "8", label: "Stobierna" },
+    { value: "9", label: "Stobierna" },
   ];
 
   const selectLocation = (selectedOption) => {
@@ -113,9 +103,6 @@ export default function ExploreTheMunicipality() {
     }),
   };
 
-  if (isLoading) {
-    return <Loading />;
-  }
   return (
     <>
       <div className={classes.top}>
@@ -127,7 +114,9 @@ export default function ExploreTheMunicipality() {
           <div className={`${classes["left-block"]} ${classes["block"]}`}>
             <div className={classes.title}>{content.quizTitle}</div>
             <div className={classes.description}>{content.quizDescription}</div>
-            <button className={classes.button}>{content.quizButton}</button>
+            <Link to="/quiz" className={classes.button}>
+              {content.quizButton}
+            </Link>
           </div>
           <div className={`${classes["right-block"]} ${classes["block"]}`}>
             <div className={classes.title}>{content.findPlaceTitle}</div>
