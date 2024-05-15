@@ -23,6 +23,21 @@
 
 @media (max-width: 1515px) {
   .skill-name {
-    font-size: 0.89m;
+    font-size: 0.89em;
+  }
+}
+
+@media (max-width: 430px) {
+  .skill-container {
+    margin-bottom: 0.2em;
+  }
+
+  .skill-name {
+    font-size: 0.85em;
+  }
+
+  .skill-bar,
+  .skill-progress {
+    border-radius: 5px;
   }
 }

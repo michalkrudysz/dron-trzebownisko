@@ -11,9 +11,9 @@
   .left-arrow,
   .right-arrow {
     position: absolute;
-    cursor: pointer;
     width: 2.5em;
     height: auto;
+    cursor: pointer;
   }
 
   .left-arrow {
@@ -43,10 +43,6 @@
   .category {
     width: 25em;
     height: 30em;
-    .left-arrow,
-    .right-arrow {
-      width: 2em;
-    }
 
     .left-arrow {
       right: 32em;
@@ -55,8 +51,48 @@
     .right-arrow {
       left: 32em;
     }
+
     .category-item {
       width: 37em;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .category {
+    width: 20em;
+    height: 25em;
+
+    .left-arrow,
+    .right-arrow {
+      top: 85%;
+    }
+
+    .left-arrow {
+      left: 30%;
+    }
+
+    .right-arrow {
+      left: 55%;
+    }
+
+    .category-item {
+      width: 25em;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .category {
+    width: 19em;
+    height: 23em;
+
+    .left-arrow {
+      left: 28%;
+    }
+
+    .category-item {
+      width: 22em;
     }
   }
 }
