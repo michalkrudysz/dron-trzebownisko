@@ -4,8 +4,8 @@
   margin-top: 1.5em;
 
   .title {
-    font-size: 1.4em;
     text-align: center;
+    font-size: 1.4em;
     padding: 0.4em 0.8em;
     border-radius: 3px;
   }
@@ -14,9 +14,8 @@
 .film-editing {
   display: flex;
   width: 100%;
-  color: white;
   font-size: 1em;
-  margin-top: 1.5em;
+  color: white;
 
   .left {
     width: 60%;
@@ -42,8 +41,8 @@
 
   .right {
     position: relative;
-    right: 10em;
     width: 40%;
+    right: 10em;
     padding: 0 2em 0 3em;
     border-left: 2px solid #7eb0f2;
 
@@ -75,9 +74,9 @@
   padding: 0 2em;
 
   .info {
+    text-align: center;
     font-size: 0.9em;
     font-weight: 400;
-    text-align: center;
     letter-spacing: 0.02em;
   }
 
@@ -107,6 +106,7 @@
       font-size: 1.3em;
     }
   }
+
   .film-editing {
     font-size: 0.85em;
 
@@ -150,6 +150,7 @@
       }
     }
   }
+
   .materials {
     margin-top: 1.5em;
     padding: 0 4em;
@@ -170,6 +171,119 @@
         margin-top: 0.2em;
         width: 45%;
       }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .top {
+    margin-top: 0.8em;
+
+    .title {
+      font-size: 1.1em;
+      padding: 0.4em;
+    }
+  }
+
+  .film-editing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 0.85em;
+    margin-top: 0.5em;
+
+    .left {
+      .photo-box {
+        position: relative;
+        width: 100%;
+        top: 0em;
+        left: 14.7%;
+        transform: translateX(0%);
+
+        .photo {
+          width: 26em;
+          padding: 0;
+          border: 2px solid #7eb0f2;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+      width: 100%;
+      margin-top: 0.9em;
+      padding: 0 1em 0 2em;
+      right: 0em;
+      border-left: 0;
+
+      .text {
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+      }
+
+      h2 {
+        font-size: 1.15em;
+      }
+
+      .list {
+        font-size: 1.15em;
+      }
+    }
+  }
+
+  .materials {
+    margin-top: 0.7em;
+    padding: 0 0.7em;
+
+    .info {
+      text-align: center;
+      font-size: 0.85em;
+      font-weight: 300;
+      letter-spacing: 0;
+    }
+
+    .video-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1em;
+      justify-content: center;
+      gap: 0.5em;
+
+      .video {
+        width: 100%;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 390px) {
+  .film-editing {
+    .left {
+      .photo-box {
+        left: 11%;
+
+        .photo {
+          width: 25em;
+        }
+      }
+    }
+
+    .right {
+      margin-top: 1em;
+      padding: 0 1em 0 1.7em;
     }
   }
 }
