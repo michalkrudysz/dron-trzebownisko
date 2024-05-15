@@ -40,3 +40,40 @@
     }
   }
 }
+
+@media (max-width: 430px) {
+  .top {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.1em;
+
+    .title {
+      font-size: 1.1em;
+      text-align: center;
+      padding: 0.4em 0.3em;
+      border-radius: 3px;
+    }
+  }
+
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 0.4em;
+    margin-bottom: 0.5em;
+
+    .photo-box {
+      width: 45%;
+      cursor: pointer;
+
+      .photo {
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
