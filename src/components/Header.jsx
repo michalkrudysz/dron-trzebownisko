@@ -1,52 +1,64 @@
+import { NavLink } from "react-router-dom";
 import classes from "./Header.module.scss";
-import Button from "./Button";
+import linkStyles from "./NavLink.module.scss";
 import logo from "../assets/logo-small.png";
 import menu from "../assets/hamburger-menu.png";
 import closeMenu from "../assets/close-menu.png";
 import { useLanguage } from "../store/language/languageContext";
-import { usePage } from "../store/page/pageContext";
 import NAVIGATION_CONTENT from "../../data/navigationContent";
 
 export default function Header({ toggleMenu, isOpen, setIsMenuOpen }) {
   const { language, toggleLanguage } = useLanguage();
-  const { changePage } = usePage();
   const content = NAVIGATION_CONTENT[language] || NAVIGATION_CONTENT.PL;
 
   return (
     <header className={classes.header}>
       <div className={classes["header-logo"]}>
         <img
-          onClick={() => {
-            changePage("homePage");
-            setIsMenuOpen(false);
-          }}
           src={logo}
           alt="Logo"
+          onClick={() => setIsMenuOpen(false)}
+          style={{ cursor: "pointer" }}
         />
       </div>
       <nav className={classes.menu}>
-        <Button onClick={() => changePage("portfolio")}>
+        <NavLink
+          to="/"
+          className={linkStyles.link}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {content.home}
+        </NavLink>
+        <NavLink
+          to="/portfolio"
+          className={linkStyles.link}
+          onClick={() => setIsMenuOpen(false)}
+        >
           {content.portfolio}
-        </Button>
-        <Button onClick={() => changePage("references")}>
+        </NavLink>
+        <NavLink
+          to="/references"
+          className={linkStyles.link}
+          onClick={() => setIsMenuOpen(false)}
+        >
           {content.references}
-        </Button>
-        <Button
-          onClick={() => changePage("exploreTheMunicipality")}
-          kind={false}
+        </NavLink>
+        <NavLink
+          to="/explore"
+          className={`${linkStyles.link} ${linkStyles.linkExplore}`}
+          onClick={() => setIsMenuOpen(false)}
         >
           {content.exploreTheMunicipality}
-        </Button>
+        </NavLink>
       </nav>
       <div className={classes.language} onClick={toggleLanguage}>
         {content.languageSwitch}
       </div>
       <div className={classes["hamburger-menu"]} onClick={toggleMenu}>
-        {isOpen ? (
-          <img src={closeMenu} alt="Menu" />
-        ) : (
-          <img src={menu} alt="Menu" />
-        )}
+        <img
+          src={isOpen ? closeMenu : menu}
+          alt={isOpen ? "Close menu" : "Open menu"}
+        />
       </div>
     </header>
   );

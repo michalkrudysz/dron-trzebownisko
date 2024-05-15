@@ -1,10 +1,9 @@
 import Select from "react-select";
 import classes from "./ExploreTheMunicipality.module.scss";
-import Location from "./Location";
+import Location from "../components/Location";
 import Loading from "./Loading";
 import { useLanguage } from "../store/language/languageContext";
 import { useState } from "react";
-import { usePage } from "../store/page/pageContext";
 import { useEffect } from "react";
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 import EXPLORE_MUNICIPALITY_CONTENT from "../../data/exploreMunicipalityContent";
@@ -12,7 +11,6 @@ import EXPLORE_MUNICIPALITY_CONTENT from "../../data/exploreMunicipalityContent"
 export default function ExploreTheMunicipality() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedOption, setSelectedOption] = useState(null);
-  const { changePage } = usePage();
   const { language } = useLanguage();
 
   const content =
@@ -129,12 +127,7 @@ export default function ExploreTheMunicipality() {
           <div className={`${classes["left-block"]} ${classes["block"]}`}>
             <div className={classes.title}>{content.quizTitle}</div>
             <div className={classes.description}>{content.quizDescription}</div>
-            <button
-              onClick={() => changePage("quiz")}
-              className={classes.button}
-            >
-              {content.quizButton}
-            </button>
+            <button className={classes.button}>{content.quizButton}</button>
           </div>
           <div className={`${classes["right-block"]} ${classes["block"]}`}>
             <div className={classes.title}>{content.findPlaceTitle}</div>

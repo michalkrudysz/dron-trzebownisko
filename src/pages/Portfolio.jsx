@@ -1,14 +1,14 @@
 import classes from "./Portfolio.module.scss";
-import SkillBar from "./SkillBar";
-import Category from "./Category";
-import FilmEditing from "./FilmEditing";
-import FilmProductions from "./FilmProductions";
-import Photos from "./Photos";
+import SkillBar from "../components/SkillBar";
+import Category from "../components/Category";
+import FilmEditing from "../components/FilmEditing";
+import FilmProductions from "../components/FilmProductions";
+import Photos from "../components/Photos";
 import PORTFOLIO_CONTENT from "../../data/portfolioContent";
 import { useLanguage } from "../store/language/languageContext";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
-import VideoModal from "./VideoModal";
+import VideoModal from "../components/VideoModal";
 
 export default function Portfolio() {
   const { language } = useLanguage();
