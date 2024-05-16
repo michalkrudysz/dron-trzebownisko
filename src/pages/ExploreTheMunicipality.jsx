@@ -6,6 +6,10 @@ import { useState } from "react";
 import MUNICIPALITY_OF_TRZEBOWNISKO from "../../data/municipalityOfTrzebownisko";
 import EXPLORE_MUNICIPALITY_CONTENT from "../../data/exploreMunicipalityContent";
 import { Link } from "react-router-dom";
+import {
+  filterLocations,
+  customSelectStyles,
+} from "../utils/exploreMunicipalityUtils";
 
 export default function ExploreTheMunicipality() {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -30,78 +34,10 @@ export default function ExploreTheMunicipality() {
     setSelectedOption(selectedOption);
   };
 
-  let filteredLocations;
-
-  if (selectedOption) {
-    filteredLocations = MUNICIPALITY_OF_TRZEBOWNISKO.filter((location) => {
-      return location.name === selectedOption.label;
-    });
-  } else {
-    filteredLocations = MUNICIPALITY_OF_TRZEBOWNISKO;
-  }
-
-  const customStyles = {
-    control: (provided, state) => ({
-      ...provided,
-      backgroundColor: "transparent",
-      borderColor: state.isFocused ? "#5096f2" : "#5096f2",
-      boxShadow: state.isFocused ? "0px" : "none",
-      borderRadius: 0,
-      cursor: "pointer",
-      paddingLeft: "1.2em",
-      paddingRight: "1.2em",
-      paddingTop: "0.15em",
-      paddingBottom: "0.15em",
-      textAlign: "center",
-      width: "100%",
-      "&:hover": {
-        borderColor: "#5096f2",
-      },
-    }),
-    menu: (provided) => ({
-      ...provided,
-      backgroundColor: "#3084F2",
-      cursor: "pointer",
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isSelected ? "#3084F2" : "#586274e5",
-      color: state.isSelected ? "white" : "white",
-      cursor: "pointer",
-      fontWeight: 400,
-      "&:hover": {
-        backgroundColor: "#4b525ee5",
-        color: "white",
-      },
-    }),
-    singleValue: (provided) => ({
-      ...provided,
-      color: "white",
-    }),
-    placeholder: (provided) => ({
-      ...provided,
-      color: "white",
-    }),
-    input: (provided) => ({
-      ...provided,
-      color: "white",
-    }),
-    noOptionsMessage: (provided) => ({
-      ...provided,
-      color: "white",
-    }),
-    dropdownIndicator: (provided) => ({
-      ...provided,
-      color: "white",
-      "&:hover": {
-        color: "white",
-      },
-    }),
-    indicatorSeparator: (provided) => ({
-      ...provided,
-      display: "none",
-    }),
-  };
+  const filteredLocations = filterLocations(
+    MUNICIPALITY_OF_TRZEBOWNISKO,
+    selectedOption
+  );
 
   return (
     <>
@@ -126,7 +62,7 @@ export default function ExploreTheMunicipality() {
             <Select
               className={classes["custom-select"]}
               options={options}
-              styles={customStyles}
+              styles={customSelectStyles}
               onChange={selectLocation}
               placeholder={content.allVillages}
               noOptionsMessage={() => content.noOptions}
