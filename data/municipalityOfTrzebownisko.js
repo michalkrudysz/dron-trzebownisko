@@ -314,70 +314,92 @@ const MUNICIPALITY_OF_TRZEBOWNISKO = [
   },
   {
     name: "Łukawiec",
-    descriptionPL:
-      "Łukawiec to malownicza wieś położona w sercu Podkarpacia, wchodząca w skład Gminy Trzebownisko, znajdująca się w bliskim sąsiedztwie Rzeszowa. Jest to miejsce, gdzie tradycja łączy się z nowoczesnością, a lokalna społeczność pielęgnuje bogate dziedzictwo kulturowe regionu. Otoczona zielonymi wzgórzami i rozległymi polami, Łukawiec oferuje swoim mieszkańcom i odwiedzającym spokój oraz bliskość natury, stanowiąc idealne miejsce dla osób szukających ucieczki od miejskiego zgiełku. ",
-    descriptionEN:
-      "Jasionka is a small town located in south-eastern Poland, in the Podkarpackie Voivodeship, near Rzeszów. It is known primarily thanks to its developing Rzeszów-Jasionka Airport, which is an important communication point for the region, offering domestic and international connections. Besides its transport role, Jasionka attracts attention thanks to the modern Exhibition and Congress Centre, which is the venue for many significant events, trade fairs, conferences, and business meetings.",
+    descriptionPL: `Łukawiec jest podzielony na dwie części: Łukawiec Górny i Łukawiec Dolny, z rzeką Wisłok płynącą przez miejscowość. Leży ona 14 km od Rzeszowa. Według danych z Narodowego Spisu Powszechnego Ludności i Mieszkań z 2021 roku, w Łukawcu mieszka około 2425 osób. W wiosce działają dwie parafie: parafia Miłosierdzia Bożego oraz parafia św. Piotra i Pawła. W latach 1954-1961 Łukawiec był siedzibą władz gromady, a po jej likwidacji – centrum gromady Łąka do 1961 roku. W okresie od 1975 do 1998 roku miejscowość administracyjnie przynależała do województwa rzeszowskiego. Na terenie wsi funkcjonują dwa domy ludowe: jeden z nich to odnowiony budynek po dawnej placówce przedszkolnej w Łukawcu Dolnym, a drugi mieści się w Domu Strażaka w Łukawcu Górnym.`,
+    descriptionEN: `Łukawiec is divided into two parts: Upper Łukawiec and Lower Łukawiec, with the Wisłok River flowing through the village. It is located 14 km from Rzeszów. According to data from the National Census of Population and Housing in 2021, about 2425 people live in Łukawiec. The village has two parishes: the Parish of Divine Mercy and the Parish of Saints Peter and Paul. From 1954 to 1961, Łukawiec was the seat of the gromada authorities, and after its dissolution, it was the center of the Łąka gromada until 1961. Between 1975 and 1998, the village was administratively part of the Rzeszów Voivodeship. There are two community centers in the village: one is a renovated building of the former kindergarten in Lower Łukawiec, and the other is located in the Firefighter’s House in Upper Łukawiec.`,
     Materials: [
       {
         img: lukawiecChurch2017,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: "Parafia pw. Miłosierdzia Bożego",
+        altEN: "Parish of Divine Mercy",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Parafia w Łukawcu została utworzona 12 września 1977 roku, przekształcając dom Zofii Gaweł w kaplicę. Następnego roku, 21 lipca, bp Ignacy Tokarczuk nadał jej status samodzielnego ośrodka duszpasterskiego. W trakcie swojej historii, parafia świadkowała wielu ważnym wydarzeniom, włącznie z rozpoczęciem budowy nowego kościoła w kwietniu 1979 roku, a także przeżyła liczne misje i wizytacje kanoniczne, z najnowszą w lipcu 2014 roku. Na terenie parafii odbywały się również uroczystości prymicyjne i przeprowadzono plebiscyt dotyczący przynależności parafialnej, który uzyskał poparcie większości mieszkańców. Od 1987 roku funkcjonuje tutaj chór przykościelny, a z czasem powstały kolejne grupy duszpasterskie i społecznościowe. Obecnie parafia liczy około 1100 wiernych i odgrywa aktywną rolę w duchowym i społecznym życiu lokalnej społeczności.`,
+        curiosityEN: `The parish in Łukawiec was established on September 12, 1977, by converting Zofia Gaweł’s house into a chapel. The following year, on July 21, Bishop Ignacy Tokarczuk granted it the status of an independent pastoral center. Throughout its history, the parish has witnessed many significant events, including the beginning of the construction of a new church in April 1979, as well as numerous missions and canonical visitations, the most recent being in July 2014. The parish also hosted first Mass celebrations and conducted a plebiscite regarding parish affiliation, which received the support of the majority of residents. Since 1987, there has been a church choir functioning here, and over time, additional pastoral and community groups have been formed. Currently, the parish has about 1100 faithful and plays an active role in the spiritual and social life of the local community.`,
+        sources: [
+          {
+            nameSource: `lukawiec-mb.pl`,
+            url: `https://lukawiec-mb.pl/historia/`,
+          },
+        ],
       },
       {
         img: lukawiecChurch2017_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
+        alt: `Parafia pw. Św. Apostołów Piotra i Pawła`,
+        altEN: "Parish of St. Apostles Peter and Paul",
         dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        curiosityPL: `Parafia Rzymskokatolicka pw. św. Apostołów Piotra i Pawła w Łukawcu Dolnym została erygowana 18 sierpnia 2001 roku. Obszar ten, historycznie związany z Rzeszowem-Staromieściem, przez wieki należał do różnych parafii, co skłoniło do budowy lokalnego kościoła w latach 80. przez ks. Władysława Kopocińskiego.`,
+        curiosityEN: `The Roman Catholic Parish of Saints Peter and Paul in Łukawiec Dolny was established on August 18, 2001. This area, historically associated with Rzeszów-Staromieście, belonged to various parishes over the centuries, which led to the construction of a local church in the 1980s by Father Władysław Kopociński.`,
+        sources: [
+          {
+            nameSource: `parafialukawiecdolny.pl`,
+            url: `https://parafialukawiecdolny.pl/?page_id=35`,
+          },
+        ],
       },
       {
         img: lukawiecChurch2019,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        alt: `Parafia pw. Św. Apostołów Piotra i Pawła`,
+        altEN: "Parish of St. Apostles Peter and Paul",
+        dateOfPhoto: 2019,
+        curiosityPL: `Budowa kościoła w Łukawcu Dolnym rozpoczęła się w październiku 1985 roku według projektów architekta Romana Orlewskiego i konstruktora Władysława Jagiełły. Kamień węgielny został poświęcony przez bp. Ignacego Tokarczuka 22 czerwca 1986 roku, a sama świątynia została poświęcona 19 czerwca 1989 roku, otrzymując wezwanie Świętych Apostołów Piotra i Pawła.`,
+        curiosityEN: `The construction of the church in Łukawiec Dolny began in October 1985 according to the designs of architect Roman Orlewski and constructor Władysław Jagiełło. The cornerstone was blessed by Bishop Ignacy Tokarczuk on June 22, 1986, and the church itself was consecrated on June 19, 1989, receiving the dedication of Saints Peter and Paul.`,
+        sources: [
+          {
+            nameSource: `parafialukawiecdolny.pl`,
+            url: `https://parafialukawiecdolny.pl/?page_id=35`,
+          },
+        ],
       },
       {
         img: lukawiecChurch2019_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        alt: `Parafia pw. Św. Apostołów Piotra i Pawła`,
+        altEN: "Parish of St. Apostles Peter and Paul",
+        dateOfPhoto: 2019,
+        curiosityPL: `Parafia szybko się rozwinęła, zyskując około 1000 wiernych. Pierwszym proboszczem został mianowany ks. Jerzy Kowal, który zorganizował życie parafialne, w tym grupy duszpasterskie oraz katolickie organizacje. Proboszcz Kowal zbudował również plebanię i nadzorował prace upiększające kościół.`,
+        curiosityEN: `The parish quickly developed, gaining around 1000 faithful. The first pastor was appointed Father Jerzy Kowal, who organized parish life, including pastoral groups and Catholic organizations. Father Kowal also built the rectory and oversaw the beautification works of the church.`,
+        sources: [
+          {
+            nameSource: `parafialukawiecdolny.pl`,
+            url: `https://parafialukawiecdolny.pl/?page_id=35`,
+          },
+        ],
       },
       {
         img: lukawiecBridge2018,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        alt: `Budowa mostu Łukawiec - Wólka Podleśna`,
+        altEN: `Łukawiec - Wólka Podleśna Bridge`,
+        dateOfPhoto: 2018,
+        curiosityPL: `Dnia 7 grudnia 2017 roku w urzędzie gminy Trzebownisko zawarto umowę dotyczącą rozbudowy drogi gminnej w Łukawcu i Wólce Podleśnej, w tym konstrukcji mostu nad Wisłokiem. Projekt ten był współfinansowany przez Regionalny Program Operacyjny Województwa Podkarpackiego i miał na celu przyczynienie się do rozwoju ekonomii z niską emisją oraz podniesienie jakości mobilności lokalnych mieszkańców przez ulepszenie transportu publicznego. Łączny koszt tej inwestycji oszacowano na 25 636 235,64 zł brutto, z czego ponad 9 milionów złotych pochodziło z dofinansowania unijnego. Prace wykonała firma Skanska S.A.`,
+        curiosityEN: `On December 7, 2017, a contract was signed at the Trzebownisko municipality office regarding the expansion of the municipal road in Łukawiec and Wólka Podleśna, including the construction of a bridge over the Wisłok River. This project was co-financed by the Regional Operational Program of the Podkarpackie Voivodeship and aimed to contribute to the development of a low-emission economy and to improve the quality of mobility for local residents by enhancing public transportation. The total cost of this investment was estimated at PLN 25,636,235.64 gross, of which over PLN 9 million came from EU funding. The work was carried out by Skanska S.A.`,
+        sources: [
+          {
+            nameSource: `trzebownisko.pl`,
+            url: `https://trzebownisko.pl/?c=mdAktualnosci-cmPokazTresc-410-2330`,
+          },
+        ],
       },
       {
         img: lukawiecBridge2018_2,
-        alt: "zdjęcie portu lotniczego",
-        altEN: "photo of the airport",
-        dateOfPhoto: 2017,
-        curiosityPL:
-          "Port lotniczy Rzeszów-Jasionka był pierwszym w Polsce, który wprowadził bezkontaktowe bramki bezpieczeństwa.",
-        curiosityEN:
-          "Rzeszów-Jasionka Airport was the first in Poland to introduce contactless security gates.",
+        alt: `Budowa mostu Łukawiec - Wólka Podleśna`,
+        altEN: `Łukawiec - Wólka Podleśna Bridge`,
+        dateOfPhoto: 2018,
+        curiosityPL: `Inwestycja przewidziała nie tylko budowę mostu, ale również infrastrukturę wspierającą zrównoważony transport, taką jak ścieżki rowerowe, chodniki oraz zatoki autobusowe. Całość projektu obejmowała stworzenie 3-kilometrowej ścieżki rowerowej i chodnika wzdłuż łącznika między Łukawcem, Jasionką a Medynią Głogowską, co ma znacząco poprawić dostępność i bezpieczeństwo komunikacyjne w regionie.`,
+        curiosityEN: `The investment included not only the construction of the bridge but also infrastructure supporting sustainable transport, such as bicycle paths, sidewalks, and bus bays. The entire project involved the creation of a 3-kilometer bicycle path and sidewalk along the connector between Łukawiec, Jasionka, and Medynia Głogowska, which is expected to significantly improve accessibility and traffic safety in the region.`,
+        sources: [
+          {
+            nameSource: `trzebownisko.pl`,
+            url: `https://trzebownisko.pl/?c=mdAktualnosci-cmPokazTresc-410-2330`,
+          },
+        ],
       },
     ],
   },
