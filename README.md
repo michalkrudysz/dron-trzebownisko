@@ -29,9 +29,27 @@ An interactive React application presenting the history of my activities through
 
 ![Website mockup](docs/assets/mockup.jpg "Website mockupn")
 
+#### The presentation of the website's functionality is available below in the form of GIFs, which may take a moment to load.
+
 ### Homepage
 
-![Homepage](docs/assets/6.gif "Homepage")
+![Homepage](docs/assets/1.gif "Homepage")
+
+### Portfolio page
+
+![Portfolio page](docs/assets/2.gif "Portfolio page")
+
+### Content filtering and municipality tour page
+
+![Content filtering and municipality tour page](docs/assets/3.gif "Content filtering and municipality tour page")
+
+### Quiz page
+
+![Quiz page](docs/assets/4.gif "Quiz pagee")
+
+### References page
+
+![References page](docs/assets/5.gif "References page")
 
 ## Pre-installation Requirements
 
