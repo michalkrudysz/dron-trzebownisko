@@ -13,7 +13,7 @@ import VideoModal from "../components/VideoModal";
 export default function Portfolio() {
   const { language } = useLanguage();
   const [isLoading, setIsLoading] = useState(true);
-  const { content } = PORTFOLIO_CONTENT[0][language];
+  const content = PORTFOLIO_CONTENT[0][language]?.content;
 
   useEffect(() => {
     const timer = setTimeout(() => {
